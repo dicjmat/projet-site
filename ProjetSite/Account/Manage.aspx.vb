@@ -1,93 +1,109 @@
-﻿Imports System.Collections.Generic
+﻿Imports System
+Imports System.Collections.Generic
+Imports Microsoft.AspNet.Identity
+Imports Microsoft.AspNet.Identity.EntityFramework
+Imports Microsoft.AspNet.Identity.Owin
+Imports Owin
 
-Imports Microsoft.AspNet.Membership.OpenAuth
-
-Public Class Manage
+Partial Public Class Manage
     Inherits System.Web.UI.Page
-
-    Private successMessageTextValue As String
-    Protected Property SuccessMessageText As String
+    Protected Property SuccessMessage() As String
         Get
-            Return successMessageTextValue
+            Return m_SuccessMessage
         End Get
         Private Set(value As String)
-            successMessageTextValue = value
+            m_SuccessMessage = value
         End Set
     End Property
+    Private m_SuccessMessage As String
 
-    Private canRemoveExternalLoginsValue As Boolean
-    Protected Property CanRemoveExternalLogins As Boolean
+    Protected Property CanRemoveExternalLogins() As Boolean
         Get
-            Return canRemoveExternalLoginsValue
+            Return m_CanRemoveExternalLogins
         End Get
-        Set(value As Boolean)
-            canRemoveExternalLoginsValue = value
+        Private Set(value As Boolean)
+            m_CanRemoveExternalLogins = value
         End Set
     End Property
+    Private m_CanRemoveExternalLogins As Boolean
 
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+    Private Function HasPassword(manager As ApplicationUserManager) As Boolean
+        Dim appUser = manager.FindById(User.Identity.GetUserId())
+        Return (appUser IsNot Nothing AndAlso appUser.PasswordHash IsNot Nothing)
+    End Function
+
+    Protected Sub Page_Load() Handles Me.Load
         If Not IsPostBack Then
             ' Déterminer les sections à afficher
-            Dim hasLocalPassword = OpenAuth.HasLocalPassword(User.Identity.Name)
-            setPassword.Visible = Not hasLocalPassword
-            changePassword.Visible = hasLocalPassword
-
-            CanRemoveExternalLogins = hasLocalPassword
+            Dim manager = Context.GetOwinContext().GetUserManager(Of ApplicationUserManager)()
+            If HasPassword(manager) Then
+                changePasswordHolder.Visible = True
+            Else
+                setPassword.Visible = True
+                changePasswordHolder.Visible = False
+            End If
+            CanRemoveExternalLogins = manager.GetLogins(User.Identity.GetUserId()).Count() > 1
 
             ' Afficher le message de réussite
             Dim message = Request.QueryString("m")
-            If Not message Is Nothing Then
+            If message IsNot Nothing Then
                 ' Enlever la chaîne de requête de l'action
                 Form.Action = ResolveUrl("~/Account/Manage")
-
-                Select Case message
-                    Case "ChangePwdSuccess"
-                        SuccessMessageText = "Votre mot de passe a été modifié."
-                    Case "SetPwdSuccess"
-                        SuccessMessageText = "Votre mot de passe a été défini."
-                    Case "RemoveLoginSuccess"
-                        SuccessMessageText = "La connexion externe a été supprimée."
-                    Case Else
-                        SuccessMessageText = String.Empty
-                End Select
-
-                successMessage.Visible = Not String.IsNullOrEmpty(SuccessMessageText)
+                SuccessMessage = If(message = "ChangePwdSuccess", "Votre mot de passe a été modifié.", If(message = "SetPwdSuccess", "Votre mot de passe a été défini.", If(message = "RemoveLoginSuccess", "Le compte a été supprimé.", [String].Empty)))
+                SuccessMessagePlaceHolder.Visible = Not [String].IsNullOrEmpty(SuccessMessage)
             End If
         End If
-
-        
     End Sub
 
-    Protected Sub setPassword_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+    Protected Sub ChangePassword_Click(sender As Object, e As EventArgs)
         If IsValid Then
-            Dim result As SetPasswordResult = OpenAuth.AddLocalPassword(User.Identity.Name, password.Text)
-            If result.IsSuccessful Then
+            Dim manager = Context.GetOwinContext().GetUserManager(Of ApplicationUserManager)()
+            Dim result As IdentityResult = manager.ChangePassword(User.Identity.GetUserId(), CurrentPassword.Text, NewPassword.Text)
+            If result.Succeeded Then
+                Dim userInfo = manager.FindById(User.Identity.GetUserId())
+                IdentityHelper.SignIn(manager, userInfo, isPersistent:=False)
+                Response.Redirect("~/Account/Manage?m=ChangePwdSuccess")
+            Else
+                AddErrors(result)
+            End If
+        End If
+    End Sub
+
+    Protected Sub SetPassword_Click(sender As Object, e As EventArgs)
+        If IsValid Then
+            ' Créer les informations de connexion locale et associer le compte local à l'utilisateur
+            Dim manager = Context.GetOwinContext().GetUserManager(Of ApplicationUserManager)()
+            Dim result As IdentityResult = manager.AddPassword(User.Identity.GetUserId(), password.Text)
+            If result.Succeeded Then
                 Response.Redirect("~/Account/Manage?m=SetPwdSuccess")
             Else
-                
-                ModelState.AddModelError("NewPassword", result.ErrorMessage)
-                
+                AddErrors(result)
             End If
         End If
     End Sub
 
-    
-    Public Function GetExternalLogins() As IEnumerable(Of OpenAuthAccountData)
-        Dim accounts = OpenAuth.GetAccountsForUser(User.Identity.Name)
-        CanRemoveExternalLogins = CanRemoveExternalLogins OrElse accounts.Count() > 1
+    Public Function GetLogins() As IEnumerable(Of UserLoginInfo)
+        Dim manager = Context.GetOwinContext().GetUserManager(Of ApplicationUserManager)()
+        Dim accounts = manager.GetLogins(User.Identity.GetUserId())
+        CanRemoveExternalLogins = accounts.Count() > 1 Or HasPassword(manager)
         Return accounts
     End Function
 
-    Public Sub RemoveExternalLogin(ByVal providerName As String, ByVal providerUserId As String)
-        Dim m = If(OpenAuth.DeleteAccount(User.Identity.Name, providerName, providerUserId), "?m=RemoveLoginSuccess", String.Empty)
-        Response.Redirect("~/Account/Manage" & m)
+    Public Sub RemoveLogin(loginProvider As String, providerKey As String)
+        Dim manager = Context.GetOwinContext().GetUserManager(Of ApplicationUserManager)()
+        Dim result = manager.RemoveLogin(User.Identity.GetUserId(), New UserLoginInfo(loginProvider, providerKey))
+        Dim msg As String = String.Empty
+        If result.Succeeded Then
+            Dim userInfo = manager.FindById(User.Identity.GetUserId())
+            IdentityHelper.SignIn(manager, userInfo, isPersistent:=False)
+            msg = "?m=RemoveLoginSuccess"
+        End If
+        Response.Redirect("~/Account/Manage" & msg)
     End Sub
-    
 
-    Protected Shared Function ConvertToDisplayDateTime(ByVal utcDateTime As Nullable(Of DateTime)) As String
-        ' Vous pouvez modifier cette méthode afin de convertir la date/heure UTC par la référence et la mise en forme
-        ' d'affichage souhaitées. Ici, nous la convertissons au fuseau horaire et à la mise en forme du serveur
-        ' sous la forme d'une chaîne date courte et heure complète, à l'aide de la culture du thread actuelle.
-        Return If(utcDateTime.HasValue, utcDateTime.Value.ToLocalTime().ToString("G"), "[never]")
-    End Function
+    Private Sub AddErrors(result As IdentityResult)
+        For Each [error] As String In result.Errors
+            ModelState.AddModelError("", [error])
+        Next
+    End Sub
 End Class

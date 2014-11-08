@@ -34,14 +34,14 @@ Public Class ViewSwitcher
     Private m_SwitchUrl As String
 
     Protected Sub Page_Load(sender As Object, e As EventArgs)
-        ' Determine current view
+        ' Déterminer la vue actuelle
         Dim isMobile = WebFormsFriendlyUrlResolver.IsMobileView(New HttpContextWrapper(Context))
         CurrentView = If(isMobile, "Mobile", "Desktop")
 
-        ' Determine alternate view
+        ' Déterminer l'autre vue
         AlternateView = If(isMobile, "Desktop", "Mobile")
 
-        ' Create switch URL from the route, e.g. ~/__FriendlyUrls_SwitchView/Mobile?ReturnUrl=/Page
+        ' Créer l'URL de basculement à partir du chemin, par ex. ~/__FriendlyUrls_SwitchView/Mobile?ReturnUrl=/Page
         Dim url = GetRouteUrl("AspNet.FriendlyUrls.SwitchView", New With { _
             Key .view = AlternateView _
         })

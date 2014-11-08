@@ -13,25 +13,12 @@ Option Explicit On
 
 Partial Public Class RegisterExternalLogin
 
-    
-
     '''<summary>
-    '''Contrôle userNameForm.
+    '''contrôle de l'adresse de messagerie.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents userNameForm As Global.System.Web.UI.WebControls.PlaceHolder
-
-    '''<summary>
-    '''Contrôle userName.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents userName As Global.System.Web.UI.WebControls.TextBox
-
-    
+    Protected WithEvents email As Global.System.Web.UI.WebControls.TextBox
 End Class

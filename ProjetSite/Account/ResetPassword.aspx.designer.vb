@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Register
+Partial Public Class ResetPassword
 
     '''<summary>
     '''Contrôle ErrorMessage.
@@ -32,7 +32,7 @@ Partial Public Class Register
     Protected WithEvents Email As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contrôle password.
+    ''' Contrôle de mot de passe.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
@@ -41,7 +41,7 @@ Partial Public Class Register
     Protected WithEvents Password As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contrôle confirmPassword.
+    ''' Contrôle de ConfirmPassword.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.

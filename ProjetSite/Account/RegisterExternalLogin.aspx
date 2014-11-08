@@ -1,35 +1,34 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="RegisterExternalLogin.aspx.vb" Inherits="ProjetSite.RegisterExternalLogin" %>
-<asp:Content ContentPlaceHolderID="MainContent" runat="server">
-    <hgroup class="title">
-        <h1>Inscrivez-vous avec votre compte <%: ProviderDisplayName %></h1>
-        <h2><%: ProviderUserName %>.</h2>
-    </hgroup>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="RegisterExternalLogin.aspx.vb" Inherits="WebApplication1.RegisterExternalLogin" Async="true" %>
 
-    
-    <asp:ModelErrorMessage runat="server" ModelStateKey="Provider" CssClass="field-validation-error" />
-    
+<%@ Import Namespace="WebApplication1" %>
+<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+<h3>Inscrivez-vous avec votre compte <%: ProviderName %></h3>
 
-    <asp:PlaceHolder runat="server" ID="userNameForm">
-        <fieldset>
-            <legend>Formulaire d'association</legend>
-            <p>
-                Vous vous êtes authentifié avec <strong><%: ProviderDisplayName %></strong> en tant que
-                <strong><%: ProviderUserName %></strong>. Veuillez entrer ci-dessous un nom d'utilisateur pour le site actuel
-                et cliquer sur le bouton Se connecter.
+    <asp:PlaceHolder runat="server">
+        <div class="form-horizontal">
+            <h4>Formulaire d'association</h4>
+            <hr />
+            <asp:ValidationSummary runat="server" ShowModelStateErrors="true" CssClass="text-danger" />
+            <p class="text-info">
+                Vous avez été authentifié auprès de <strong><%: ProviderName %></strong>. Veuillez entrer une adresse de messagerie ci-dessous pour le site actuel
+                et cliquer sur le bouton Connexion.
             </p>
-            <ol>
-                <li class="email">
-                    <asp:Label runat="server" AssociatedControlID="userName">Nom d'utilisateur</asp:Label>
-                    <asp:TextBox runat="server" ID="userName" />
-                    <asp:RequiredFieldValidator runat="server" ControlToValidate="userName"
-                        Display="Dynamic" ErrorMessage="Le nom d'utilisateur est requis" ValidationGroup="NewUser" />
-                    
-                    <asp:ModelErrorMessage runat="server" ModelStateKey="UserName" CssClass="field-validation-error" />
-                    
-                </li>
-            </ol>
-            <asp:Button runat="server" Text="Se connecter" ValidationGroup="NewUser" OnClick="logIn_Click" />
-            <asp:Button runat="server" Text="Annuler" CausesValidation="false" OnClick="cancel_Click" />
-        </fieldset>
+
+            <div class="form-group">
+                <asp:Label runat="server" AssociatedControlID="email" CssClass="col-md-2 control-label">Messagerie</asp:Label>
+                <div class="col-md-10">
+                    <asp:TextBox runat="server" ID="email" CssClass="form-control" TextMode="Email" />
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="email"
+                        Display="Dynamic" CssClass="text-danger" ErrorMessage="Une adresse de messagerie est nécessaire" />
+                    <asp:ModelErrorMessage runat="server" ModelStateKey="email" CssClass="text-error" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <asp:Button runat="server" Text="Se connecter" CssClass="btn btn-default" OnClick="LogIn_Click" />
+                </div>
+            </div>
+        </div>
     </asp:PlaceHolder>
 </asp:Content>

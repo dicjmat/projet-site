@@ -21,7 +21,7 @@ Namespace My
 
         Private Shared defaultInstance As MySettings = CType(Global.System.Configuration.ApplicationSettingsBase.Synchronized(New MySettings), MySettings)
 
-#Region "Fonctionnalité Enregistrement automatique My.Settings"
+#Region "My.Settings Auto-Save Functionality"
 #If _MyType = "WindowsForms" Then
         Private Shared addedHandler As Boolean
 
@@ -63,9 +63,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.ProjetSite.My.MySettings
+        Friend ReadOnly Property Settings() As Global.WebApplication1.My.MySettings
             Get
-                Return Global.ProjetSite.My.MySettings.Default
+                Return Global.WebApplication1.My.MySettings.Default
             End Get
         End Property
     End Module

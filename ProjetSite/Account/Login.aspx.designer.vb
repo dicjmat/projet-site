@@ -14,6 +14,51 @@ Option Explicit On
 Partial Public Class Login
 
     '''<summary>
+    '''Contrôle ErrorMessage.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents ErrorMessage As Global.System.Web.UI.WebControls.PlaceHolder
+
+    '''<summary>
+    '''Contrôle FailureText.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents FailureText As Global.System.Web.UI.WebControls.Literal
+
+    '''<summary>
+    '''Contrôle de l'adresse de messagerie.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents Email As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Contrôle password.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents Password As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Contrôle RememberMe.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents RememberMe As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
     '''Contrôle RegisterHyperLink.
     '''</summary>
     '''<remarks>
@@ -23,11 +68,20 @@ Partial Public Class Login
     Protected WithEvents RegisterHyperLink As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
+    '''Contrôle ForgotPasswordHyperLink.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents ForgotPasswordHyperLink As Global.System.Web.UI.WebControls.HyperLink
+
+    '''<summary>
     '''Contrôle OpenAuthLogin.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents OpenAuthLogin As Global.ProjetSite.OpenAuthProviders
+    Protected WithEvents OpenAuthLogin As Global.WebApplication1.OpenAuthProviders
 End Class

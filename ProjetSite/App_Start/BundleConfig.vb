@@ -4,7 +4,7 @@ Imports System.Web
 Imports System.Web.Optimization
 
 Public Class BundleConfig
-    ' Pour plus d’informations sur le regroupement, accédez à l’adresse http://go.microsoft.com/fwlink/?LinkId=254726 (en anglais)
+    ' Pour plus d'informations sur le regroupement (Bundling), consultez http://go.microsoft.com/fwlink/?LinkID=303951
     Public Shared Sub RegisterBundles(ByVal bundles As BundleCollection)
         bundles.Add(New ScriptBundle("~/bundles/WebFormsJs").Include(
                         "~/Scripts/WebForms/WebForms.js",
@@ -27,6 +27,14 @@ Public Class BundleConfig
         ' prêt pour une implémentation dans un environnement de production, utilisez l’outil de génération que vous trouverez à l’adresse http://modernizr.com pour sélectionner uniquement les tests dont vous avez besoin
         bundles.Add(New ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"))
-       
+
+        ' Affectez la valeur false à EnableOptimizations pour le débogage. Pour plus d'informations,
+        ' consultez http://go.microsoft.com/fwlink/?LinkId=301862
+        BundleTable.EnableOptimizations = True
+
+        ScriptManager.ScriptResourceMapping.AddDefinition("respond", New ScriptResourceDefinition() With {
+                .Path = "~/Scripts/respond.min.js",
+                .DebugPath = "~/Scripts/respond.js"})
+
     End Sub
 End Class

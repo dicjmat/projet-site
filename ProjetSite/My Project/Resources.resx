@@ -5,14 +5,14 @@
     
     Version 2.0
     
-    Le principal objectif de ce format est d'autoriser un format XML simple 
-    lisible. La génération et l'analyse des 
-    différents types de données sont effectuées via les classes TypeConverter 
-    associées aux types de données.
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
     
-    Exemple :
+    Example:
     
-    ... ado.net/XML headers  schema ...
+    ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
@@ -27,37 +27,37 @@
         <comment>This is a comment</comment>
     </data>
                 
-    Il existe des lignes "resheader" qui contiennent des paires 
-    nom/valeur simples.
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
     
-    Chaque ligne de données contient un nom et une valeur. La ligne contient également un 
-    type ou mimetype. Le type correspond à une classe .NET qui prend en charge la conversion 
-    texte/valeur via l'architecture TypeConverter. 
-    Les classes qui ne prennent pas en charge cela, sont sérialisées et stockées avec le jeu 
-    mimetype.
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
     
-    Le mimetype est utilisé pour les objets sérialisés et indique au 
-    ResXResourceReader comment ne plus persister l'objet. Cela n'est actuellement pas 
-    extensible. Pour un mimetype donné, la valeur doit être définie en conséquence :
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
     
-    Remarque - application/x-microsoft.net.object.binary.base64 est le format 
-    que ResXResourceWriter générera, cependant, le lecteur peut 
-    lire n'importe lequel des formats répertoriés ci-dessous.
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
     
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : L'objet doit être sérialisé avec 
+    value   : The object must be serialized with 
             : System.Serialization.Formatters.Binary.BinaryFormatter
-            : puis encodé avec l'encodage base64.
+            : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : L'objet doit être sérialisé avec 
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : puis encodé avec l'encodage base64.
+            : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : L'objet doit être sérialisé dans un tableau d'octets 
-            : à l'aide d'un System.ComponentModel.TypeConverter
-            : puis encodé avec un encodage base64.
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:element name="root" msdata:IsDataSet="true">

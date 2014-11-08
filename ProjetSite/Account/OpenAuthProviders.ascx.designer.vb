@@ -12,7 +12,7 @@ Option Explicit On
 
 
 Partial Public Class OpenAuthProviders
-    
+
     '''<summary>
     '''contrôle providerDetails.
     '''</summary>
@@ -21,5 +21,4 @@ Partial Public Class OpenAuthProviders
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents providerDetails As Global.System.Web.UI.WebControls.ListView
-    
 End Class
