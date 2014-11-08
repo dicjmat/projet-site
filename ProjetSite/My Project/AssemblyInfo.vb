@@ -7,17 +7,17 @@ Imports System.Runtime.InteropServices
 ' associées à un assembly.
 
 ' Passez en revue les valeurs des attributs de l'assembly
-<Assembly: AssemblyTitle("WebApplication1")> 
+<Assembly: AssemblyTitle("ProjetSite")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("WebApplication1")> 
+<Assembly: AssemblyProduct("ProjetSite")> 
 <Assembly: AssemblyCopyright("Copyright ©  2014")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
 
 'Le GUID suivant est pour l'ID de la typelib si ce projet est exposé à COM
-<Assembly: Guid("09fd6ca7-1dd0-4578-b1e3-ce0b8e93ce87")> 
+<Assembly: Guid("0083d2fa-3191-4455-8739-ffaee815f9f6")> 
 
 ' Les informations de version pour un assembly se composent des quatre valeurs suivantes :
 '

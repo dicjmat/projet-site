@@ -1,4 +1,4 @@
-﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="OpenAuthProviders.ascx.vb" Inherits="WebApplication1.OpenAuthProviders" %>
+﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="OpenAuthProviders.ascx.vb" Inherits="ProjetSite.OpenAuthProviders" %>
 
 <div id="socialLoginList">
     <h4>Connectez-vous à l'aide d'un autre service.</h4>

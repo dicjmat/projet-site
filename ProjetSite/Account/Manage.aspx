@@ -1,6 +1,6 @@
-﻿<%@ Page Title="Gérer le compte" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Manage.aspx.vb" Inherits="WebApplication1.Manage" %>
+﻿<%@ Page Title="Gérer le compte" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Manage.aspx.vb" Inherits="ProjetSite.Manage" %>
 
-<%@ Import Namespace="WebApplication1" %>
+<%@ Import Namespace="ProjetSite" %>
 <%@ Import Namespace="Microsoft.AspNet.Identity" %>
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 

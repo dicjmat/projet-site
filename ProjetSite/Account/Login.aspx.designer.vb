@@ -83,5 +83,5 @@ Partial Public Class Login
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents OpenAuthLogin As Global.WebApplication1.OpenAuthProviders
+    Protected WithEvents OpenAuthLogin As Global.ProjetSite.OpenAuthProviders
 End Class
