@@ -7,12 +7,12 @@ Imports Microsoft.Owin
 ' Configurer l'application que le gestionnaire des utilisateurs a utilisée dans cette application. UserManager est défini dans ASP.NET Identity et est utilisé par l'application.
 Public Class ApplicationUserManager
     Inherits UserManager(Of ApplicationUser)
-    Public Sub New(store As IUserStore(Of ApplicationUser))
+    Public Sub New(store As Store(Of ApplicationUser))
         MyBase.New(store)
     End Sub
 
     Public Shared Function Create(options As IdentityFactoryOptions(Of ApplicationUserManager), context As IOwinContext) As ApplicationUserManager
-        Dim manager = New ApplicationUserManager(New UserStore(Of ApplicationUser)(context.[Get](Of ApplicationDbContext)()))
+        Dim manager = New ApplicationUserManager(New Store(Of ApplicationUser)(context.[Get](Of ApplicationDbContext)()))
         ' Configurer la logique de validation pour les noms d'utilisateur
         manager.UserValidator = New UserValidator(Of ApplicationUser)(manager) With {
           .AllowOnlyAlphanumericUserNames = False,
