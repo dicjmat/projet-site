@@ -1,11 +1,13 @@
 ﻿Imports Microsoft.AspNet.Identity
 Imports System.Threading.Tasks
-Public Class Store(Of TUser As ApplicationUser)
-
+Public Class MonStore(Of TUser As ApplicationUser)
+    Implements IUserStore(Of ApplicationUser)
     Implements IUserPasswordStore(Of ApplicationUser)
     Implements IUserLoginStore(Of ApplicationUser)
 
+    Private bd As New P2014_Equipe2_GestionHôtelièreEntities
     Private _applicationDbContext As ApplicationDbContext
+    'Private bd As New P
 
     Sub New(applicationDbContext As ApplicationDbContext)
         ' TODO: Complete member initialization 
@@ -41,7 +43,13 @@ Public Class Store(Of TUser As ApplicationUser)
     End Function
 
     Public Function FindByNameAsync(userName As String) As Task(Of ApplicationUser) Implements IUserStore(Of ApplicationUser, String).FindByNameAsync
+        Dim res = From el In bd.tblLogin Where el.utilisateur = userName Select el
 
+        Dim usr As New ApplicationUser
+        usr.PasswordHash = res.Single.mdp
+        usr.UserName = res.Single.utilisateur
+        usr.Id = res.Single.noEmpl
+        Return Task.FromResult(usr)
     End Function
 
     Public Function UpdateAsync(user As ApplicationUser) As Task Implements IUserStore(Of ApplicationUser, String).UpdateAsync
@@ -78,16 +86,21 @@ Public Class Store(Of TUser As ApplicationUser)
         GC.SuppressFinalize(Me)
     End Sub
 #End Region
-
+#Region "UserPassword"
     Public Function GetPasswordHashAsync(user As ApplicationUser) As Task(Of String) Implements IUserPasswordStore(Of ApplicationUser, String).GetPasswordHashAsync
-
+        Return Task.FromResult(user.PasswordHash)
     End Function
 
     Public Function HasPasswordAsync(user As ApplicationUser) As Task(Of Boolean) Implements IUserPasswordStore(Of ApplicationUser, String).HasPasswordAsync
-
+        If user.PasswordHash IsNot Nothing Then
+            Return Task.FromResult(True)
+        End If
+        Return Task.FromResult(False)
     End Function
 
     Public Function SetPasswordHashAsync(user As ApplicationUser, passwordHash As String) As Task Implements IUserPasswordStore(Of ApplicationUser, String).SetPasswordHashAsync
-
+        user.PasswordHash = passwordHash
+        Return Task.FromResult(True)
     End Function
+#End Region
 End Class
