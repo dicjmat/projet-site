@@ -213,6 +213,7 @@
       <LastGenOutput>Model1.vb</LastGenOutput>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="PageAccueil.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -245,6 +246,8 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Shared\_footer.aspx" />
+    <Content Include="Shared\_header.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <None Include="Project_Readme.html" />
@@ -488,6 +491,27 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PageAccueil.aspx.designer.vb">
+      <DependentUpon>PageAccueil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageAccueil.aspx.vb">
+      <DependentUpon>PageAccueil.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Shared\_footer.aspx.designer.vb">
+      <DependentUpon>_footer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\_footer.aspx.vb">
+      <DependentUpon>_footer.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Shared\_header.aspx.designer.vb">
+      <DependentUpon>_header.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\_header.aspx.vb">
+      <DependentUpon>_header.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.vb">
       <DependentUpon>Site.Master</DependentUpon>
