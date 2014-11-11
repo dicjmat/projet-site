@@ -58,7 +58,7 @@ Partial Public Class Manage
     Protected Sub ChangePassword_Click(sender As Object, e As EventArgs)
         If IsValid Then
             Dim manager = Context.GetOwinContext().GetUserManager(Of ApplicationUserManager)()
-            Dim result As IdentityResult = manager.ChangePassword(User.Identity.GetUserId(), CurrentPassword.Text, NewPassword.Text)
+            Dim result As IdentityResult = manager.ChangePasswordAsync(User.Identity.GetUserId(), CurrentPassword.Text, NewPassword.Text).Result
             If result.Succeeded Then
                 Dim userInfo = manager.FindById(User.Identity.GetUserId())
                 IdentityHelper.SignIn(manager, userInfo, isPersistent:=False)

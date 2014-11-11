@@ -19,9 +19,9 @@
                     <div class="form-group">
                         <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Messagerie</asp:Label>
                         <div class="col-md-10">
-                            <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" />
-                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
-                                CssClass="text-danger" ErrorMessage="Le champ d’adresse de messagerie est obligatoire." />
+                            <asp:TextBox runat="server" ID="Email" CssClass="form-control"/>
+<%--                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
+                                CssClass="text-danger" ErrorMessage="Le champ d’adresse de messagerie est obligatoire." />--%>
                         </div>
                     </div>
                     <div class="form-group">
