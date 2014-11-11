@@ -213,7 +213,7 @@
       <LastGenOutput>Model1.vb</LastGenOutput>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="PageAccueil.aspx" />
+    <Content Include="Account\PageAccueil.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -492,10 +492,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PageAccueil.aspx.designer.vb">
+    <Compile Include="Account\PageAccueil.aspx.designer.vb">
       <DependentUpon>PageAccueil.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PageAccueil.aspx.vb">
+    <Compile Include="Account\PageAccueil.aspx.vb">
       <DependentUpon>PageAccueil.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
