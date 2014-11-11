@@ -227,8 +227,8 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Shared\_footer.aspx" />
-    <Content Include="Shared\_header.aspx" />
+    <Content Include="Shared\_footer.ascx" />
+    <Content Include="Shared\_header.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <None Include="Project_Readme.html" />
@@ -360,18 +360,18 @@
       <DependentUpon>PageAccueil.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Shared\_footer.aspx.designer.vb">
-      <DependentUpon>_footer.aspx</DependentUpon>
+    <Compile Include="Shared\_footer.ascx.designer.vb">
+      <DependentUpon>_footer.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Shared\_footer.aspx.vb">
-      <DependentUpon>_footer.aspx</DependentUpon>
+    <Compile Include="Shared\_footer.ascx.vb">
+      <DependentUpon>_footer.ascx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Shared\_header.aspx.designer.vb">
-      <DependentUpon>_header.aspx</DependentUpon>
+    <Compile Include="Shared\_header.ascx.designer.vb">
+      <DependentUpon>_header.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Shared\_header.aspx.vb">
-      <DependentUpon>_header.aspx</DependentUpon>
+    <Compile Include="Shared\_header.ascx.vb">
+      <DependentUpon>_header.ascx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.vb">
