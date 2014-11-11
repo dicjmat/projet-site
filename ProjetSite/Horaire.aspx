@@ -10,7 +10,8 @@
 <body>
     <form id="horaire" runat="server">
     <div>
-        <asp:Calendar runat="server" Width="Strech" Height="Strech"></asp:Calendar>
+        <p>Allo</p>
+        <asp:Calendar runat="server"></asp:Calendar>
     </div>
     </form>
 </body>
