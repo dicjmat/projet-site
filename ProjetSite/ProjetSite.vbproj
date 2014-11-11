@@ -190,6 +190,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Horaire.aspx" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -213,7 +214,7 @@
       <LastGenOutput>Model1.vb</LastGenOutput>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="PageAccueil.aspx" />
+    <Content Include="Account\PageAccueil.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -246,8 +247,8 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Shared\_footer.aspx" />
-    <Content Include="Shared\_header.aspx" />
+    <Content Include="Shared\_footer.ascx" />
+    <Content Include="Shared\_header.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <None Include="Project_Readme.html" />
@@ -350,6 +351,13 @@
     </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Horaire.aspx.designer.vb">
+      <DependentUpon>Horaire.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Horaire.aspx.vb">
+      <DependentUpon>Horaire.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Models\determinerlibre_Result.vb">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -492,25 +500,25 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PageAccueil.aspx.designer.vb">
+    <Compile Include="Account\PageAccueil.aspx.designer.vb">
       <DependentUpon>PageAccueil.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PageAccueil.aspx.vb">
+    <Compile Include="Account\PageAccueil.aspx.vb">
       <DependentUpon>PageAccueil.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Shared\_footer.aspx.designer.vb">
-      <DependentUpon>_footer.aspx</DependentUpon>
+    <Compile Include="Shared\_footer.ascx.designer.vb">
+      <DependentUpon>_footer.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Shared\_footer.aspx.vb">
-      <DependentUpon>_footer.aspx</DependentUpon>
+    <Compile Include="Shared\_footer.ascx.vb">
+      <DependentUpon>_footer.ascx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Shared\_header.aspx.designer.vb">
-      <DependentUpon>_header.aspx</DependentUpon>
+    <Compile Include="Shared\_header.ascx.designer.vb">
+      <DependentUpon>_header.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Shared\_header.aspx.vb">
-      <DependentUpon>_header.aspx</DependentUpon>
+    <Compile Include="Shared\_header.ascx.vb">
+      <DependentUpon>_header.ascx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.vb">

@@ -11,5 +11,14 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class PageAccueil
+Partial Public Class Horaire
+
+    '''<summary>
+    '''Contrôle horaire.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents horaire As Global.System.Web.UI.HtmlControls.HtmlForm
 End Class
