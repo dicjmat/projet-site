@@ -17,12 +17,29 @@ Public Class Horaire
         Dim hFin As TimeSpan
         Dim empl As Integer
 
-        Dim emp = From em In bd.tblHoraire Where em.noEmpl = 1001 Select em
-        empl = emp.Single.noEmpl
-        Dim var = From ho In bd.tblHoraire Where ho.dateHoraire = calendar1.SelectedDate And ho.noEmpl = empl Select ho
-        hDeb = var.Single.heureDebut
-        hFin = var.Single.heureFin
+        Dim emp = From em In bd.tblHoraire Where em.noEmpl = 1001 Select em.dateHoraire, em.heureDebut, em.heureFin, em.noEmpl
+        empl = emp.First.noEmpl
+        Dim var = From ho In bd.tblHoraire Where ho.dateHoraire = calendar1.SelectedDate And ho.noEmpl = empl Select ho.heureDebut, ho.heureFin
 
-        lbltest.Text = "Vous travaillez de " + hDeb.ToString + "à " + hFin.ToString + "aujourd'hui."
+        If var.Count <> 0 Then
+            hDeb = var.First.heureDebut
+            hFin = var.First.heureFin
+            lbltest.Text = "Vous travaillez de " + hDeb.ToString + " à " + hFin.ToString + " aujourd'hui."
+        Else
+            lbltest.Text = "Vous ne travaillez pas."
+        End If
+
+    End Sub
+
+    Private Sub calendar1_DayRender(ByVal sender As Object, ByVal e As DayRenderEventArgs) Handles calendar1.DayRender
+        Dim res = From el In bd.tblHoraire Where el.noEmpl = 1001 Select el.dateHoraire
+
+        If res.ToList IsNot Nothing Then
+            For Each el In res
+                If e.Day.Date = el Then
+                    e.Cell.BackColor = System.Drawing.Color.LightBlue
+                End If
+            Next
+        End If
     End Sub
 End Class
