@@ -23,7 +23,10 @@ Public Class MonStore(Of TUser As ApplicationUser)
     End Function
 
     Public Function GetLoginsAsync(user As ApplicationUser) As Task(Of IList(Of UserLoginInfo)) Implements IUserLoginStore(Of ApplicationUser, String).GetLoginsAsync
-
+        Dim l = New List(Of UserLoginInfo)
+        Dim info = New UserLoginInfo("BlaBla", "asdh45528975k")
+        l.Add(info)
+        Return Task.FromResult(DirectCast(l, IList(Of UserLoginInfo)))
     End Function
 
     Public Function RemoveLoginAsync(user As ApplicationUser, login As UserLoginInfo) As Task Implements IUserLoginStore(Of ApplicationUser, String).RemoveLoginAsync
@@ -31,7 +34,11 @@ Public Class MonStore(Of TUser As ApplicationUser)
     End Function
 
     Public Function CreateAsync(user As ApplicationUser) As Task Implements IUserStore(Of ApplicationUser, String).CreateAsync
-
+        Dim usr As New ApplicationUser
+        usr.PasswordHash = user.PasswordHash
+        usr.UserName = user.UserName
+        usr.Id = user.Id
+        Return Task.FromResult(usr)
     End Function
 
     Public Function DeleteAsync(user As ApplicationUser) As Task Implements IUserStore(Of ApplicationUser, String).DeleteAsync
@@ -39,7 +46,13 @@ Public Class MonStore(Of TUser As ApplicationUser)
     End Function
 
     Public Function FindByIdAsync(userId As String) As Task(Of ApplicationUser) Implements IUserStore(Of ApplicationUser, String).FindByIdAsync
+        Dim res = From el In bd.tblLogin Where el.noEmpl = userId Select el
 
+        Dim usr As New ApplicationUser
+        usr.PasswordHash = res.Single.mdp
+        usr.UserName = res.Single.utilisateur
+        usr.Id = res.Single.noEmpl
+        Return Task.FromResult(usr)
     End Function
 
     Public Function FindByNameAsync(userName As String) As Task(Of ApplicationUser) Implements IUserStore(Of ApplicationUser, String).FindByNameAsync
@@ -53,7 +66,11 @@ Public Class MonStore(Of TUser As ApplicationUser)
     End Function
 
     Public Function UpdateAsync(user As ApplicationUser) As Task Implements IUserStore(Of ApplicationUser, String).UpdateAsync
+        Dim res = From el In bd.tblLogin Where el.noEmpl = user.Id Select el
 
+        res.Single.mdp = user.PasswordHash
+        res.Single.utilisateur = user.UserName
+        Return Task.FromResult(True)
     End Function
 
 #Region "IDisposable Support"
@@ -102,5 +119,6 @@ Public Class MonStore(Of TUser As ApplicationUser)
         user.PasswordHash = passwordHash
         Return Task.FromResult(True)
     End Function
+
 #End Region
 End Class

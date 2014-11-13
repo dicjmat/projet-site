@@ -23,6 +23,17 @@ Public Class ApplicationUserManager
         Return Task.FromResult(usr)
     End Function
 
+    Public Overrides Function ChangePasswordAsync(userId As String, currentPassword As String, newPassword As String) As Task(Of IdentityResult)
+        Dim result = New IdentityResult
+        Dim usr As ApplicationUser = Me.FindByIdAsync(userId).Result
+
+        If usr.PasswordHash = currentPassword Then
+            Me.RemovePasswordAsync(userId)
+            Return Task.FromResult(Me.AddPasswordAsync(userId, newPassword).Result)
+        End If
+        Return Task.FromResult(result)
+    End Function
+
     Public Shared Function Create(options As IdentityFactoryOptions(Of ApplicationUserManager), context As IOwinContext) As ApplicationUserManager
         Dim manager = New ApplicationUserManager(New MonStore(Of ApplicationUser)(context.[Get](Of ApplicationDbContext)()))
         ' Configurer la logique de validation pour les noms d'utilisateur
