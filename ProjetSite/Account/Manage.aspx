@@ -59,8 +59,63 @@
                     </div>
                 </asp:PlaceHolder>
 
-                <asp:PlaceHolder runat="server" ID="changePasswordHolder" Visible="false">
+                <asp:PlaceHolder runat="server" ID="modifierInfo" Visible="True">
                     <p>Vous êtes connecté en tant que <strong><%: User.Identity.GetUserName() %></strong>.</p>
+                    <div class="form-horizontal">
+                        <h4>Changer les informations relatives au client</h4>
+                        <hr />
+                        <asp:ValidationSummary runat="server" ShowModelStateErrors="true" CssClass="text-danger" />
+                        <div class="form-group">
+                            <asp:Label runat="server" ID="Label1" AssociatedControlID="Nom" CssClass="col-md-2 control-label">Nom</asp:Label>
+                            <div class="col-md-10">
+                                <asp:TextBox runat="server" ID="Nom" CssClass="form-control" />
+                                <asp:RequiredFieldValidator runat="server" ControlToValidate="Nom"
+                                    CssClass="text-danger" ErrorMessage="Le nom est requis."
+                                    ValidationGroup="ChangeInfo" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label runat="server" ID="Label2" AssociatedControlID="Prenom" CssClass="col-md-2 control-label">Prénom</asp:Label>
+                            <div class="col-md-10">
+                                <asp:TextBox runat="server" ID="Prenom" CssClass="form-control" />
+                                <asp:RequiredFieldValidator runat="server" ControlToValidate="Prenom"
+                                    CssClass="text-danger" ErrorMessage="Le prénom est requis."
+                                    ValidationGroup="ChangeInfo" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label runat="server" ID="Label3" AssociatedControlID="Adresse" CssClass="col-md-2 control-label">Adresse</asp:Label>
+                            <div class="col-md-10">
+                                <asp:TextBox runat="server" ID="Adresse" CssClass="form-control" />
+                                <asp:RequiredFieldValidator runat="server" ControlToValidate="Adresse"
+                                    CssClass="text-danger" Display="Dynamic" ErrorMessage="L'adresse est requise."
+                                    ValidationGroup="ChangeInfo" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label runat="server" ID="Label4" AssociatedControlID="Telephone" CssClass="col-md-2 control-label">Téléphone</asp:Label>
+                            <div class="col-md-10">
+                                <asp:TextBox runat="server" ID="Telephone" CssClass="form-control" />
+                                <asp:RequiredFieldValidator runat="server" ControlToValidate="Telephone"
+                                    CssClass="text-danger" Display="Dynamic" ErrorMessage="Le numéro de téléphone est requis."
+                                    ValidationGroup="ChangeInfo" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label runat="server" ID="Label5" AssociatedControlID="TelephoneSup" CssClass="col-md-2 control-label">Téléphone Cellulaire ou travail</asp:Label>
+                            <div class="col-md-10">
+                                <asp:TextBox runat="server" ID="TelephoneSup" CssClass="form-control" />
+                             </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <asp:Button runat="server" Text="Modifier les informations" OnClick="ChangeInfo_Click" CssClass="btn btn-default" ValidationGroup="ChangeInfo" />
+                            </div>
+                        </div>
+                    </div>
+                </asp:PlaceHolder>
+
+                <asp:PlaceHolder runat="server" ID="changePasswordHolder" Visible="false">
                     <div class="form-horizontal">
                         <h4>Changer la forme du mot de passe</h4>
                         <hr />

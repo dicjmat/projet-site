@@ -52,6 +52,12 @@ Partial Public Class Manage
                 SuccessMessage = If(message = "ChangePwdSuccess", "Votre mot de passe a été modifié.", If(message = "SetPwdSuccess", "Votre mot de passe a été défini.", If(message = "RemoveLoginSuccess", "Le compte a été supprimé.", [String].Empty)))
                 SuccessMessagePlaceHolder.Visible = Not [String].IsNullOrEmpty(SuccessMessage)
             End If
+            Dim usr As ApplicationUser = Context.GetOwinContext().GetUserManager(Of ApplicationUserManager)().FindByIdAsync(Context.User.Identity.GetUserId).Result
+            Telephone.Text = usr.telephone
+            TelephoneSup.Text = usr.telephoneSup
+            Adresse.Text = usr.adresse
+            Nom.Text = usr.nom
+            Prenom.Text = usr.prenom
         End If
     End Sub
 
@@ -66,6 +72,26 @@ Partial Public Class Manage
             Else
                 AddErrors(result)
             End If
+        End If
+    End Sub
+
+    Protected Sub ChangeInfo_Click(sender As Object, e As EventArgs)
+        If IsValid Then
+            Dim manager = Context.GetOwinContext().GetUserManager(Of ApplicationUserManager)()
+            Dim usr = manager.FindByIdAsync(User.Identity.GetUserId()).Result
+            usr.telephone = Telephone.Text
+            usr.telephoneSup = TelephoneSup.Text
+            usr.nom = Nom.Text
+            usr.prenom = Prenom.Text
+            usr.adresse = Adresse.Text
+            Dim result As IdentityResult = manager.UpdateAsync(usr).Result
+            If result.Succeeded Then
+
+            Else
+                AddErrors(result)
+            End If
+
+            SuccessMessage = "Les informations ont été modifiées avec succès"
         End If
     End Sub
 

@@ -10,11 +10,8 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class tblOption
-    Public Property noOption As Byte
-    Public Property descOption As String
-
-    Public Overridable Property tblForfait As ICollection(Of tblForfait) = New HashSet(Of tblForfait)
-    Public Overridable Property tblTypeChambre As ICollection(Of tblTypeChambre) = New HashSet(Of tblTypeChambre)
+Partial Public Class determinersallelibre_Result
+    Public Property noSalle As Short
+    Public Property nomTypeSalle As String
 
 End Class

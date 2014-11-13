@@ -10,8 +10,14 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class determinerlibre_Result
-    Public Property noChambre As Short
-    Public Property codeTypeChambre As String
+Partial Public Class tblElementNote
+    Public Property noNote As Integer
+    Public Property codeTypeElement As String
+    Public Property noLigne As Byte
+    Public Property montantElement As Short
+    Public Property dateAjoutElem As Date
+
+    Public Overridable Property tblTypeElement As tblTypeElement
+    Public Overridable Property tblNote As tblNote
 
 End Class

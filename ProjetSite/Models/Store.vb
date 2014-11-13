@@ -46,30 +46,61 @@ Public Class MonStore(Of TUser As ApplicationUser)
     End Function
 
     Public Function FindByIdAsync(userId As String) As Task(Of ApplicationUser) Implements IUserStore(Of ApplicationUser, String).FindByIdAsync
-        Dim res = From el In bd.tblLogin Where el.noEmpl = userId Select el
+        Dim res = From el In bd.tblLogin
+                  Join em In bd.tblEmploye
+                  On em.noEmpl Equals el.noEmpl
+                  Where el.noEmpl = userId
+                  Select el.mdp, el.utilisateur, em.nomEmpl, em.prenEmpl, em.adrEmpl, em.noTelEmpl, em.noCellEmpl, el.noEmpl
 
         Dim usr As New ApplicationUser
-        usr.PasswordHash = res.Single.mdp
-        usr.UserName = res.Single.utilisateur
-        usr.Id = res.Single.noEmpl
+        usr.PasswordHash = res.First.mdp
+        usr.UserName = res.First.utilisateur
+        usr.Id = res.First.noEmpl
+        usr.prenom = res.First.prenEmpl
+        usr.nom = res.First.nomEmpl
+        usr.adresse = res.First.adrEmpl
+        usr.telephone = res.First.noTelEmpl
+        usr.telephoneSup = res.First.noCellEmpl
         Return Task.FromResult(usr)
     End Function
 
     Public Function FindByNameAsync(userName As String) As Task(Of ApplicationUser) Implements IUserStore(Of ApplicationUser, String).FindByNameAsync
-        Dim res = From el In bd.tblLogin Where el.utilisateur = userName Select el
+        Dim res = From el In bd.tblLogin
+                  Join em In bd.tblEmploye
+                  On em.noEmpl Equals el.noEmpl
+                  Where el.utilisateur = userName
+                  Select el.mdp, el.utilisateur, em.nomEmpl, em.prenEmpl, em.adrEmpl, em.noTelEmpl, em.noCellEmpl, el.noEmpl
 
         Dim usr As New ApplicationUser
-        usr.PasswordHash = res.Single.mdp
-        usr.UserName = res.Single.utilisateur
-        usr.Id = res.Single.noEmpl
+        usr.PasswordHash = res.First.mdp
+        usr.UserName = res.First.utilisateur
+        usr.Id = res.First.noEmpl
+        usr.prenom = res.First.prenEmpl
+        usr.nom = res.First.nomEmpl
+        usr.adresse = res.First.adrEmpl
+        usr.telephone = res.First.noTelEmpl
+        usr.telephoneSup = res.First.noCellEmpl
         Return Task.FromResult(usr)
     End Function
 
-    Public Function UpdateAsync(user As ApplicationUser) As Task Implements IUserStore(Of ApplicationUser, String).UpdateAsync
-        Dim res = From el In bd.tblLogin Where el.noEmpl = user.Id Select el
 
-        res.Single.mdp = user.PasswordHash
-        res.Single.utilisateur = user.UserName
+    Public Function UpdateAsync(user As ApplicationUser) As Task Implements IUserStore(Of ApplicationUser, String).UpdateAsync
+        Dim login = From el In bd.tblLogin
+                    Where el.noEmpl = user.Id
+                    Select el
+
+        Dim emp = From el In bd.tblEmploye
+                  Where el.noEmpl = user.Id
+                  Select el
+
+        login.First.mdp = user.PasswordHash
+        login.First.utilisateur = user.UserName
+        emp.Single.nomEmpl = user.nom
+        emp.Single.prenEmpl = user.prenom
+        emp.Single.adrEmpl = user.adresse
+        emp.Single.noTelEmpl = user.telephone
+        emp.Single.noCellEmpl = user.telephoneSup
+        bd.SaveChanges()
         Return Task.FromResult(True)
     End Function
 

@@ -10,11 +10,15 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class tblPieceJointe
-    Public Property noPieceJointe As Long
-    Public Property acces As String
-    Public Property noMessage As Long
+Partial Public Class tblBris
+    Public Property noBris As Integer
+    Public Property etatBris As String
+    Public Property dateRepare As Nullable(Of Date)
+    Public Property dateBris As Date
+    Public Property noSalle As Short
+    Public Property noHotel As Byte
+    Public Property codeItem As String
 
-    Public Overridable Property tblMessage As tblMessage
+    Public Overridable Property tblChecklist As tblChecklist
 
 End Class

@@ -10,6 +10,58 @@ Imports System.Security.Claims
 Public Class ApplicationUser
     Inherits IdentityUser
 
+    Private _adresse As String
+    Public Property adresse() As String
+        Get
+            Return _adresse
+        End Get
+        Set(ByVal value As String)
+            _adresse = value
+        End Set
+    End Property
+
+    Private _nom As String
+    Public Property nom() As String
+        Get
+            Return _nom
+        End Get
+        Set(ByVal value As String)
+            _nom = value
+        End Set
+    End Property
+
+    Private _prenom As String
+    Public Property prenom() As String
+        Get
+            Return _prenom
+        End Get
+        Set(ByVal value As String)
+            _prenom = value
+        End Set
+    End Property
+
+    Private _tel As String
+    Public Property telephone() As String
+        Get
+            Return _tel
+        End Get
+        Set(ByVal value As String)
+            _tel = value
+        End Set
+    End Property
+
+    Private _telSup As String
+    Public Property telephoneSup() As String
+        Get
+            Return _telSup
+        End Get
+        Set(ByVal value As String)
+            _telSup = value
+        End Set
+    End Property
+
+
+
     Public Function GenerateUserIdentityAsync(manager As ApplicationUserManager) As Task(Of ClaimsIdentity)
         Return Task.FromResult(GenerateUserIdentity(manager))
     End Function
