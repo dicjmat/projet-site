@@ -17,9 +17,11 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    
 
 </head>
 <body>
+
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -77,6 +79,9 @@
                 </div>
             </div>
         </div>
+            <header id="header">
+        <img src="C:\Users\Utilisateur\Desktop\projet-site\banniere_5.png" id="banniere"/>
+    </header>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
