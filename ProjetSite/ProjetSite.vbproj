@@ -192,6 +192,7 @@
     <Content Include="Content\Header.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Horaire.aspx" />
+    <Content Include="Images\logo-hotel.png" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
