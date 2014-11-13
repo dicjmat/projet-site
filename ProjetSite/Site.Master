@@ -16,11 +16,15 @@
     </asp:PlaceHolder>
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link rel="stylesheet" type="text/css" href='~/Content/Header.css' />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    
 
 </head>
 <body>
+              <asp:Image runat="server" ImageUrl="~/Images/logo-hotel.png" id="banniere"/>
     <form runat="server">
+    
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--Pour plus d'informations sur les scripts de regroupement dans ScriptManager, consultez http://go.microsoft.com/fwlink/?LinkID=301884 --%>
@@ -77,10 +81,12 @@
                 </div>
             </div>
         </div>
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
+
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - Mon ASP.NET Application</p>
             </footer>

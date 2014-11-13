@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<img src="C:\Users\Utilisateur\Dropbox\Raptors binaires\GestionHotelbanniere_5.png" />
+<img src="C:\Users\Utilisateur\Desktop\projet-site\banniere_5.png"/>
 </body>
 
 </html>
