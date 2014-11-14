@@ -11,32 +11,32 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Horaire
+Partial Public Class Accueil
 
     '''<summary>
-    '''Contrôle horaire.
+    '''Contrôle Accueil.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents horaire As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents Accueil As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Contrôle calendar1.
+    '''Contrôle lblIntro.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents calendar1 As Global.System.Web.UI.WebControls.Calendar
+    Protected WithEvents lblIntro As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Contrôle lblHoraire.
+    '''Contrôle communique.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents lblHoraire As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents communique As Global.System.Web.UI.WebControls.Panel
 End Class
