@@ -22,7 +22,7 @@
 
 </head>
 <body>
-              <asp:Image runat="server" ImageUrl="~/Images/logo-hotel.png" id="banniere"/>
+              
     <form runat="server">
     
         <asp:ScriptManager runat="server">
@@ -85,10 +85,24 @@
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
+       
+
+            <div id="main">
+ 
+            <div id="Back" />
+            <div id="fore">
+                 <hr />
+              <asp:Image runat="server" ImageUrl="~/Images/logo-hotel.png" id="banniere"/> 
+                </div>
+                </div>
 
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Mon ASP.NET Application</p>
+                <!--<p>&copy; <%: DateTime.Now.Year %> - Mon ASP.NET Application</p>-->
+                <ul>
+                     <li>Se connecter</li>
+                     <li>À propos</li>
+                     <li>UltraNet</li>
+                </ul>
             </footer>
         </div>
     </form>
