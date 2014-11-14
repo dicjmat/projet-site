@@ -23,11 +23,11 @@ Partial Public Class SiteMaster
     Protected WithEvents MainContent As Global.System.Web.UI.WebControls.ContentPlaceHolder
 
     '''<summary>
-    '''Contrôle banniere.
+    '''Contrôle panel.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents banniere As Global.System.Web.UI.WebControls.Image
+    Protected WithEvents panel As Global.System.Web.UI.WebControls.Panel
 End Class

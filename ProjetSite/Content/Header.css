@@ -8,9 +8,20 @@ body {
     background-size: cover;
     height:100%;
     width:100%;
- 
 }
 
-ul li {
-color: white;
+#liste {
+    color: black;
+    position:absolute;
+}
+
+
+#panel{
+    background-color:white;
+    border-style:double;
+    height:75%;
+    width:80%;
+    position:absolute;
+    opacity:0.9;
+    bottom:10%
 }

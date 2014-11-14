@@ -87,18 +87,22 @@
             </asp:ContentPlaceHolder>
        
 
-            <div id="main">
+<%--            <div id="main">
               <asp:Image runat="server" ImageUrl="~/Images/logo-hotel.png" id="banniere"/> 
-                </div>
+                </div>--%>
 
-            <footer>
+            <asp:panel runat="server" id="panel">
+                 <footer>
                 <!--<p>&copy; <%: DateTime.Now.Year %> - Mon ASP.NET Application</p>-->
-                <ul>
+                <ul id="liste">
                      <li>Se connecter</li>
                      <li>À propos</li>
                      <li>UltraNet</li>
                 </ul>
             </footer>
+            </asp:panel>
+
+
         </div>
     </form>
 </body>
