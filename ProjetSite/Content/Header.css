@@ -1,24 +1,14 @@
-﻿#main {
-    position:relative;
-}
+﻿
 
-#Back { 
+body { 
     background-image: url(../Images/villa.jpg);
-
-    opacity:0.5;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     height:100%;
     width:100%;
  
-}
-
-#fore
-{
-    /*top:0;
-    left:0;*/
-    position:absolute;
-      height:100%;
-   width:100%;
-   
 }
 
 ul li {

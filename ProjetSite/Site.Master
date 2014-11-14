@@ -88,14 +88,7 @@
        
 
             <div id="main">
- 
-            <div id="Back">
-                </div>
-
-            <div id="fore">
-                 <hr />
               <asp:Image runat="server" ImageUrl="~/Images/logo-hotel.png" id="banniere"/> 
-                </div>
                 </div>
 
             <footer>
