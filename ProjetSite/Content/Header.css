@@ -3,21 +3,18 @@
 }
 
 #Back { 
-    background-image: url(http://www.nyaman-villas-bali.fr/wp-content/gallery/2_bedrooms/villa-2-chambres-bali-seminyak-vue-de-nuit.jpg);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-   /*opacity:0.5;
-   height:100%;
-   width:100%;*/
-   
+    background-image: url(../Images/villa.jpg);
+
+    opacity:0.5;
+    height:100%;
+    width:100%;
+ 
 }
 
 #fore
 {
-    top:0;
-    left:0;
+    /*top:0;
+    left:0;*/
     position:absolute;
       height:100%;
    width:100%;
