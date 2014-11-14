@@ -191,7 +191,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="Content\Header.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Horaire.aspx" />
     <Content Include="Images\logo-hotel.png" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -355,13 +354,6 @@
     </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Horaire.aspx.designer.vb">
-      <DependentUpon>Horaire.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Horaire.aspx.vb">
-      <DependentUpon>Horaire.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Models\determinerchambrelibre_Result.vb">
       <DependentUpon>Model1.tt</DependentUpon>

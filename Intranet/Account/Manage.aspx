@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Gérer le compte" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Manage.aspx.vb" Inherits="ProjetSite.Manage" %>
+﻿<%@ Page Title="Gérer le compte" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Manage.aspx.vb" Inherits="Intranet.Manage" %>
 
 <%@ Import Namespace="ProjetSite" %>
 <%@ Import Namespace="Microsoft.AspNet.Identity" %>
