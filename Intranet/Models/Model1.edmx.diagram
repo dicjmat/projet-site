@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="67ef22268112433c93c2205f77595f3a" Name="Diagram1">
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblBris" Width="1.5" PointX="17.25" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblCatalogue" Width="1.5" PointX="15" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblChecklist" Width="1.5" PointX="15" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblCommande" Width="1.5" PointX="15" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblFournisseur" Width="1.5" PointX="12.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblGabarit" Width="1.5" PointX="15.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblHotel" Width="1.5" PointX="7.5" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblInventaire" Width="1.5" PointX="9.75" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblItem" Width="1.5" PointX="7.5" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblLigneCommande" Width="1.5" PointX="20.25" PointY="26.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblPays" Width="1.5" PointX="0.75" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblProvince" Width="1.5" PointX="3" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblVille" Width="1.5" PointX="5.25" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblCommunique" Width="1.5" PointX="9.75" PointY="25.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblEmploye" Width="1.5" PointX="12.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblHoraire" Width="1.5" PointX="15" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblLogin" Width="1.5" PointX="15" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblProfession" Width="1.5" PointX="10.5" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblClient" Width="1.5" PointX="12.75" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblCompagnie" Width="1.5" PointX="7.5" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblElementNote" Width="1.5" PointX="22.5" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblFacture" Width="1.5" PointX="18" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblForfait" Width="1.5" PointX="9.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblNote" Width="1.5" PointX="20.25" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblPeriode" Width="1.5" PointX="15.75" PointY="35.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblPeriodeTypeSalle" Width="1.5" PointX="18" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblRabais" Width="1.5" PointX="12" PointY="33" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblReservation" Width="1.5" PointX="18" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblSalle" Width="1.5" PointX="12.75" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblTypeElement" Width="1.5" PointX="20.25" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblTypeSalle" Width="1.5" PointX="10.5" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="P2014_Equipe2_GestionHôtelièreV2Model.tblTypeSalleHotel" Width="1.5" PointX="9.75" PointY="28" IsExpanded="true" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_bris_datesalle" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_cat_codeitem" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_cat_nofour" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_chklist_coitem" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_chklist_noempl" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_chklist_nosa" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_com_empl" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_com_nofour" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_ligcom_nocom" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_gab_codi" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_gab_tysa" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_com_nohot" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_empl_hot" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_for_nohot" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_hot_codeville" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_inv_hot" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_sa_nohot" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_tysaho_ho" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_inv_item" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_ligcom_codeitem" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_prov_codepays" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_ville_codeprov" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_cli_covi" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_com_ville" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_empl_covi" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_empl_copr" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_hor_noempl" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_log_noempl" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_res_noempl" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_cli_cum" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_res_nocli" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_elenote_cotyel" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_elenote_nonote" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_for_cotysa" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_note_nores" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_pertysa_coper" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_pertysa_cotysa" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_rab_cotysa" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_res_nosa" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_sa_cotysa" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.fk_tysaho_tysa" ManuallyRouted="false" />
+        <AssociationConnector Association="P2014_Equipe2_GestionHôtelièreV2Model.tblFactureNote" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
