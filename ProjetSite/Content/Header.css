@@ -1,4 +1,27 @@
-﻿#banniere {
-padding-left:50px;
-padding-top:25px;
+﻿
+
+body {
+    background-image: url(../Images/villa.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:100%;
+    width:100%;
+}
+
+#liste {
+    color: black;
+    position:absolute;
+}
+
+
+#panel{
+    background-color:white;
+    border-style:double;
+    height:75%;
+    width:80%;
+    position:absolute;
+    opacity:0.9;
+    bottom:10%
 }

@@ -14,15 +14,6 @@ Option Explicit On
 Partial Public Class SiteMaster
 
     '''<summary>
-    '''Contrôle banniere.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents banniere As Global.System.Web.UI.WebControls.Image
-
-    '''<summary>
     '''Contrôle MainContent.
     '''</summary>
     '''<remarks>
@@ -30,4 +21,13 @@ Partial Public Class SiteMaster
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents MainContent As Global.System.Web.UI.WebControls.ContentPlaceHolder
+
+    '''<summary>
+    '''Contrôle panel.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents panel As Global.System.Web.UI.WebControls.Panel
 End Class
