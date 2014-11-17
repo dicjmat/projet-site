@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="FicheEmploye.aspx.vb" Inherits="Intranet.FicheEmploye" %>
+﻿<%@ Page Title="Fiche Employe" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FicheEmploye.aspx.vb" Inherits="Intranet.FicheEmploye" %>
 
 
 <asp:Content runat="server" ID="BodyContent"  ContentPlaceHolderID="MainContent">
