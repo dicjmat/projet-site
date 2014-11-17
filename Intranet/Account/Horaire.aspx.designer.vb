@@ -14,13 +14,13 @@ Option Explicit On
 Partial Public Class Horaire
 
     '''<summary>
-    '''Contrôle horaire.
+    '''Contrôle creerHoraire.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents horaire As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents creerHoraire As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
     '''Contrôle calendar1.
