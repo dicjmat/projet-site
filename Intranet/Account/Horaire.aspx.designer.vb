@@ -32,11 +32,11 @@ Partial Public Class Horaire
     Protected WithEvents calendar1 As Global.System.Web.UI.WebControls.Calendar
 
     '''<summary>
-    '''Contrôle lbltest.
+    '''Contrôle lblHoraire.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents lbltest As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblHoraire As Global.System.Web.UI.WebControls.Label
 End Class

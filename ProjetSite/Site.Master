@@ -58,7 +58,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/Horaire">Accueil</a></li>
+                        <li><a runat="server" href="~/">Accueil</a></li>
                         <li><a runat="server" href="~/About">À propos de</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>
@@ -87,18 +87,22 @@
             </asp:ContentPlaceHolder>
        
 
-            <div id="main">
+<%--            <div id="main">
               <asp:Image runat="server" ImageUrl="~/Images/logo-hotel.png" id="banniere"/> 
-                </div>
+                </div>--%>
 
-            <footer>
+            <asp:panel runat="server" id="panel">
+                 <footer>
                 <!--<p>&copy; <%: DateTime.Now.Year %> - Mon ASP.NET Application</p>-->
-                <ul>
+                <ul id="liste">
                      <li>Se connecter</li>
                      <li>À propos</li>
                      <li>UltraNet</li>
                 </ul>
             </footer>
+            </asp:panel>
+
+
         </div>
     </form>
 </body>

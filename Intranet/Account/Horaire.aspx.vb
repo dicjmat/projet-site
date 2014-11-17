@@ -29,9 +29,9 @@ Public Class Horaire
         If var.Count <> 0 Then
             hDeb = var.First.heureDebut
             hFin = var.First.heureFin
-            lbltest.Text = "Vous travaillez de " + hDeb.ToString + " à " + hFin.ToString + " aujourd'hui."
+            lblHoraire.Text = "Vous travaillez de " + hDeb.ToString + " à " + hFin.ToString + " aujourd'hui."
         Else
-            lbltest.Text = "Vous ne travaillez pas."
+            lblHoraire.Text = "Vous ne travaillez pas."
         End If
 
     End Sub
