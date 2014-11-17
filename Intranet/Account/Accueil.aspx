@@ -1,15 +1,7 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Accueil.aspx.vb" Inherits="Intranet.Accueil" %>
+﻿<%@ Page Title="Accueil" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Accueil.aspx.vb" Inherits="Intranet.Accueil" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Accueil</title>
-    <link rel="stylesheet" type="text/css" href='~/CSSIntranet.css' />
-</head>
-<body>
-    <form id="Accueil" runat="server">
+<asp:Content runat="server" ID="BodyContent"  ContentPlaceHolderID="MainContent">
+    <section id="SectionAccueil" runat="server">
         <h3 id="titreAccueil">Accueil</h3>
     <div>
         <asp:Label runat="server" ID="lblIntro"></asp:Label>
@@ -19,6 +11,5 @@
     <div>
         <asp:Panel ID="communique" runat="server" GroupingText="<b>Communiqué</b>"></asp:Panel>
     </div>
-    </form>
-</body>
-</html>
+    </section>
+</asp:Content>
