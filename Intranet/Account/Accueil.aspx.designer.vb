@@ -14,13 +14,13 @@ Option Explicit On
 Partial Public Class Accueil
 
     '''<summary>
-    '''Contrôle Accueil.
+    '''Contrôle SectionAccueil.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents Accueil As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents SectionAccueil As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
     '''Contrôle lblIntro.
