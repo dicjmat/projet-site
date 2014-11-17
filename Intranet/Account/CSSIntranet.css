@@ -14,6 +14,7 @@
 #titreAccueil{
     font-weight:bold;
     font-size:large;
+    
 }
 
 #lblIntro{
@@ -25,6 +26,31 @@
 }
 
 /*CSS de la fiche d'employé*/
+
 #titreFiche{
+
+}
+
+#lblIntroFiche{
+    
+}
+
+#lblNoEmp{
+
+}
+
+#lblNoTel{
+
+}
+
+#lblAdr{
+
+}
+
+#lblCodeProf{
+
+}
+
+#lblDateEmbauche{
 
 }
