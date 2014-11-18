@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Se connecter" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Login.aspx.vb" Inherits="Intranet.Login" Async="true" %>
+﻿<%@ Page Title="Se connecter" Language="vb" AutoEventWireup="false" MasterPageFile="~/Accueil.Master" CodeBehind="Login.aspx.vb" Inherits="Intranet.Login" Async="true" %>
 
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 
@@ -45,9 +45,6 @@
                         </div>
                     </div>
                 </div>
-                <p>
-                    <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled">Inscrire comme nouvel utilisateur</asp:HyperLink>
-                </p>
                 <p>
                     <%-- Activez ceci une fois que vous avez activé la confirmation de votre compte pour la fonctionnalité de réinitialisation du mot de passe
                     <asp:HyperLink runat="server" ID="ForgotPasswordHyperLink" ViewStateMode="Disabled">Vous avez oublié votre mot de passe ? </asp:HyperLink>
