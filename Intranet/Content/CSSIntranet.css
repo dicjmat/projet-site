@@ -8,23 +8,6 @@
 
 }
 
-
-/*CSS de la page Accueil*/
-
-#titreAccueil{
-    font-weight:bold;
-    font-size:large;
-    
-}
-
-#lblIntro{
-    font-size:medium;
-}
-
-#communique{
-    
-}
-
 /*CSS de la fiche d'employé*/
 
 #titreFiche{
@@ -52,5 +35,9 @@
 }
 
 #lblDateEmbauche{
+    
+}
 
+#communique legend{
+    
 }

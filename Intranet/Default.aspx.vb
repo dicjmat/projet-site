@@ -11,18 +11,18 @@ Public Class _Default
     Dim usr As ApplicationUser
     Dim bd As P2014_Equipe2_GestionHôtelièreEntities
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
+        bd = New P2014_Equipe2_GestionHôtelièreEntities
+
         If Context.User.Identity.GetUserId IsNot Nothing <> 0 Then
             Dim usr As ApplicationUser = Context.GetOwinContext().GetUserManager(Of ApplicationUserManager)().FindByIdAsync(Context.User.Identity.GetUserId).Result
             nom = usr.nom
             prenom = usr.prenom
         End If
 
-        bd = New P2014_Equipe2_GestionHôtelièreEntities
+        'Accueil et communiqué
         Dim comuni As String
 
         usr = Context.GetOwinContext().GetUserManager(Of ApplicationUserManager)().FindByIdAsync(Context.User.Identity.GetUserId).Result
-
-        lblIntro.Text = "Bonjour " + usr.prenom + " " + usr.nom + ", bienvenue sur votre Intranet."
 
         Dim noHotell As Integer = (From ho In bd.tblEmploye Where ho.noEmpl = usr.Id Select ho.noHotel).Single
 
@@ -35,8 +35,53 @@ Public Class _Default
                 communique.Controls.Add(New LiteralControl(comuni + "<br/>"))
             Next
         Else
-            communique.Controls.Add(New LiteralControl("Vous n'avez aucun communiqué"))
+            communique.Controls.Add(New LiteralControl("Vous n'avez pas de communiqué"))
         End If
+
+        'Fiche employé
+        Dim noEmp As Integer
+        Dim noTel As String
+        Dim adr As String
+        Dim code As String
+        Dim embauche As Date
+        Dim jMal As Integer
+        Dim jFer As Integer
+        Dim jVac As Integer
+        Dim salaireHoraire As Decimal
+        Dim hrSem As Integer
+        Dim noHot As Integer
+        Dim NoCell As String
+
+        Dim var = From emp In bd.tblEmploye Where emp.noEmpl = usr.Id Select emp.noEmpl, emp.nomEmpl, emp.prenEmpl, emp.noTelEmpl, emp.adrEmpl, emp.tblProfession.nomProf, emp.dateEmbauche, emp.noCellEmpl, emp.noHotel, emp.hrSemaine, emp.salaire, emp.joursFerie, emp.joursMal, emp.joursVac
+
+
+        'Initialisation des variables
+        noEmp = var.First.noEmpl
+        noTel = var.First.noTelEmpl
+        NoCell = var.First.noCellEmpl
+        adr = var.First.adrEmpl
+        code = var.First.nomProf
+        embauche = var.First.dateEmbauche
+        noHot = var.First.noHotel
+        hrSem = var.First.hrSemaine
+        salaireHoraire = var.First.salaire
+        jVac = var.First.joursVac
+        jFer = var.First.joursFerie
+        jMal = var.First.joursMal
+
+        'Écriture des labels
+        lblNoEmp.Text = "Numéro d'employé : " + noEmp.ToString
+        lblNoTel.Text = "Numéro de téléphone : " + noTel
+        lblNoCell.Text = "Numéro de céllulaire : " + NoCell
+        lblAdr.Text = "Adresse : " + adr
+        lblProf.Text = "Profession : " + code
+        lbldateEmbauche.Text = "Vous avez été embauché le " + Format(embauche, "yyyy-MM-dd") + "."
+        lblNoHotel.Text = "Vous travaillez à l'hotel numéro " + noHot.ToString + "."
+        lblHrSemaine.Text = "Nombre d'heure cette semaine : " + hrSem.ToString
+        lblSalaire.Text = "Vous êtes payé " + salaireHoraire.ToString + "$ de l'heure."
+        lblJoursFerie.Text = "Nombre de jours fériés restants : " + jFer.ToString
+        lblJoursMal.Text = "Nombre de jours de maladies restants : " + jMal.ToString
+        lblJoursVac.Text = "Nombre de jours de vacances restants : " + jVac.ToString
 
     End Sub
 End Class
