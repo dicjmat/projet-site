@@ -23,15 +23,6 @@ Partial Public Class SiteMaster
     Protected WithEvents MainContent As Global.System.Web.UI.WebControls.ContentPlaceHolder
 
     '''<summary>
-    '''Contrôle panel.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents panel As Global.System.Web.UI.WebControls.Panel
-
-    '''<summary>
     '''Contrôle placefooter.
     '''</summary>
     '''<remarks>
