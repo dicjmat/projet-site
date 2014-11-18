@@ -12,4 +12,31 @@ Option Explicit On
 
 
 Partial Public Class _Default
+
+    '''<summary>
+    '''Contrôle SectionAccueil.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents SectionAccueil As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Contrôle lblIntro.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents lblIntro As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Contrôle communique.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents communique As Global.System.Web.UI.WebControls.Panel
 End Class
