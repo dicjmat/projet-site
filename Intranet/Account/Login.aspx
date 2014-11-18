@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Se connecter" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Login.aspx.vb" Inherits="Intranet.Login" Async="true" %>
+﻿<%@ Page Title="Se connecter" Language="vb" AutoEventWireup="false" MasterPageFile="~/Accueil.Master" CodeBehind="Login.aspx.vb" Inherits="Intranet.Login" Async="true" %>
 
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 
