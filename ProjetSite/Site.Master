@@ -85,14 +85,11 @@
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-       
-
-<%--            <div id="main">
-              <asp:Image runat="server" ImageUrl="~/Images/logo-hotel.png" id="banniere"/> 
-                </div>--%>
+      
 
             <asp:panel runat="server" id="panel">
-                 <footer>
+            <asp:ContentPlaceHolder runat="server" ID="placefooter"> </asp:ContentPlaceHolder>
+                <footer>
                 <!--<p>&copy; <%: DateTime.Now.Year %> - Mon ASP.NET Application</p>-->
                 <ul id="liste">
                      <li>Se connecter</li>
