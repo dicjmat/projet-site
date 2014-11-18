@@ -2,7 +2,7 @@
 
 <%@ Import Namespace="ProjetSite" %>
 <%@ Import Namespace="Microsoft.AspNet.Identity" %>
-<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="placefooter">
     <h2><%: Title %>.</h2>
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />
