@@ -49,10 +49,10 @@ Public Class _Default
         Dim jVac As Integer
         Dim salaireHoraire As Decimal
         Dim hrSem As Integer
-        Dim noHot As Integer
+        Dim nomHot As String
         Dim NoCell As String
 
-        Dim var = From emp In bd.tblEmploye Where emp.noEmpl = usr.Id Select emp.noEmpl, emp.nomEmpl, emp.prenEmpl, emp.noTelEmpl, emp.adrEmpl, emp.tblProfession.nomProf, emp.dateEmbauche, emp.noCellEmpl, emp.noHotel, emp.hrSemaine, emp.salaire, emp.joursFerie, emp.joursMal, emp.joursVac
+        Dim var = From emp In bd.tblEmploye Where emp.noEmpl = usr.Id Select emp.noEmpl, emp.nomEmpl, emp.prenEmpl, emp.noTelEmpl, emp.adrEmpl, emp.tblProfession.nomProf, emp.dateEmbauche, emp.noCellEmpl, emp.tblHotel.nomHotel, emp.hrSemaine, emp.salaire, emp.joursFerie, emp.joursMal, emp.joursVac
 
 
         'Initialisation des variables
@@ -62,7 +62,7 @@ Public Class _Default
         adr = var.First.adrEmpl
         code = var.First.nomProf
         embauche = var.First.dateEmbauche
-        noHot = var.First.noHotel
+        nomHot = var.First.nomHotel
         hrSem = var.First.hrSemaine
         salaireHoraire = var.First.salaire
         jVac = var.First.joursVac
@@ -76,7 +76,7 @@ Public Class _Default
         lblAdr.Text = "Adresse : " + adr
         lblProf.Text = "Profession : " + code
         lbldateEmbauche.Text = "Vous avez été embauché le " + Format(embauche, "yyyy-MM-dd") + "."
-        lblNoHotel.Text = "Vous travaillez à l'hotel numéro " + noHot.ToString + "."
+        lblNoHotel.Text = "Vous travaillez à l'hotel " + nomHot + "."
         lblHrSemaine.Text = "Nombre d'heure cette semaine : " + hrSem.ToString
         lblSalaire.Text = "Vous êtes payé " + salaireHoraire.ToString + "$ de l'heure."
         lblJoursFerie.Text = "Nombre de jours fériés restants : " + jFer.ToString
