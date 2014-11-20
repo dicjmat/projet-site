@@ -3,16 +3,16 @@
 <asp:Content runat="server" ID="BodyContent"  ContentPlaceHolderID="MainContent">
     <section id="creerHoraire" runat="server">
         <h3 id="titreHoraire">Horaire</h3>
-        <asp:Calendar runat="server" ID="calendar1"
+        <asp:Calendar runat="server" ID="calendar1" CssClass="calendrier"
             TodayDayStyle-BackColor="LightBlue"
             SelectedDayStyle-BackColor ="CadetBlue"
             TitleStyle-BackColor="CadetBlue"
             TitleStyle-Font-Size ="20"
             DayStyle-Font-Size ="15"
-            DayStyle-Height ="100"
-            DayStyle-Width ="100"
+            DayStyle-Height ="80"
+            DayStyle-Width ="80"
             OtherMonthDayStyle-ForeColor ="Gray"          
             ></asp:Calendar>
-        <asp:Label ID="lblHoraire" runat="server" Text=""></asp:Label>
+        <asp:Label ID="lblHoraire" runat="server" Text="" CssClass="horaire"></asp:Label>
     </section>
 </asp:Content>
