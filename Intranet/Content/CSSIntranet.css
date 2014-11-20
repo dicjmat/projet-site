@@ -1,43 +1,15 @@
-﻿/*CSS de la page horaire*/
-
-#titreHoraire{
-
+﻿/*CSS de l'accueil*/
+.communique {
+    position:absolute;
+    top:15%;
+    right:0;
+    width:45%;
 }
 
-#lblHoraire{
-
+.fiche{
+    width:55%;
 }
 
-/*CSS de la fiche d'employé*/
-
-#titreFiche{
-
-}
-
-#lblIntroFiche{
-
-}
-
-#lblNoEmp{
-
-}
-
-#lblNoTel{
-
-}
-
-#lblAdr{
-
-}
-
-#lblCodeProf{
-
-}
-
-#lblDateEmbauche{
-    
-}
-
-#communique legend{
+.titre{
     
 }

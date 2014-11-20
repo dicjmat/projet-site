@@ -1,16 +1,16 @@
 ﻿<%@ Page Title="Accueil" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.vb" Inherits="Intranet._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
     <section id="SectionAccueil" runat="server">
-        <asp:label ID="titreAccueil" runat="server" Font-Size="30">Accueil</asp:label>
+        <asp:label ID="titreAccueil" CssClass="titre" runat="server" Font-Size="30">Accueil</asp:label>
 
     <div>
-        <asp:Panel ID="communique" runat="server" GroupingText="<b>Communiqué</b>" Font-Size="15"></asp:Panel>
+        <asp:Panel class="communique" ID="communique" runat="server" GroupingText="<b>Communiqué</b>" Font-Size="15"></asp:Panel>
     </div>
+
     </section>
 
-    <section id="FicheEmpl" runat="server">
+    <section id="FicheEmpl" runat="server" class="fiche">
         <asp:label ID="titreFiche" runat="server" Font-Size="15"><b><br/>Fiche d'employé</b></asp:label>
     <div>
 
