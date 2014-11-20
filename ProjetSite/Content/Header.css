@@ -8,12 +8,6 @@
     width:100%;
 }
 
-#liste {
-    color: black;
-    position:absolute;
-}
-
-
 #panel{
     background-color:white;
     border-style:double;
@@ -29,4 +23,12 @@
     /*margin-left:4%;*/
     margin-top:3%;
     min-height:600px;
+}
+
+#footer{
+    border-style:solid;
+    background-color:peachpuff;
+    position:absolute;
+    width:77%;
+    margin-top:5px;
 }
