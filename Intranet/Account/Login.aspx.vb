@@ -12,10 +12,10 @@ Partial Public Class Login
         'RegisterHyperLink.NavigateUrl = "Register"
         ' Activez ceci une fois que vous avez activé la confirmation du compte pour la fonctionnalité de réinitialisation du mot de passe
         ' ForgotPasswordHyperLink.NavigateUrl = "Forgot"
-        OpenAuthLogin.ReturnUrl = Request.QueryString("ReturnUrl")
+        'OpenAuthLogin.ReturnUrl = Request.QueryString("ReturnUrl")
         Dim returnUrl = HttpUtility.UrlEncode(Request.QueryString("ReturnUrl"))
         If Not [String].IsNullOrEmpty(returnUrl) Then
-            RegisterHyperLink.NavigateUrl += "?ReturnUrl=" & returnUrl
+            'RegisterHyperLink.NavigateUrl += "?ReturnUrl=" & returnUrl
         End If
     End Sub
 
