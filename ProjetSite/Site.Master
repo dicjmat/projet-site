@@ -86,11 +86,19 @@
 
             <div  id="panel">
             <asp:ContentPlaceHolder runat="server" ID="placefooter"/>
-                <footer>
 
-            </footer>
             </div>
 
+            <footer>
+               <div id="footer">
+                   <ul id="listefooter">
+                       <li>Accueil</li>
+                       <li>À propos</li>
+                       <li>Pour nous joindre</li>
+                   </ul>
+                   <img src="~/Images/logo-hotel.png"/>
+               </div>
+            </footer>
 
         </div>
     </form>
