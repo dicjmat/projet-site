@@ -57,13 +57,4 @@ Partial Public Class Login
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents RememberMe As Global.System.Web.UI.WebControls.CheckBox
-
-    '''<summary>
-    '''Contrôle OpenAuthLogin.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents OpenAuthLogin As Global.Intranet.OpenAuthProviders
 End Class
