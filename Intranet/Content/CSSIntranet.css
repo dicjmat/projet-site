@@ -1,7 +1,7 @@
 ﻿/*CSS de l'accueil*/
 .communique {
     position:absolute;
-    top:15%;
+    top:18%;
     right:0;
     width:45%;
 }
@@ -10,6 +10,10 @@
     width:55%;
 }
 
-.titre{
-    
+.horaire{
+    position:absolute;
+    top:15%;
+    width:21%;
+    right:30%;
+    font-size:large;
 }
