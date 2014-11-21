@@ -12,7 +12,15 @@
         nomhotel.DataValueField = "noHotel"
 
         nomhotel.DataBind()
+        btnValid.Enabled = False
 
+    End Sub
+
+    Protected Sub btnValid_Click(sender As Object, e As EventArgs) Handles btnValid.Click
+
+    End Sub
+
+    Protected Sub Unnamed1_SelectionChanged(sender As Object, e As EventArgs)
 
     End Sub
 End Class
