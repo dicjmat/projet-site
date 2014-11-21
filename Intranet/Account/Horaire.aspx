@@ -11,7 +11,8 @@
             DayStyle-Font-Size ="15"
             DayStyle-Height ="80"
             DayStyle-Width ="80"
-            OtherMonthDayStyle-ForeColor ="Gray"          
+            OtherMonthDayStyle-ForeColor ="Gray"
+            DayStyle-BackColor ="White"         
             ></asp:Calendar>
         <asp:Label ID="lblHoraire" runat="server" Text="" CssClass="horaire"></asp:Label>
     </section>
