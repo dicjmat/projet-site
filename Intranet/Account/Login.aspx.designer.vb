@@ -56,14 +56,5 @@ Partial Public Class Login
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents ForgotPasswordHyperLink As Global.System.Web.UI.WebControls.HyperLink
-
-    '''<summary>
-    '''Contrôle RememberMe.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
     Protected WithEvents RememberMe As Global.System.Web.UI.WebControls.CheckBox
 End Class

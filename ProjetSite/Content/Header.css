@@ -35,6 +35,20 @@
 
 }
 
-/*#listefooter{
+#verif{
+    background-color:black;
+    height:40%;
+    width:60%;
+    padding-top:1%;
+    padding-left:1%;
+    padding-bottom:1%;
+    border-style:solid;
+}
+
+p{
     color:grey;
-}*/
+}
+
+#btnValid{
+
+}

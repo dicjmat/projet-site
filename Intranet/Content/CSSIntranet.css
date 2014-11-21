@@ -1,7 +1,7 @@
 ﻿/*CSS de l'accueil*/
 .communique {
     position:absolute;
-    top:18%;
+    top:25%;
     right:0;
     width:45%;
 }
@@ -15,5 +15,15 @@
     top:15%;
     width:21%;
     right:30%;
+    font-size:large;
+}
+
+.oublie{
+    position:absolute;
+    border:dashed;
+    border-color:black;
+}
+
+fieldset{
     font-size:large;
 }
