@@ -24,6 +24,8 @@
                 <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Password"
                     CssClass="text-danger" ErrorMessage="Le champ du mot de passe est obligatoire." />
+                <asp:RegularExpressionValidator ID="Regex1" runat="server" ControlToValidate="Password"
+    ValidationExpression="^(?=(.*[A-Z]))(?=(.*[0-9]))(?!.*\|)(?=[a-zA-Z0-9]{6,})" ErrorMessage="Le mot de passe doit contenir: Minimum 8 caractères et au moins un chiffre et un majuscule" ForeColor="Red" />
             </div>
         </div>
         <div class="form-group">

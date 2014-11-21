@@ -41,6 +41,15 @@ Partial Public Class ResetPassword
     Protected WithEvents Password As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Contrôle Regex1.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents Regex1 As Global.System.Web.UI.WebControls.RegularExpressionValidator
+
+    '''<summary>
     '''Contrôle ConfirmPassword.
     '''</summary>
     '''<remarks>
