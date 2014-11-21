@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Réinitialiser le mot de passe" Language="vb" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ResetPassword.aspx.vb" Inherits="Intranet.ResetPassword" Async="true" %>
+﻿<%@ Page Title="Réinitialiser le mot de passe" Language="vb" MasterPageFile="~/Accueil.Master" AutoEventWireup="true" CodeBehind="ResetPassword.aspx.vb" Inherits="Intranet.ResetPassword" Async="true" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <h2><%: Title %>.</h2>
