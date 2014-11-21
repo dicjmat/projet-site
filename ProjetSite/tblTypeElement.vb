@@ -10,8 +10,10 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class sp_helpdiagramdefinition_Result
-    Public Property version As Nullable(Of Integer)
-    Public Property definition As Byte()
+Partial Public Class tblTypeElement
+    Public Property codeTypeElement As String
+    Public Property nomTypeElement As String
+
+    Public Overridable Property tblElementNote As ICollection(Of tblElementNote) = New HashSet(Of tblElementNote)
 
 End Class

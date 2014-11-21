@@ -14,6 +14,7 @@ Partial Public Class tblLogin
     Public Property utilisateur As String
     Public Property mdp As String
     Public Property statut As String
+    Public Property premiereConnexion As Boolean
     Public Property noEmpl As Short
 
     Public Overridable Property tblEmploye As tblEmploye

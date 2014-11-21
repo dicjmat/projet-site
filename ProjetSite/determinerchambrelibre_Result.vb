@@ -10,13 +10,8 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class tblLogin
-    Public Property utilisateur As String
-    Public Property mdp As String
-    Public Property statut As String
-    Public Property premiereConnexion As Boolean
-    Public Property noEmpl As Short
-
-    Public Overridable Property tblEmploye As tblEmploye
+Partial Public Class determinerchambrelibre_Result
+    Public Property noSalle As Short
+    Public Property nomTypeSalle As String
 
 End Class

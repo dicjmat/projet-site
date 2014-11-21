@@ -10,11 +10,12 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class sp_helpdiagrams_Result
-    Public Property Database As String
-    Public Property Name As String
-    Public Property ID As Integer
-    Public Property Owner As String
-    Public Property OwnerID As Integer
+Partial Public Class tblCompte
+    Public Property email As String
+    Public Property mdp As String
+    Public Property premiereConnexion As Boolean
+    Public Property noClient As Integer
+
+    Public Overridable Property tblClient As tblClient
 
 End Class

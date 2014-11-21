@@ -39,6 +39,8 @@ Public Class Horaire
     Private Sub calendar1_DayRender(ByVal sender As Object, ByVal e As DayRenderEventArgs) Handles calendar1.DayRender
         Dim res = From el In bd.tblHoraire Where el.noEmpl = usr.Id Select el.dateHoraire
 
+        calendar1.TodayDayStyle.BackColor = Drawing.Color.CadetBlue
+
         If res.ToList IsNot Nothing Then
             For Each el In res
                 If e.Day.Date = el Then
