@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Réinitialiser le mot de passe" Language="vb" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ResetPassword.aspx.vb" Inherits="Intranet.ResetPassword" Async="true" %>
+﻿<%@ Page Title="Réinitialiser le mot de passe" Language="vb" MasterPageFile="~/Accueil.Master" AutoEventWireup="true" CodeBehind="ResetPassword.aspx.vb" Inherits="Intranet.ResetPassword" Async="true" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <h2><%: Title %>.</h2>
@@ -13,7 +13,7 @@
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Messagerie</asp:Label>
             <div class="col-md-10">
-                <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" />
+                <asp:TextBox runat="server" ID="Email" CssClass="form-control" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
                     CssClass="text-danger" ErrorMessage="Le champ d’adresse de messagerie est obligatoire." />
             </div>

@@ -18,7 +18,7 @@ Partial Public Class ForgotPassword
             ' Valider le mot de passe de l'utilisateur
             Dim manager = Context.GetOwinContext().GetUserManager(Of ApplicationUserManager)()
             Dim user As ApplicationUser = manager.FindByName(Email.Text)
-            If user Is Nothing OrElse Not manager.IsEmailConfirmed(user.Id) Then
+            If user Is Nothing Then
                 FailureText.Text = "L'utilisateur n'existe pas ou n'est pas confirmé."
                 ErrorMessage.Visible = True
                 Return

@@ -10,6 +10,17 @@ Imports System.Security.Claims
 Public Class ApplicationUser
     Inherits IdentityUser
 
+    Private _premiereCon As Boolean
+    Public Property premiereConnexion() As Boolean
+        Get
+            Return _premiereCon
+        End Get
+        Set(ByVal value As Boolean)
+            _premiereCon = value
+        End Set
+    End Property
+
+
     Private _adresse As String
     Public Property adresse() As String
         Get

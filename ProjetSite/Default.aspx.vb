@@ -10,9 +10,17 @@
         nomhotel.DataSource = res.ToList
         nomhotel.DataTextField = "nomHotel"
         nomhotel.DataValueField = "noHotel"
-
         nomhotel.DataBind()
 
+        btnValid.Enabled = False
 
+    End Sub
+
+    Protected Sub Unnamed1_SelectionChanged(sender As Object, e As EventArgs)
+        Dim datef As Date
+        Dim dated As Date
+
+        datef = dpFin.SelectedDate
+        dated = dpDebut.SelectedDate
     End Sub
 End Class

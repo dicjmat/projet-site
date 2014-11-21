@@ -50,7 +50,7 @@ Partial Public Class Login
     Protected WithEvents Password As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contrôle RememberMe.
+    '''Contrôle ForgotPasswordHyperLink.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
