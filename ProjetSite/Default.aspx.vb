@@ -16,7 +16,8 @@
 
     End Sub
 
-    Protected Sub Unnamed1_SelectionChanged(sender As Object, e As EventArgs)
+
+    Protected Sub btnValid_Click(sender As Object, e As EventArgs) Handles btnValid.Click
         Dim datef As Date
         Dim dated As Date
 

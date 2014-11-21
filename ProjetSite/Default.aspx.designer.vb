@@ -14,6 +14,24 @@ Option Explicit On
 Partial Public Class _Default
 
     '''<summary>
+    '''Contrôle dpDebut.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents dpDebut As Global.System.Web.UI.WebControls.Calendar
+
+    '''<summary>
+    '''Contrôle dpFin.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents dpFin As Global.System.Web.UI.WebControls.Calendar
+
+    '''<summary>
     '''Contrôle nomhotel.
     '''</summary>
     '''<remarks>
