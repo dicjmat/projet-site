@@ -2,8 +2,8 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="placefooter" runat="server">
         <div id="verif">
-        <p id="lbldeb">Date de début: <asp:Calendar runat="server" OnDayRender="DayRenderEventHandler" OnSelectionChanged="Unnamed1_SelectionChanged" /></p>
-        <p>Date de fin: <asp:Calendar runat="server" OnDayRender="DayRenderEventHandler" /></p>
+        <p>Date de début: <asp:Calendar runat="server" <%--OnDayRender="DayRenderEventHandler"--%> ID="dpDebut" /></p>
+        <p>Date de fin: <asp:Calendar runat="server" <%--OnDayRender="DayRenderEventHandler"--%> ID="dpFin" /></p>
         <p>Hotel: <select id="nomhotel" runat="server"/></p>
 
         <asp:Button id="btnValid" runat="server" Text="Vérification"/>
