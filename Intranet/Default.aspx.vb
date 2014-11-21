@@ -70,18 +70,18 @@ Public Class _Default
         jMal = var.First.joursMal
 
         'Écriture des labels
-        lblNoEmp.Text = "Numéro d'employé : " + noEmp.ToString
-        lblNoTel.Text = "Numéro de téléphone : " + noTel
-        lblNoCell.Text = "Numéro de céllulaire : " + NoCell
-        lblAdr.Text = "Adresse : " + adr
-        lblProf.Text = "Profession : " + code
-        lbldateEmbauche.Text = "Vous avez été embauché le " + Format(embauche, "yyyy-MM-dd") + "."
-        lblNoHotel.Text = "Vous travaillez à l'hotel " + nomHot + "."
-        lblHrSemaine.Text = "Nombre d'heure cette semaine : " + hrSem.ToString
-        lblSalaire.Text = "Vous êtes payé " + salaireHoraire.ToString + "$ de l'heure."
-        lblJoursFerie.Text = "Nombre de jours fériés restants : " + jFer.ToString
-        lblJoursMal.Text = "Nombre de jours de maladies restants : " + jMal.ToString
-        lblJoursVac.Text = "Nombre de jours de vacances restants : " + jVac.ToString
+        lblNoEmp.Text = noEmp.ToString
+        lblNoTel.Text = noTel
+        lblNoCell.Text = NoCell
+        lblAdr.Text = adr
+        lblProf.Text = code
+        lbldateEmbauche.Text = Format(embauche, "yyyy-MM-dd")
+        lblNoHotel.Text = nomHot + "."
+        lblHrSemaine.Text = hrSem.ToString
+        lblSalaire.Text = salaireHoraire.ToString + "$ de l'heure."
+        lblJoursFerie.Text = jFer.ToString
+        lblJoursMal.Text = jMal.ToString
+        lblJoursVac.Text = jVac.ToString
 
     End Sub
 End Class
