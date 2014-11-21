@@ -8,10 +8,12 @@ Imports Owin
 
 Partial Public Class Login
     Inherits Page
+
+    Dim bd As New P2014_Equipe2_GestionHôtelièreEntities
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
         'RegisterHyperLink.NavigateUrl = "Register"
         ' Activez ceci une fois que vous avez activé la confirmation du compte pour la fonctionnalité de réinitialisation du mot de passe
-        ' ForgotPasswordHyperLink.NavigateUrl = "Forgot"
+        ForgotPasswordHyperLink.NavigateUrl = "Forgot"
         'OpenAuthLogin.ReturnUrl = Request.QueryString("ReturnUrl")
         Dim returnUrl = HttpUtility.UrlEncode(Request.QueryString("ReturnUrl"))
         If Not [String].IsNullOrEmpty(returnUrl) Then
@@ -25,8 +27,15 @@ Partial Public Class Login
             Dim manager = Context.GetOwinContext().GetUserManager(Of ApplicationUserManager)()
             Dim user As ApplicationUser = manager.Find(Email.Text, Password.Text)
             If user IsNot Nothing Then
-                IdentityHelper.SignIn(manager, user, RememberMe.Checked)
-                IdentityHelper.RedirectToReturnUrl(Request.QueryString("ReturnUrl"), Response)
+                If user.Then Then
+
+                    Response.Redirect("~/Account/ResetPassword")
+                Else
+                    IdentityHelper.SignIn(manager, user, RememberMe.Checked)
+                    IdentityHelper.RedirectToReturnUrl(Request.QueryString("ReturnUrl"), Response)
+                End If
+
+
             Else
                 FailureText.Text = "Nom d'utilisateur ou mot de passe incorrect."
                 ErrorMessage.Visible = True

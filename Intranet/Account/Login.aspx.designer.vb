@@ -50,6 +50,15 @@ Partial Public Class Login
     Protected WithEvents Password As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Contrôle ForgotPasswordHyperLink.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents ForgotPasswordHyperLink As Global.System.Web.UI.WebControls.HyperLink
+
+    '''<summary>
     '''Contrôle RememberMe.
     '''</summary>
     '''<remarks>
@@ -57,13 +66,4 @@ Partial Public Class Login
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents RememberMe As Global.System.Web.UI.WebControls.CheckBox
-
-    '''<summary>
-    '''Contrôle OpenAuthLogin.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents OpenAuthLogin As Global.Intranet.OpenAuthProviders
 End Class

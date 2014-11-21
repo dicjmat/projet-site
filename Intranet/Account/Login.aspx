@@ -28,6 +28,7 @@
                         <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Mot de passe</asp:Label>
                         <div class="col-md-10">
                             <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" />
+                            <div id="ForgotPasswordLink"><asp:HyperLink ID="ForgotPasswordHyperLink" runat="server" NavigateUrl="#">Forgot Password</asp:HyperLink></div>        
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" CssClass="text-danger" ErrorMessage="Le champ mot de passe est requis." />
                         </div>
                     </div>
