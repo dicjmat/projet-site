@@ -10,11 +10,10 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class sp_helpdiagrams_Result
-    Public Property Database As String
-    Public Property Name As String
-    Public Property ID As Integer
-    Public Property Owner As String
-    Public Property OwnerID As Integer
+Partial Public Class tblPays
+    Public Property codePays As String
+    Public Property nomPays As String
+
+    Public Overridable Property tblProvince As ICollection(Of tblProvince) = New HashSet(Of tblProvince)
 
 End Class
