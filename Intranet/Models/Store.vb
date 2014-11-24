@@ -1,5 +1,6 @@
 ﻿Imports Microsoft.AspNet.Identity
 Imports System.Threading.Tasks
+Imports System.Web.Security.Roles
 Public Class MonStore(Of TUser As ApplicationUser)
     Implements IUserStore(Of ApplicationUser)
     Implements IUserPasswordStore(Of ApplicationUser)
@@ -63,6 +64,9 @@ Public Class MonStore(Of TUser As ApplicationUser)
         usr.telephoneSup = res.First.noCellEmpl
         usr.premiereConnexion = res.First.premiereConnexion
         usr.typeEmploye = res.First.statut
+        If usr.typeEmploye = "ADMI" Then
+            AddUserToRole(usr.UserName, "Admin")
+        End If
         Return Task.FromResult(usr)
     End Function
 
