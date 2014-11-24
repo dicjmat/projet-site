@@ -20,15 +20,15 @@
                         <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Identifiant</asp:Label>
                         <div class="col-md-10">
                             <asp:TextBox runat="server" ID="Email" CssClass="form-control"/>
-<%--                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
-                                CssClass="text-danger" ErrorMessage="Le champ d’adresse de messagerie est obligatoire." />--%>
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
+                                CssClass="text-danger" ErrorMessage="Le champ d’utilisateur est obligatoire." />
                         </div>
                     </div>
                     <div class="form-group">
                         <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Mot de passe</asp:Label>
                         <div class="col-md-10">
                             <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" />
-                            <div id="ForgotPasswordLink"><asp:HyperLink ID="ForgotPasswordHyperLink" runat="server" NavigateUrl="#">Forgot Password</asp:HyperLink></div>        
+                            <div id="ForgotPasswordLink"><%--<asp:HyperLink ID="ForgotPasswordHyperLink" runat="server" NavigateUrl="#">Forgot Password</asp:HyperLink>--%></div>        
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" CssClass="text-danger" ErrorMessage="Le champ mot de passe est requis." />
                         </div>
                     </div>
@@ -54,10 +54,10 @@
             </section>
         </div>
 
-        <div class="oublie"><br/>
+<%--        <div class="oublie"><br/>
             <h3 runat="server" class="titreOublie" Font-Size="15"><b>Mot de passe oublié</b></h3>
             <asp:Label runat="server">Si vous avez oublié votre identifiant ou votre mot de passe, veuillez contacter l'administrateur de votre hotel.</asp:Label>
-        </div>
+        </div>--%>
 
 <%--        <div class="col-md-4">
             <section id="socialLoginForm">

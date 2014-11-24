@@ -60,6 +60,16 @@
                         <li><a runat="server" href="~/Account/Horaire">Horaire</a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <RoleGroups>
+                            <asp:RoleGroup Roles="Admin">
+                                <ContentTemplate>
+                                    <ul class="nav navbar-nav">
+                                        <li><a runat="server" href="~/Account/Communique">Communiqué</a></li>
+
+                                    </ul>
+                                </ContentTemplate>
+                            </asp:RoleGroup>
+                        </RoleGroups>
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
  <%--                               <li><a runat="server" href="~/Account/Register">Inscrire</a></li>--%>
@@ -74,6 +84,7 @@
                                 </li>
                             </ul>
                         </LoggedInTemplate>
+                        
                     </asp:LoginView>
                 </div>
             </div>

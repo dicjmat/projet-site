@@ -82,6 +82,5 @@ Public Class _Default
         lblJoursFerie.Text = jFer.ToString
         lblJoursMal.Text = jMal.ToString
         lblJoursVac.Text = jVac.ToString
-
     End Sub
 End Class

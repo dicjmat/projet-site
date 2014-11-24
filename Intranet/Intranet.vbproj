@@ -183,7 +183,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Account\ResetPassword.aspx" />
-    <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Account\Communique.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -330,13 +330,6 @@
       <DependentUpon>ResetPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.vb">
-      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\ResetPasswordConfirmation.aspx.vb">
-      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\IdentityConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
@@ -348,6 +341,13 @@
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="App_Start\Startup.Auth.vb" />
+    <Compile Include="Account\Communique.aspx.designer.vb">
+      <DependentUpon>Communique.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Communique.aspx.vb">
+      <DependentUpon>Communique.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Contact.aspx.designer.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>

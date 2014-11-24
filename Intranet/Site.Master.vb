@@ -1,4 +1,10 @@
-﻿Public Class SiteMaster
+﻿Imports System
+Imports System.Collections.Generic
+Imports Microsoft.AspNet.Identity
+Imports Microsoft.AspNet.Identity.EntityFramework
+Imports Microsoft.AspNet.Identity.Owin
+Imports Owin
+Public Class SiteMaster
     Inherits MasterPage
     Private Const AntiXsrfTokenKey As String = "__AntiXsrfToken"
     Private Const AntiXsrfUserNameKey As String = "__AntiXsrfUserName"
@@ -44,11 +50,14 @@
     End Sub
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Dim bd As P2014_Equipe2_GestionHôtelièreEntities
+
+        bd = New P2014_Equipe2_GestionHôtelièreEntities
+
 
     End Sub
 
     Protected Sub Unnamed_LoggingOut(sender As Object, e As LoginCancelEventArgs)
         Context.GetOwinContext().Authentication.SignOut()
     End Sub
-
 End Class

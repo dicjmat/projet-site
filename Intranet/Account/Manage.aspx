@@ -136,6 +136,8 @@
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="NewPassword"
                                     CssClass="text-danger" ErrorMessage="Le nouveau mot de passe est requis."
                                     ValidationGroup="ChangePassword" />
+                                <asp:RegularExpressionValidator ID="Regex1" runat="server" ControlToValidate="NewPassword"
+    ValidationExpression="^(?=(.*[A-Z]))(?=(.*[0-9]))(?!.*\|)(?=[a-zA-Z0-9]{6,})" ErrorMessage="Le mot de passe doit contenir: Minimum 8 caractères et au moins un chiffre et un majuscule" ForeColor="Red" />
                             </div>
                         </div>
                         <div class="form-group">
