@@ -65,9 +65,9 @@ Public Class MonStore(Of TUser As ApplicationUser)
         usr.telephone = res.First.noTelEmpl
         usr.telephoneSup = res.First.noCellEmpl
         usr.premiereConnexion = res.First.premiereConnexion
-        'If res.First.statut = "ADMI" Then
-        '    Roles.AddUserToRole(usr.UserName, "Admin")
-        'End If
+        If res.First.statut = "ADMI" Then
+            AddToRoleAsync(usr, "Admin")
+        End If
         Return Task.FromResult(usr)
     End Function
 
@@ -88,9 +88,9 @@ Public Class MonStore(Of TUser As ApplicationUser)
         usr.telephone = res.First.noTelEmpl
         usr.telephoneSup = res.First.noCellEmpl
         usr.premiereConnexion = res.First.premiereConnexion
-        'If res.First.statut = "ADMI" Then
-        '    Roles.AddUserToRole(usr.UserName, "Admin")
-        'End If
+        If res.First.statut = "ADMI" Then
+            AddToRoleAsync(usr, "Admin")
+        End If
         Return Task.FromResult(usr)
     End Function
 
