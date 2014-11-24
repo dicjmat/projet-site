@@ -14,7 +14,7 @@ Public Class MonStore(Of TUser As ApplicationUser)
     Sub New(applicationDbContext As ApplicationDbContext)
         ' TODO: Complete member initialization 
         _applicationDbContext = applicationDbContext
-        Roles.CreateRole("Admin")
+        'Roles.CreateRole("Admin")
     End Sub
 
     Public Function AddLoginAsync(user As ApplicationUser, login As UserLoginInfo) As Task Implements IUserLoginStore(Of ApplicationUser, String).AddLoginAsync
@@ -65,9 +65,9 @@ Public Class MonStore(Of TUser As ApplicationUser)
         usr.telephone = res.First.noTelEmpl
         usr.telephoneSup = res.First.noCellEmpl
         usr.premiereConnexion = res.First.premiereConnexion
-        If res.First.statut = "ADMI" Then
-            Roles.AddUserToRole(usr.UserName, "Admin")
-        End If
+        'If res.First.statut = "ADMI" Then
+        '    Roles.AddUserToRole(usr.UserName, "Admin")
+        'End If
         Return Task.FromResult(usr)
     End Function
 
@@ -88,9 +88,9 @@ Public Class MonStore(Of TUser As ApplicationUser)
         usr.telephone = res.First.noTelEmpl
         usr.telephoneSup = res.First.noCellEmpl
         usr.premiereConnexion = res.First.premiereConnexion
-        If res.First.statut = "ADMI" Then
-            Roles.AddUserToRole(usr.UserName, "Admin")
-        End If
+        'If res.First.statut = "ADMI" Then
+        '    Roles.AddUserToRole(usr.UserName, "Admin")
+        'End If
         Return Task.FromResult(usr)
     End Function
 
