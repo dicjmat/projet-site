@@ -18,11 +18,12 @@ Partial Public Class ResetPassword
         'Dim code As String = IdentityHelper.GetCodeFromRequest(Request)
         'If code IsNot Nothing Then
         Dim manager = Context.GetOwinContext().GetUserManager(Of ApplicationUserManager)()
-        Dim user = manager.FindByName(Email.Text)
+        Dim user = manager.FindByIdAsync(Context.User.Identity.GetUserId).Result
         If user Is Nothing Then
             ErrorMessage.Text = "Aucun utilisateur trouvé"
             Return
         End If
+
         Dim result = manager.ChangePasswordAsync(user.Id, user.PasswordHash, Password.Text).Result
         If Not result.Succeeded Then
             user.premiereConnexion = False

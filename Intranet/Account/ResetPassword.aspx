@@ -11,13 +11,13 @@
         <hr />
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
         <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Utilisateur</asp:Label>
+<%--            <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Utilisateur</asp:Label>
             <div class="col-md-10">
                 <asp:TextBox runat="server" ID="Email" CssClass="form-control" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
                     CssClass="text-danger" ErrorMessage="Le champ d’adresse de messagerie est obligatoire." />
             </div>
-        </div>
+        </div>--%>
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Mot de passe</asp:Label>
             <div class="col-md-10">
@@ -25,7 +25,7 @@
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Password"
                     CssClass="text-danger" ErrorMessage="Le champ du mot de passe est obligatoire." />
                 <asp:RegularExpressionValidator ID="Regex1" runat="server" ControlToValidate="Password"
-    ValidationExpression="^(?=(.*[A-Z]))(?=(.*[0-9]))(?!.*\|)(?=[a-zA-Z0-9]{6,})" ErrorMessage="Le mot de passe doit contenir: Minimum 8 caractères et au moins un chiffre et un majuscule" ForeColor="Red" />
+    ValidationExpression="^(?=(.*[A-Z]))(?=(.*[0-9]))(?!.*\|)(?=[a-zA-Z0-9]{6,})" ErrorMessage="Le mot de passe doit contenir: Minimum 6 caractères et au moins un chiffre et un majuscule" ForeColor="Red" />
             </div>
         </div>
         <div class="form-group">
