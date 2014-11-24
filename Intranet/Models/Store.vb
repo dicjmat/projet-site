@@ -1,6 +1,6 @@
 ﻿Imports Microsoft.AspNet.Identity
 Imports System.Threading.Tasks
-Imports System.Web.Security.Roles
+Imports System.Web.Security
 Public Class MonStore(Of TUser As ApplicationUser)
     Implements IUserStore(Of ApplicationUser)
     Implements IUserPasswordStore(Of ApplicationUser)
@@ -14,7 +14,7 @@ Public Class MonStore(Of TUser As ApplicationUser)
     Sub New(applicationDbContext As ApplicationDbContext)
         ' TODO: Complete member initialization 
         _applicationDbContext = applicationDbContext
-        CreateRole("Admin")
+        Roles.CreateRole("Admin")
     End Sub
 
     Public Function AddLoginAsync(user As ApplicationUser, login As UserLoginInfo) As Task Implements IUserLoginStore(Of ApplicationUser, String).AddLoginAsync
@@ -66,7 +66,7 @@ Public Class MonStore(Of TUser As ApplicationUser)
         usr.telephoneSup = res.First.noCellEmpl
         usr.premiereConnexion = res.First.premiereConnexion
         If res.First.statut = "ADMI" Then
-            AddUserToRole(usr.UserName, "Admin")
+            Roles.AddUserToRole(usr.UserName, "Admin")
         End If
         Return Task.FromResult(usr)
     End Function
@@ -89,7 +89,7 @@ Public Class MonStore(Of TUser As ApplicationUser)
         usr.telephoneSup = res.First.noCellEmpl
         usr.premiereConnexion = res.First.premiereConnexion
         If res.First.statut = "ADMI" Then
-            AddUserToRole(usr.UserName, "Admin")
+            Roles.AddUserToRole(usr.UserName, "Admin")
         End If
         Return Task.FromResult(usr)
     End Function
