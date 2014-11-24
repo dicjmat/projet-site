@@ -5,6 +5,7 @@ Public Class MonStore(Of TUser As ApplicationUser)
     Implements IUserStore(Of ApplicationUser)
     Implements IUserPasswordStore(Of ApplicationUser)
     Implements IUserLoginStore(Of ApplicationUser)
+    Implements IUserRoleStore(Of ApplicationUser)
 
     Private bd As New P2014_Equipe2_GestionHôtelièreEntities
     Private _applicationDbContext As ApplicationDbContext
@@ -63,8 +64,7 @@ Public Class MonStore(Of TUser As ApplicationUser)
         usr.telephone = res.First.noTelEmpl
         usr.telephoneSup = res.First.noCellEmpl
         usr.premiereConnexion = res.First.premiereConnexion
-        usr.typeEmploye = res.First.statut
-        If usr.typeEmploye = "ADMI" Then
+        If res.First.statut = "ADMI" Then
             AddUserToRole(usr.UserName, "Admin")
         End If
         Return Task.FromResult(usr)
@@ -87,7 +87,9 @@ Public Class MonStore(Of TUser As ApplicationUser)
         usr.telephone = res.First.noTelEmpl
         usr.telephoneSup = res.First.noCellEmpl
         usr.premiereConnexion = res.First.premiereConnexion
-        usr.typeEmploye = res.First.statut
+        If res.First.statut = "ADMI" Then
+            AddUserToRole(usr.UserName, "Admin")
+        End If
         Return Task.FromResult(usr)
     End Function
 
@@ -161,4 +163,23 @@ Public Class MonStore(Of TUser As ApplicationUser)
     End Function
 
 #End Region
+
+    Public Function AddToRoleAsync(user As ApplicationUser, roleName As String) As Task Implements IUserRoleStore(Of ApplicationUser, String).AddToRoleAsync
+        user.typeEmploye.Add(roleName)
+        Return Task.FromResult(True)
+    End Function
+
+    Public Function GetRolesAsync(user As ApplicationUser) As Task(Of IList(Of String)) Implements IUserRoleStore(Of ApplicationUser, String).GetRolesAsync
+        Dim listeRole As List(Of String)
+        listeRole = user.typeEmploye
+        Task.FromResult(DirectCast(listeRole, IList(Of String)))
+    End Function
+
+    Public Function IsInRoleAsync(user As ApplicationUser, roleName As String) As Task(Of Boolean) Implements IUserRoleStore(Of ApplicationUser, String).IsInRoleAsync
+
+    End Function
+
+    Public Function RemoveFromRoleAsync(user As ApplicationUser, roleName As String) As Task Implements IUserRoleStore(Of ApplicationUser, String).RemoveFromRoleAsync
+
+    End Function
 End Class

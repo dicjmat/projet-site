@@ -10,12 +10,12 @@ Imports System.Security.Claims
 Public Class ApplicationUser
     Inherits IdentityUser
 
-    Private _typeEmploye As String
-    Public Property typeEmploye() As String
+    Private _typeEmploye As List(Of String)
+    Public Property typeEmploye() As List(Of String)
         Get
             Return _typeEmploye
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As List(Of String))
             _typeEmploye = value
         End Set
     End Property
