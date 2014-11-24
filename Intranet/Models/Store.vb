@@ -14,6 +14,7 @@ Public Class MonStore(Of TUser As ApplicationUser)
     Sub New(applicationDbContext As ApplicationDbContext)
         ' TODO: Complete member initialization 
         _applicationDbContext = applicationDbContext
+        CreateRole("Admin")
     End Sub
 
     Public Function AddLoginAsync(user As ApplicationUser, login As UserLoginInfo) As Task Implements IUserLoginStore(Of ApplicationUser, String).AddLoginAsync
