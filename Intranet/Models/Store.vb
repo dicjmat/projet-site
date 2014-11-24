@@ -50,7 +50,7 @@ Public Class MonStore(Of TUser As ApplicationUser)
                   Join em In bd.tblEmploye
                   On em.noEmpl Equals el.noEmpl
                   Where el.noEmpl = userId
-                  Select el.mdp, el.utilisateur, em.nomEmpl, em.prenEmpl, em.adrEmpl, em.noTelEmpl, em.noCellEmpl, el.noEmpl, el.premiereConnexion
+                  Select el.mdp, el.utilisateur, em.nomEmpl, em.prenEmpl, em.adrEmpl, em.noTelEmpl, em.noCellEmpl, el.noEmpl, el.premiereConnexion, el.statut
 
         Dim usr As New ApplicationUser
         usr.PasswordHash = res.First.mdp
@@ -62,6 +62,7 @@ Public Class MonStore(Of TUser As ApplicationUser)
         usr.telephone = res.First.noTelEmpl
         usr.telephoneSup = res.First.noCellEmpl
         usr.premiereConnexion = res.First.premiereConnexion
+        usr.typeEmploye = res.First.statut
         Return Task.FromResult(usr)
     End Function
 
@@ -70,7 +71,7 @@ Public Class MonStore(Of TUser As ApplicationUser)
                   Join em In bd.tblEmploye
                   On em.noEmpl Equals el.noEmpl
                   Where el.utilisateur = userName
-                  Select el.mdp, el.utilisateur, em.nomEmpl, em.prenEmpl, em.adrEmpl, em.noTelEmpl, em.noCellEmpl, el.noEmpl, el.premiereConnexion
+                  Select el.mdp, el.utilisateur, em.nomEmpl, em.prenEmpl, em.adrEmpl, em.noTelEmpl, em.noCellEmpl, el.noEmpl, el.premiereConnexion, el.statut
 
         Dim usr As New ApplicationUser
         usr.PasswordHash = res.First.mdp
@@ -82,6 +83,7 @@ Public Class MonStore(Of TUser As ApplicationUser)
         usr.telephone = res.First.noTelEmpl
         usr.telephoneSup = res.First.noCellEmpl
         usr.premiereConnexion = res.First.premiereConnexion
+        usr.typeEmploye = res.First.statut
         Return Task.FromResult(usr)
     End Function
 
