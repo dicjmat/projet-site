@@ -9,7 +9,7 @@
 }
 
 #panel{
-    background-color:#FFF8C3;
+    background-color: lightgray;
     border-style:double;
     height:75%;
     width:100%;
@@ -27,7 +27,7 @@
 #footer{
 
     border-style:solid;
-    background-color:#FFF8C3;
+    background-color:lightgray;
     position:relative;
     width:100%;
     margin-top:0.5%;
