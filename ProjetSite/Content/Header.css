@@ -9,20 +9,17 @@
 }
 
 #panel{
-    background-image: url(http://www.multiplemayhemmamma.com/wp-content/uploads/2013/02/Happy-family1.jpg);
-    
-    background-color:#FFF8C3;
+    background-color: lightgray;
     border-style:double;
     height:75%;
     width:100%;
     position:relative;
     opacity:0.9;
-    /*bottom:10%;*/
     padding-right:5%;
     padding-left:5%;
     padding-top:2%;
     padding-bottom:3%;
-    /*margin-left:4%;*/
+
     margin-top:3%;
     min-height:600px;
 }
@@ -30,7 +27,7 @@
 #footer{
 
     border-style:solid;
-    background-color:#FFF8C3;
+    background-color:lightgray;
     position:relative;
     width:100%;
     margin-top:0.5%;
@@ -53,6 +50,3 @@ p{
     color:grey;
 }
 
-/*#family{
-    opacity:1;
-}*/

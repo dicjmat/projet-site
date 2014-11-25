@@ -18,14 +18,15 @@
 <script src="http://cdn.wijmo.com/interop/wijmo.data.ajax.3.20143.59.js" type="text/javascript"></script>
 
 <%--    <img src="http://www.multiplemayhemmamma.com/wp-content/uploads/2013/02/Happy-family1.jpg" id="family"/>--%>
+
         <div id="verif">
         <p>Date de début: <input type="text" id="textboxdebut" /></p>
         <p>Date de fin: <input type="text" id="textboxFin"  /></p>
         <p>Hotel: <select id="nomhotel" runat="server"/></p>
         
         <asp:Button id="btnValid" runat="server" Text="Vérification"/>
-
     </div>
+    
 <script type="text/javascript">
     $(document).ready(function () {
         $("#textboxdebut").wijinputdate(

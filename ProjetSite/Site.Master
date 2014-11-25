@@ -92,9 +92,9 @@
             <footer>
                <div id="footer">
                    <ul id="listefooter">
-                       <li>Accueil</li>
-                       <li>À propos</li>
-                       <li>Pour nous joindre</li>
+                       <li><a href="Default.aspx">Accueil</li>
+                       <li><a href="About.aspx">À propos</li>
+                       <li><a href="Contact.aspx">Pour nous joindre</a></li>
                    </ul>
            
                </div>
