@@ -26,12 +26,12 @@ Partial Public Class Login
             Dim manager = Context.GetOwinContext().GetUserManager(Of ApplicationUserManager)()
             Dim user As ApplicationUser = manager.Find(Email.Text, Password.Text)
             If user IsNot Nothing Then
-                'If user.premiereConnexion Then
-                '    Response.Redirect("~/Account/ResetPassword")
-                'Else
-                IdentityHelper.SignIn(manager, user, RememberMe.Checked)
-                IdentityHelper.RedirectToReturnUrl(Request.QueryString("ReturnUrl"), Response)
-                'End If
+                If user.premiereConnexion Then
+                    Response.Redirect("~/Account/ResetPassword")
+                Else
+                    IdentityHelper.SignIn(manager, user, RememberMe.Checked)
+                    IdentityHelper.RedirectToReturnUrl(Request.QueryString("ReturnUrl"), Response)
+                End If
 
 
             Else
