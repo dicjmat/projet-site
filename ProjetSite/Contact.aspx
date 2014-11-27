@@ -5,11 +5,15 @@
     <h2><%: Title %></h2>
     <p>Your contact page.</p>
 
-    <address>
-        <%tel()%>
-    </address>
-
-    <address>
-
-    </address>
+    <asp:Repeater runat="server">
+        <ItemTemplate>
+            <%#
+ DataBinder.Eval(Container.DataItem, "nomHotel")
+                DataBinder.Eval(Container.DataItem, "noTelHotel")
+                DataBinder.Eval(Container.DataItem, "noTelecopieur")
+                DataBinder.Eval(Container.DataItem, "noTelReserv")
+            %>
+        </ItemTemplate>
+    </asp:Repeater>
+    
 </asp:Content>
