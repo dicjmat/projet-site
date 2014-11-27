@@ -6,5 +6,8 @@
         bd = New P2014_Equipe2_GestionHôtelièreEntities
         Dim tel = From el In bd.tblHotel Select el
 
+        repeat.DataSource() = tel.ToList
+        repeat.DataBind()
+
     End Sub
 End Class

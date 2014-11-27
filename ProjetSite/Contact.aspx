@@ -5,14 +5,14 @@
     <h2><%: Title %></h2>
     <p>Your contact page.</p>
 
-    <asp:Repeater runat="server">
+    <asp:Repeater runat="server" ID="repeat">
         <ItemTemplate>
-            <%#
- DataBinder.Eval(Container.DataItem, "nomHotel")
-                DataBinder.Eval(Container.DataItem, "noTelHotel")
-                DataBinder.Eval(Container.DataItem, "noTelecopieur")
-                DataBinder.Eval(Container.DataItem, "noTelReserv")
-            %>
+            
+ <%# DataBinder.Eval(Container.DataItem, "nomHotel")%>
+   <%# DataBinder.Eval(Container.DataItem, "noTelHotel")%>
+   <%# DataBinder.Eval(Container.DataItem, "noTelecopieur")%>
+   <%# DataBinder.Eval(Container.DataItem, "noTelReserv")%>
+            
         </ItemTemplate>
     </asp:Repeater>
     
