@@ -26,12 +26,12 @@ Public Class _Default
 
         Dim noHotell As Integer = (From ho In bd.tblEmploye Where ho.noEmpl = usr.Id Select ho.noHotel).Single
 
-        Dim com = From comu In bd.tblCommunique Where comu.noHotel = noHotell Select comu.titreCommunique, comu.contCommunique
+        Dim com = From comu In bd.tblCommunique Where comu.noHotel = noHotell And comu.etatCommunique = "actif" Select comu.titreCommunique, comu.contCommunique
 
 
         If com.ToList.Count <> 0 Then
             For Each el In com.ToList
-                comuni = el.titreCommunique + " " + el.contCommunique
+                comuni = "<b><u>" + el.titreCommunique + "</u></b><br/>" + el.contCommunique + "<br/>"
                 communique.Controls.Add(New LiteralControl(comuni + "<br/>"))
             Next
         Else
