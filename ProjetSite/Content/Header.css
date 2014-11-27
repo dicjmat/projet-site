@@ -14,12 +14,12 @@
     height:75%;
     width:100%;
     position:relative;
-    opacity:0.9;
     padding-right:5%;
     padding-left:5%;
     padding-top:2%;
     padding-bottom:3%;
-
+    background-image:url(../Images/voyage.jpg);
+    background-size:100%;
     margin-top:3%;
     min-height:600px;
 }
