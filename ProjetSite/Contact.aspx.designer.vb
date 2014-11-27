@@ -12,4 +12,13 @@ Option Explicit On
 
 
 Partial Public Class Contact
+
+    '''<summary>
+    '''Contrôle repeat.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents repeat As Global.System.Web.UI.WebControls.Repeater
 End Class
