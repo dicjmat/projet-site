@@ -54,10 +54,10 @@
             </section>
         </div>
 
-<%--        <div class="oublie"><br/>
+        <div class="oublie"><br/>
             <h3 runat="server" class="titreOublie" Font-Size="15"><b>Mot de passe oublié</b></h3>
             <asp:Label runat="server">Si vous avez oublié votre identifiant ou votre mot de passe, veuillez contacter l'administrateur de votre hotel.</asp:Label>
-        </div>--%>
+        </div>
 
 <%--        <div class="col-md-4">
             <section id="socialLoginForm">
