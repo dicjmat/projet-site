@@ -137,7 +137,7 @@
                                     CssClass="text-danger" ErrorMessage="Le nouveau mot de passe est requis."
                                     ValidationGroup="ChangePassword" />
                                 <asp:RegularExpressionValidator ID="Regex1" runat="server" ControlToValidate="NewPassword" Display="Dynamic"
-    ValidationExpression="^(?=.*[A-Z])(?=.*[0-9])(?!.*\|).{6,}" ErrorMessage="Le mot de passe doit contenir: Minimum 6 caractères et au moins un chiffre et une majuscule" CssClass="text-danger" />
+    ValidationExpression="^[a-z](?=.*\d)((?=[a-zA-Z0-9]).{6}|(?=[a-zA-Z0-9]).{13})$" ErrorMessage="Le mot de passe doit commencer par une lettre et contenir: Soit 7 ou 14 caractères, au moins un chiffre et seulement des caractères alphanumériques" CssClass="text-danger" />
                             </div>
                         </div>
                         <div class="form-group">

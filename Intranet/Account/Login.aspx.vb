@@ -27,6 +27,7 @@ Partial Public Class Login
             Dim user As ApplicationUser = manager.Find(Email.Text, Password.Text)
             If user IsNot Nothing Then
                 If user.premiereConnexion Then
+                    IdentityHelper.SignIn(manager, user, RememberMe.Checked)
                     Response.Redirect("~/Account/ResetPassword")
                 Else
                     IdentityHelper.SignIn(manager, user, RememberMe.Checked)

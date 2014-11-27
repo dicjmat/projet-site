@@ -22,10 +22,10 @@
             <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Mot de passe</asp:Label>
             <div class="col-md-10">
                 <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" />
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="Password"
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" Display="Dynamic"
                     CssClass="text-danger" ErrorMessage="Le champ du mot de passe est obligatoire." />
-                <asp:RegularExpressionValidator ID="Regex1" runat="server" ControlToValidate="Password"
-    ValidationExpression="^(?=.*[A-Z])(?=.*[0-9])(?!.*\|).{6,}" ErrorMessage="Le mot de passe doit contenir: Minimum 6 caractères et au moins un chiffre et une majuscule" CssClass="text-danger"/>
+                <asp:RegularExpressionValidator ID="Regex1" runat="server" ControlToValidate="Password" Display="Dynamic"
+    ValidationExpression="^[a-z](?=.*\d)((?=[a-zA-Z0-9]).{6}|(?=[a-zA-Z0-9]).{13})$" ErrorMessage="Le mot de passe doit contenir: Soit 7 ou 14 caractères, au moins un chiffre et une lettre et seulement des caractères alphanumériques" CssClass="text-danger"/>
             </div>
         </div>
         <div class="form-group">
@@ -33,7 +33,7 @@
             <div class="col-md-10">
                 <asp:TextBox runat="server" ID="ConfirmPassword" TextMode="Password" CssClass="form-control" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="ConfirmPassword"
-                    CssClass="text-danger" Display="Dynamic" ErrorMessage="Merci, votre compte est valide." />
+                    CssClass="text-danger" Display="Dynamic" ErrorMessage="Le confirmation de mot de passe est requise." />
                 <asp:CompareValidator runat="server" ControlToCompare="Password" ControlToValidate="ConfirmPassword"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="Le mot de passe et le mot de passe de confirmation ne correspondent pas." />
             </div>
