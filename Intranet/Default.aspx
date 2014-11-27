@@ -14,7 +14,7 @@
         <asp:label ID="titreFiche" runat="server" Font-Size="20"><b><br/>Fiche d'employé</b></asp:label>
     <div>
         <fieldset>
-            <legend><b>Information personnel</b></legend>
+            <legend><b>Informations personnelles</b></legend>
                 Numéro de l'employé : <asp:label runat="server" ID="lblNoEmp" Font-Size="15"></asp:label><br/>
                 Numéro de téléphone : <asp:label runat="server" ID="lblNoTel" Font-Size="15"></asp:label><br/>
                 Numéro de céllulaire :<asp:label runat="server" ID="lblNoCell" Font-Size="15"></asp:label><br/>
@@ -22,7 +22,7 @@
         </fieldset><br/>
 
         <fieldset>
-            <legend><b>Information de travail</b></legend>
+            <legend><b>Informations de travail</b></legend>
                 Profession : <asp:label runat="server" ID="lblProf" Font-Size="15"></asp:label><br/>
                 Date d'embauche : <asp:label runat="server" ID="lbldateEmbauche" Font-Size="15"></asp:label><br/>
                 Vous travaillez à l'hotel <asp:label runat="server" ID="lblNoHotel" Font-Size="15"></asp:label><br/>
