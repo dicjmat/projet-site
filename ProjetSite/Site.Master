@@ -95,7 +95,8 @@
                        <li><a href="Default.aspx">Accueil</a></li>
                        <li><a href="About.aspx">À propos</a></li>
                        <li><a href="Contact.aspx">Pour nous joindre</a></li>
-                       <li><a href="~/../Intranet/Account/Login.aspx">Ultranet</a></li>
+                       <li><a href="http://localhost:1888/Account/Login">Ultranet</a></li>
+                                  <%--Changer ce lien ^ lors de la remise--%>
                    </ul>
            
                </div>

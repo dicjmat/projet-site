@@ -17,7 +17,6 @@
 <script src="http://cdn.wijmo.com/jquery.wijmo-pro.all.3.20143.59.min.js" type="text/javascript"></script>
 <script src="http://cdn.wijmo.com/interop/wijmo.data.ajax.3.20143.59.js" type="text/javascript"></script>
 
-<%--    <img src="http://www.multiplemayhemmamma.com/wp-content/uploads/2013/02/Happy-family1.jpg" id="family"/>--%>
 
         <div id="verif">
         <p>Date de début: <input type="text" id="textboxdebut" /></p>
