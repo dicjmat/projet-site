@@ -92,9 +92,10 @@
             <footer>
                <div id="footer">
                    <ul id="listefooter">
-                       <li><a href="Default.aspx">Accueil</li>
-                       <li><a href="About.aspx">À propos</li>
+                       <li><a href="Default.aspx">Accueil</a></li>
+                       <li><a href="About.aspx">À propos</a></li>
                        <li><a href="Contact.aspx">Pour nous joindre</a></li>
+                       <li><a href="~/../Intranet/Account/Login.aspx">Ultranet</a></li>
                    </ul>
            
                </div>
