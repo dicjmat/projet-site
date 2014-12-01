@@ -65,30 +65,31 @@
                         <h4>Changer les informations relatives au client</h4>
                         <hr />
                         <asp:ValidationSummary runat="server" ShowModelStateErrors="true" CssClass="text-danger" />
-                        <div class="form-group">
-                            <asp:Label runat="server" ID="Label1" AssociatedControlID="Nom" CssClass="col-md-2 control-label">Nom</asp:Label>
-                            <div class="col-md-10">
-                                <asp:TextBox runat="server" ID="Nom" CssClass="form-control" />
-                                <asp:RequiredFieldValidator runat="server" ControlToValidate="Nom"
-                                    CssClass="text-danger" ErrorMessage="Le nom est requis."
-                                    ValidationGroup="ChangeInfo" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <asp:Label runat="server" ID="Label2" AssociatedControlID="Prenom" CssClass="col-md-2 control-label">Prénom</asp:Label>
-                            <div class="col-md-10">
-                                <asp:TextBox runat="server" ID="Prenom" CssClass="form-control" />
-                                <asp:RequiredFieldValidator runat="server" ControlToValidate="Prenom"
-                                    CssClass="text-danger" ErrorMessage="Le prénom est requis."
-                                    ValidationGroup="ChangeInfo" />
-                            </div>
-                        </div>
+                        
                         <div class="form-group">
                             <asp:Label runat="server" ID="Label3" AssociatedControlID="Adresse" CssClass="col-md-2 control-label">Adresse</asp:Label>
                             <div class="col-md-10">
                                 <asp:TextBox runat="server" ID="Adresse" CssClass="form-control" />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Adresse"
                                     CssClass="text-danger" Display="Dynamic" ErrorMessage="L'adresse est requise."
+                                    ValidationGroup="ChangeInfo" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label runat="server" ID="Label1" AssociatedControlID="CodePostal" CssClass="col-md-2 control-label">Code postal</asp:Label>
+                            <div class="col-md-10">
+                                <asp:TextBox runat="server" ID="CodePostal" CssClass="form-control" />
+                                <asp:RequiredFieldValidator runat="server" ControlToValidate="CodePostal"
+                                    CssClass="text-danger" ErrorMessage="Le code Postal est requis."
+                                    ValidationGroup="ChangeInfo" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label runat="server" ID="Label2" AssociatedControlID="Ville" CssClass="col-md-2 control-label">Ville</asp:Label>
+                            <div class="col-md-10">
+                                <asp:DropDownList runat="server" ID="Ville" CssClass="form-control" Width="280 px" />
+                                <asp:RequiredFieldValidator runat="server" ControlToValidate="Ville"
+                                    CssClass="text-danger" ErrorMessage="Le ville est requis."
                                     ValidationGroup="ChangeInfo" />
                             </div>
                         </div>
@@ -105,6 +106,12 @@
                             <asp:Label runat="server" ID="Label5" AssociatedControlID="TelephoneSup" CssClass="col-md-2 control-label">Téléphone Cellulaire ou travail</asp:Label>
                             <div class="col-md-10">
                                 <asp:TextBox runat="server" ID="TelephoneSup" CssClass="form-control" />
+                             </div>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label runat="server" ID="Label6" AssociatedControlID="Email" CssClass="col-md-2 control-label">Adresse E-mail</asp:Label>
+                            <div class="col-md-10">
+                                <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" />
                              </div>
                         </div>
                         <div class="form-group">
@@ -137,7 +144,7 @@
                                     CssClass="text-danger" ErrorMessage="Le nouveau mot de passe est requis."
                                     ValidationGroup="ChangePassword" />
                                 <asp:RegularExpressionValidator ID="Regex1" runat="server" ControlToValidate="NewPassword" Display="Dynamic"
-    ValidationExpression="^[a-z](?=.*\d)((?=[a-zA-Z0-9]).{6}|(?=[a-zA-Z0-9]).{13})$" ErrorMessage="Le mot de passe doit commencer par une lettre et contenir: Soit 7 ou 14 caractères, au moins un chiffre et seulement des caractères alphanumériques" CssClass="text-danger" />
+    ValidationExpression="^[a-z](?=.*\d)((?=[a-z0-9]).{6}|(?=[a-z0-9]).{13})$" ErrorMessage="Le mot de passe doit commencer par une lettre et contenir: Soit 7 ou 14 caractères, au moins un chiffre et seulement des caractères alphanumériques" CssClass="text-danger" />
                             </div>
                         </div>
                         <div class="form-group">

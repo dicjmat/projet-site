@@ -36,6 +36,7 @@ Partial Public Class Manage
         If Not IsPostBack Then
             ' Déterminer les sections à afficher
             Dim manager = Context.GetOwinContext().GetUserManager(Of ApplicationUserManager)()
+            Dim bd = New P2014_Equipe2_GestionHôtelièreEntities
             If HasPassword(manager) Then
                 changePasswordHolder.Visible = True
             Else
@@ -56,8 +57,16 @@ Partial Public Class Manage
             Telephone.Text = usr.telephone
             TelephoneSup.Text = usr.telephoneSup
             Adresse.Text = usr.adresse
-            Nom.Text = usr.nom
-            Prenom.Text = usr.prenom
+            CodePostal.Text = usr.codePostal
+            Dim res = From vi In bd.tblVille
+                      Where vi.codeProv = usr.province
+                      Select vi
+
+            Ville.DataSource = res.ToList
+            Ville.DataValueField = "codeVille"
+            Ville.DataTextField = "nomVille"
+            Ville.DataBind()
+            Ville.SelectedValue = usr.ville
         End If
     End Sub
 
@@ -81,8 +90,11 @@ Partial Public Class Manage
             Dim usr = manager.FindByIdAsync(User.Identity.GetUserId()).Result
             usr.telephone = Telephone.Text
             usr.telephoneSup = TelephoneSup.Text
-            usr.nom = Nom.Text
-            usr.prenom = Prenom.Text
+            'usr.nom = Nom.Text
+            'usr.prenom = Prenom.Text
+            usr.ville = Ville.SelectedItem.Value
+            usr.codePostal = CodePostal.Text
+            usr.Email = Email.Text
             usr.adresse = Adresse.Text
             Dim result As IdentityResult = manager.UpdateAsync(usr).Result
             If result.Succeeded Then

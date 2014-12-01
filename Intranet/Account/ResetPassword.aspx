@@ -25,7 +25,7 @@
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" Display="Dynamic"
                     CssClass="text-danger" ErrorMessage="Le champ du mot de passe est obligatoire." />
                 <asp:RegularExpressionValidator ID="Regex1" runat="server" ControlToValidate="Password" Display="Dynamic"
-    ValidationExpression="^[a-z](?=.*\d)((?=[a-zA-Z0-9]).{6}|(?=[a-zA-Z0-9]).{13})$" ErrorMessage="Le mot de passe doit contenir: Soit 7 ou 14 caractères, au moins un chiffre et une lettre et seulement des caractères alphanumériques" CssClass="text-danger"/>
+    ValidationExpression="^[a-z](?=.*\d)((?=[a-z0-9]).{6}|(?=[a-z0-9]).{13})$" ErrorMessage="Le mot de passe doit contenir: Soit 7 ou 14 caractères, au moins un chiffre et une lettre et seulement des caractères alphanumériques" CssClass="text-danger"/>
             </div>
         </div>
         <div class="form-group">

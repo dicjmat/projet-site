@@ -11,6 +11,8 @@ Public Class ApplicationUser
     Inherits IdentityUser
 
     Private _adresse As String
+    Friend codePostal As Object
+
     Public Property adresse() As String
         Get
             Return _adresse

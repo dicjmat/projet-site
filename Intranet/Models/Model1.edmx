@@ -172,6 +172,8 @@
           <Property Name="joursVac" Type="tinyint" />
           <Property Name="joursFerie" Type="tinyint" />
           <Property Name="joursMal" Type="tinyint" />
+          <Property Name="codePostalEmploye" Type="char" MaxLength="6" />
+          <Property Name="emailEmploye" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="tblHoraire">
           <Key>
@@ -1382,6 +1384,8 @@
           <Property Name="joursVac" Type="Byte" />
           <Property Name="joursFerie" Type="Byte" />
           <Property Name="joursMal" Type="Byte" />
+          <Property Name="codePostalEmploye" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="emailEmploye" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="tblChecklist" Relationship="Self.fk_chklist_noempl" FromRole="tblEmploye" ToRole="tblChecklist" />
           <NavigationProperty Name="tblCommande" Relationship="Self.fk_com_empl" FromRole="tblEmploye" ToRole="tblCommande" />
           <NavigationProperty Name="tblHotel" Relationship="Self.fk_empl_hot" FromRole="tblEmploye" ToRole="tblHotel" />
@@ -2590,6 +2594,8 @@
                 <ScalarProperty Name="joursVac" ColumnName="joursVac" />
                 <ScalarProperty Name="joursFerie" ColumnName="joursFerie" />
                 <ScalarProperty Name="joursMal" ColumnName="joursMal" />
+                <ScalarProperty Name="codePostalEmploye" ColumnName="codePostalEmploye" />
+                <ScalarProperty Name="emailEmploye" ColumnName="emailEmploye" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

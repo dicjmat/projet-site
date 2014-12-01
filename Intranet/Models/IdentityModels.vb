@@ -20,6 +20,38 @@ Public Class ApplicationUser
     '    End Set
     'End Property
 
+    Private _province As String
+    Public Property province() As String
+        Get
+            Return _province
+        End Get
+        Set(ByVal value As String)
+            _province = value
+        End Set
+    End Property
+
+
+    Private _codePostal As String
+    Public Property codePostal() As String
+        Get
+            Return _codePostal
+        End Get
+        Set(ByVal value As String)
+            _codePostal = value
+        End Set
+    End Property
+
+    Private _ville As String
+    Public Property ville() As String
+        Get
+            Return _Ville
+        End Get
+        Set(ByVal value As String)
+            _Ville = value
+        End Set
+    End Property
+
+
     Private _premiereCon As Boolean
     Public Property premiereConnexion() As Boolean
         Get

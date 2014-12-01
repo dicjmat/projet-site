@@ -53,7 +53,8 @@ Public Class MonStore(Of TUser As ApplicationUser)
                   Join em In bd.tblEmploye
                   On em.noEmpl Equals el.noEmpl
                   Where el.noEmpl = userId
-                  Select el.mdp, el.utilisateur, em.nomEmpl, em.prenEmpl, em.adrEmpl, em.noTelEmpl, em.noCellEmpl, el.noEmpl, el.premiereConnexion, el.statut
+                  Select el.mdp, el.utilisateur, em.nomEmpl, em.prenEmpl, em.adrEmpl, em.noTelEmpl,
+                                 em.noCellEmpl, el.noEmpl, el.premiereConnexion, el.statut, em.codePostalEmploye, em.codeVille, em.codeProv, em.emailEmploye
 
         Dim usr As New ApplicationUser
         usr.PasswordHash = res.First.mdp
@@ -65,6 +66,10 @@ Public Class MonStore(Of TUser As ApplicationUser)
         usr.telephone = res.First.noTelEmpl
         usr.telephoneSup = res.First.noCellEmpl
         usr.premiereConnexion = res.First.premiereConnexion
+        usr.codePostal = res.First.codePostalEmploye
+        usr.ville = res.First.codeVille
+        usr.province = res.First.codeProv
+        usr.Email = res.First.emailEmploye
         'usr.typeEmploye = New List(Of String)
         'If res.First.statut = "ADMI" Then
         '    AddToRoleAsync(usr, "Admin")
@@ -77,7 +82,8 @@ Public Class MonStore(Of TUser As ApplicationUser)
                   Join em In bd.tblEmploye
                   On em.noEmpl Equals el.noEmpl
                   Where el.utilisateur = userName
-                  Select el.mdp, el.utilisateur, em.nomEmpl, em.prenEmpl, em.adrEmpl, em.noTelEmpl, em.noCellEmpl, el.noEmpl, el.premiereConnexion, el.statut
+                  Select el.mdp, el.utilisateur, em.nomEmpl, em.prenEmpl, em.adrEmpl, em.noTelEmpl,
+                        em.noCellEmpl, el.noEmpl, el.premiereConnexion, el.statut, em.codePostalEmploye, em.codeVille, em.codeProv, em.emailEmploye
 
         Dim usr As New ApplicationUser
         usr.PasswordHash = res.First.mdp
@@ -89,6 +95,10 @@ Public Class MonStore(Of TUser As ApplicationUser)
         usr.telephone = res.First.noTelEmpl
         usr.telephoneSup = res.First.noCellEmpl
         usr.premiereConnexion = res.First.premiereConnexion
+        usr.codePostal = res.First.codePostalEmploye
+        usr.ville = res.First.codeVille
+        usr.province = res.First.codeProv
+        usr.Email = res.First.emailEmploye
         'usr.typeEmploye = New List(Of String)
         'If res.First.statut = "ADMI" Then
         '    AddToRoleAsync(usr, "Admin")
