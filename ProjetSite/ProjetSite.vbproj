@@ -193,6 +193,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\logo-hotel.png" />
     <Content Include="Images\villa.jpg" />
+    <Content Include="listechambre.aspx" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -356,6 +357,13 @@
     </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="listechambre.aspx.designer.vb">
+      <DependentUpon>listechambre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listechambre.aspx.vb">
+      <DependentUpon>listechambre.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Models\determinerchambrelibre_Result.vb">
       <DependentUpon>Model1.tt</DependentUpon>
