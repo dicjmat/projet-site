@@ -19,8 +19,8 @@
 
 
         <div id="verif">
-        <p>Date de début: <input type="text" id="textboxdebut" runat="server"/></p>
-        <p>Date de fin: <input type="text" id="textboxFin" runat="server" /></p>
+        <p>Date de début: <input type="text" id="textboxdebut" /></p>
+        <p>Date de fin: <input type="text" id="textboxFin" /></p>
         <p>Hotel: <select id="nomhotel" runat="server"/></p>
         
         <asp:Button id="btnValid" runat="server" Text="Vérification"/>
