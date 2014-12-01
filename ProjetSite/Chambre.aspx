@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Chambre.aspx.vb" Inherits="ProjetSite.WebForm1" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Chambre.aspx.vb" Inherits="ProjetSite.Chambre" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="placefooter" runat="server">
+    <asp:Image runat="server" ID="imgChambre" />
 </asp:Content>
