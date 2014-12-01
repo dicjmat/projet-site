@@ -12,13 +12,20 @@
         nomhotel.DataValueField = "noHotel"
         nomhotel.DataBind()
 
-        btnValid.Enabled = False
+
 
     End Sub
 
 
     Protected Sub btnValid_Click(sender As Object, e As EventArgs) Handles btnValid.Click
-       
+        Dim datef As Date
+        Dim dated As Date
+        Dim noHotel As Integer
+
+        dated = textboxdebut.Value
+        datef = textboxFin.Value
+        noHotel = nomhotel.SelectedIndex
+
     End Sub
 
 
