@@ -1,14 +1,14 @@
 ﻿Public Class listechambre
     Inherits System.Web.UI.Page
-    Private _dd As String
-    Private _df As String
-    Private _nhotel As Integer
-    'Sub New(dated As String, datef As String, noHotel As Integer)
-    '    _dd = dated
-    '    _df = datef
-    '    _nhotel = noHotel
-    'End Sub
+    Dim bd As P2014_Equipe2_GestionHôtelièreEntities
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        bd = New P2014_Equipe2_GestionHôtelièreEntities
+        Dim gotdated = Request.QueryString("dated")
+        Dim gotdatef = Request.QueryString("datef")
+        Dim gotnohotel = Request.QueryString("nohotel")
+
+        repeatchambre.DataSource() = bd.determinerchambrelibre(gotdated, gotdatef, gotnohotel).ToList
+        repeatchambre.DataBind()
 
     End Sub
 
