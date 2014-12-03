@@ -12,8 +12,6 @@
         nomhotel.DataValueField = "noHotel"
         nomhotel.DataBind()
 
-
-
     End Sub
 
 
@@ -24,7 +22,8 @@
 
         dated = textboxdebut.Text
         datef = textboxFin.Text
-        noHotel = nomhotel.Value
+        noHotel = nomhotel.SelectedValue
+
         Response.Redirect("listechambre.aspx?dated=" + dated + "&datef=" + datef + "&noHotel=" + noHotel.ToString)
     End Sub
 
