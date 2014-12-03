@@ -192,6 +192,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Content\Header.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Images\chambreSUP.jpg" />
     <Content Include="Images\logo-hotel.png" />
     <Content Include="Images\villa.jpg" />
     <Content Include="listechambre.aspx" />
