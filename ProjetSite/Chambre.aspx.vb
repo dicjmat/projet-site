@@ -26,7 +26,7 @@
                 lblTypeLit.Text += li.ToString + " - "
             End If
         Next
-        lblDescTypeSalle = chambre.DescTypeSalle
+        'lblDescTypeSalle = chambre.DescTypeSalle
     End Sub
 
 End Class

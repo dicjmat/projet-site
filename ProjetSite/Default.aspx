@@ -21,7 +21,7 @@
         <div id="verif">
         <p>Date de début: <asp:textbox runat="server" cssclass="textboxdebut" id="textboxdebut"/></p>
         <p>Date de fin: <asp:textbox runat="server" cssclass="textboxFin" ID="textboxFin" /></p>
-        <p>Hotel: <select id="nomhotel" runat="server"/></p>
+        <p>Hotel: <asp:DropDownList id="nomhotel" runat="server"/></p>
         
         <asp:Button id="btnValid" runat="server" Text="Vérification"/>
     </div>

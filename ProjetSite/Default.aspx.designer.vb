@@ -38,7 +38,7 @@ Partial Public Class _Default
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents nomhotel As Global.System.Web.UI.HtmlControls.HtmlSelect
+    Protected WithEvents nomhotel As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Contrôle btnValid.
