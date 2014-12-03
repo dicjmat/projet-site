@@ -4,6 +4,23 @@ body {
     padding-bottom: 20px;
 }
 
+.imgChambre
+{
+    width: 25%;
+    height: 25%;
+}
+
+.typeChambre
+{
+    font-size:larger;
+    font-weight:bold;
+}
+
+.lbl
+{
+    max-height:15px;
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {

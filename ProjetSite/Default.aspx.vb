@@ -6,12 +6,13 @@
         bd = New P2014_Equipe2_GestionHôtelièreEntities
         Dim myControl1 As Control = LoadControl("~/Shared/_header.ascx")
         Controls.Add(myControl1)
-        Dim res = From el In bd.tblHotel Select el
-        nomhotel.DataSource = res.ToList
-        nomhotel.DataTextField = "nomHotel"
-        nomhotel.DataValueField = "noHotel"
-        nomhotel.DataBind()
-
+        If Not IsPostBack Then
+            Dim res = From el In bd.tblHotel Select el
+            nomhotel.DataSource = res.ToList
+            nomhotel.DataTextField = "nomHotel"
+            nomhotel.DataValueField = "noHotel"
+            nomhotel.DataBind()
+        End If
     End Sub
 
 
@@ -23,7 +24,6 @@
         dated = textboxdebut.Text
         datef = textboxFin.Text
         noHotel = nomhotel.SelectedValue
-
         Response.Redirect("listechambre.aspx?dated=" + dated + "&datef=" + datef + "&noHotel=" + noHotel.ToString)
     End Sub
 
