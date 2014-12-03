@@ -10,13 +10,11 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class tblCommunique
-    Public Property noCommunique As Short
-    Public Property titreCommunique As String
-    Public Property contCommunique As String
-    Public Property noHotel As Byte
-    Public Property etatCommunique As String
-
-    Public Overridable Property tblHotel As tblHotel
+Partial Public Class sp_helpdiagrams_Result
+    Public Property Database As String
+    Public Property Name As String
+    Public Property ID As Integer
+    Public Property Owner As String
+    Public Property OwnerID As Integer
 
 End Class

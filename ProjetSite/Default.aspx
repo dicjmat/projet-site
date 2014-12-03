@@ -19,8 +19,8 @@
 
 
         <div id="verif">
-        <p>Date de début: <input type="text" id="textboxdebut" /></p>
-        <p>Date de fin: <input type="text" id="textboxFin" /></p>
+        <p>Date de début: <asp:textbox runat="server" cssclass="textboxdebut" id="textboxdebut"/></p>
+        <p>Date de fin: <asp:textbox runat="server" cssclass="textboxFin" ID="textboxFin" /></p>
         <p>Hotel: <select id="nomhotel" runat="server"/></p>
         
         <asp:Button id="btnValid" runat="server" Text="Vérification"/>
@@ -28,7 +28,7 @@
     
 <script type="text/javascript">
     $(document).ready(function () {
-        $("#textboxdebut").wijinputdate(
+        $(".textboxdebut").wijinputdate(
             {
                 showTrigger: true
             });
@@ -36,7 +36,7 @@
 </script>
 <script type="text/javascript">
     $(document).ready(function () {
-        $("#textboxFin").wijinputdate(
+        $(".textboxFin").wijinputdate(
             {
                 showTrigger: true
             });

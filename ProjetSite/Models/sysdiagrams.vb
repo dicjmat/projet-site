@@ -10,13 +10,11 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class tblCommunique
-    Public Property noCommunique As Short
-    Public Property titreCommunique As String
-    Public Property contCommunique As String
-    Public Property noHotel As Byte
-    Public Property etatCommunique As String
-
-    Public Overridable Property tblHotel As tblHotel
+Partial Public Class sysdiagrams
+    Public Property name As String
+    Public Property principal_id As Integer
+    Public Property diagram_id As Integer
+    Public Property version As Nullable(Of Integer)
+    Public Property definition As Byte()
 
 End Class

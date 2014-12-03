@@ -18,14 +18,14 @@
 
 
     Protected Sub btnValid_Click(sender As Object, e As EventArgs) Handles btnValid.Click
-        'Dim datef As Date
-        'Dim dated As Date
-        'Dim noHotel As Integer
+        Dim datef As Date
+        Dim dated As Date
+        Dim noHotel As Integer
 
-        'dated = textboxdebut.Value
-        'datef = textboxFin.Value
-        'noHotel = nomhotel.SelectedIndex
-        'Response.Redirect("listechambre.aspx?" + dated + datef + noHotel)
+        dated = textboxdebut.Text
+        datef = textboxFin.Text
+        noHotel = nomhotel.Value
+        Response.Redirect("listechambre.aspx?dated=" + dated + "&datef=" + datef + "&noHotel=" + noHotel.ToString)
     End Sub
 
 

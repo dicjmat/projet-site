@@ -1,17 +1,12 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="listechambre.aspx.vb" Inherits="ProjetSite.listechambre" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="listechambre.aspx.vb" Inherits="ProjetSite.listechambre" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-<!DOCTYPE html>
+       <asp:Repeater runat="server" ID="repeatchambre">
+        <ItemTemplate>
+            <hr />
+             <b><u><p>Type de chambre: <%# DataBinder.Eval(Container.DataItem, "nomTypeSalle")%></p></u></b>
+   <p>Nombre de chambre disponible: <%# DataBinder.Eval(Container.DataItem, "nbChambre")%> </p>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
-</body>
-</html>
+        </ItemTemplate>
+        </asp:Repeater>
+</asp:Content>
