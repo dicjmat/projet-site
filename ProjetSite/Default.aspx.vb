@@ -24,7 +24,7 @@
 
         dated = textboxdebut.Text
         datef = textboxFin.Text
-        noHotel = nomhotel.SelectedIndex + 1
+        noHotel = nomhotel.Value
         Response.Redirect("listechambre.aspx?dated=" + dated + "&datef=" + datef + "&noHotel=" + noHotel.ToString)
     End Sub
 

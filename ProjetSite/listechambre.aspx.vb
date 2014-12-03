@@ -7,7 +7,7 @@
         Dim gotdatef = Request.QueryString("datef")
         Dim gotnohotel = Request.QueryString("nohotel")
 
-        repeatchambre.DataSource() = bd.determinerchambrelibre(gotdated, gotdatef, gotnohotel).ToList
+        repeatchambre.DataSource() = bd.determinertypechambrelibre(gotdated, gotdatef, gotnohotel).ToList
         repeatchambre.DataBind()
 
     End Sub

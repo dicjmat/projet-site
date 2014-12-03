@@ -4,10 +4,9 @@
        <asp:Repeater runat="server" ID="repeatchambre">
         <ItemTemplate>
             <hr />
-             <b><u><%# DataBinder.Eval(Container.DataItem, "noSalle")%></u></b>
-   <p>Description de la chambre: <%# DataBinder.Eval(Container.DataItem, "descSalle")%> </p>
-   <p>Nombre de places: <%# DataBinder.Eval(Container.DataItem, "nbPlace")%></p> 
-   <p>Type de la chambre: <%# DataBinder.Eval(Container.DataItem, "codeTypeSalle")%></p> 
+             <b><u><p>Type de chambre: <%# DataBinder.Eval(Container.DataItem, "nomTypeSalle")%></p></u></b>
+   <p>Nombre de chambre disponible: <%# DataBinder.Eval(Container.DataItem, "nbChambre")%> </p>
+
         </ItemTemplate>
         </asp:Repeater>
 </asp:Content>
