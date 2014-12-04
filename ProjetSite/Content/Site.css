@@ -8,6 +8,7 @@ body {
 {
     width: 25%;
     height: 25%;
+    position:relative;
 }
 
 .typeChambre
@@ -18,7 +19,33 @@ body {
 
 .lbl
 {
+    margin-top:2%;
+    margin-left:1%;
+    position:absolute;
     max-height:15px;
+    width:50%;
+    text-align:justify;
+}
+
+.lbldesc
+{
+    margin-top:5%;
+}
+
+#chambre
+{
+  position:absolute;
+}
+
+#contframe
+{
+    margin-left:25%;
+}
+
+#frame
+{
+    height:800px;
+    width:100%;
 }
 
 /* Wrapping element */

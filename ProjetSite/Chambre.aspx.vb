@@ -26,7 +26,18 @@
                 lblTypeLit.Text += li.ToString + " - "
             End If
         Next
-        'lblDescTypeSalle = chambre.DescTypeSalle
+        lblDescTypeSalle.Text = chambre.Single.descTypeSalle
+        If Not IsPostBack Then
+            Dim res = From it In bd.tblItem
+                      Join gab In bd.tblGabarit
+                      On gab.codeItem Equals it.codeItem
+                      Where gab.codeTypeSalle = "SUP"
+                      Select it
+
+            lstItem.DataSource = res.ToList
+            lstItem.DataBind()
+        End If
+
     End Sub
 
 End Class

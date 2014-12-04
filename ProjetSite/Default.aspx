@@ -25,7 +25,6 @@
         
         <asp:Button id="btnValid" runat="server" Text="Vérification"/>
     </div>
-    
 <script type="text/javascript">
     $(document).ready(function () {
         $(".textboxdebut").wijinputdate(

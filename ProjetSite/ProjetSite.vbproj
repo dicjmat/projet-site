@@ -196,6 +196,7 @@
     <Content Include="Images\logo-hotel.png" />
     <Content Include="Images\villa.jpg" />
     <Content Include="listechambre.aspx" />
+    <Content Include="listeSalle.aspx" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -218,6 +219,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.vb</LastGenOutput>
     </Content>
+    <Content Include="Accueil.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Account\PageAccueil.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -331,6 +333,13 @@
       <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Accueil.Master.designer.vb">
+      <DependentUpon>Accueil.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Accueil.Master.vb">
+      <DependentUpon>Accueil.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\IdentityConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
@@ -371,6 +380,13 @@
     </Compile>
     <Compile Include="listechambre.aspx.vb">
       <DependentUpon>listechambre.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="listeSalle.aspx.designer.vb">
+      <DependentUpon>listeSalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listeSalle.aspx.vb">
+      <DependentUpon>listeSalle.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Models\determinerchambrelibre_Result.vb">
