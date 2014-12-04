@@ -9,7 +9,6 @@
 
         repeatchambre.DataSource() = bd.determinertypechambrelibre(gotdated, gotdatef, gotnohotel).ToList
         repeatchambre.DataBind()
-
     End Sub
 
 End Class

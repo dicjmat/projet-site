@@ -4,9 +4,11 @@
        <asp:Repeater runat="server" ID="repeatchambre">
         <ItemTemplate>
             <hr />
-             <b><u><p>Type de chambre: <%# DataBinder.Eval(Container.DataItem, "nomTypeSalle")%></p></u></b>
-   <p>Nombre de chambre disponible: <%# DataBinder.Eval(Container.DataItem, "nbChambre")%> </p>
-
+            <div id="clickable">
+             <b><u> <%# DataBinder.Eval(Container.DataItem, "nomTypeSalle")%></u></b>
+             <p>Nombre de chambre disponible: <%# DataBinder.Eval(Container.DataItem, "nbChambre")%> </p>
+             <asp:image ImageUrl='<%# String.Format("~/Images/chambre{0}.jpg", Eval("codeTypeSalle"))%>' runat="server" CssClass="imagechambre"/>
+            </div>
         </ItemTemplate>
         </asp:Repeater>
 <%--    </div>--%>
