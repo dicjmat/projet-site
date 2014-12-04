@@ -1,6 +1,6 @@
-﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="ProjetSite.SiteMaster" %>
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Accueil.Master.vb" Inherits="ProjetSite.Acceuil" %>
 
-<%@ Import Namespace="ProjetSite" %>
+<%@ Import Namespace="Intranet" %>
 <%@ Import Namespace="Microsoft.AspNet.Identity" %>
 <!DOCTYPE html>
 
@@ -9,8 +9,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%--<%: Page.Title %>--%>NouvHotel</title>
+    <title>NouvHotel</title>
 
+    
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
@@ -18,13 +19,9 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link rel="stylesheet" type="text/css" href='~/Content/Header.css' />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    
-
 </head>
 <body>
-              
     <form runat="server">
-    
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--Pour plus d'informations sur les scripts de regroupement dans ScriptManager, consultez http://go.microsoft.com/fwlink/?LinkID=301884 --%>
@@ -46,7 +43,7 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+<%--        <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -54,15 +51,20 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">NouvHotel</a>
+                    <a class="navbar-brand" runat="server" href="~/">Ultranet</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Accueil</a></li>                    </ul>
-<%--                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <li><a runat="server" href="~/Account/Accueil">Accueil</a></li>
+                        <li><a runat="server" href="~/Account/Horaire">Horaire</a></li>
+                        <li><a runat="server" href="~/Account/FicheEmploye">Fiche d'employé</a></li>
+                        <li><a runat="server" href="~/About">À propos de</a></li>
+                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                    </ul>
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Register">Inscrire</a></li>
+                            <li><a runat="server" href="~/Account/Register">Inscrire</a></li>
                                 <li><a runat="server" href="~/Account/Login">Se connecter</a></li>
                             </ul>
                         </AnonymousTemplate>
@@ -74,35 +76,17 @@
                                 </li>
                             </ul>
                         </LoggedInTemplate>
-                    </asp:LoginView>--%>
+                    </asp:LoginView>
                 </div>
             </div>
-        </div>
-
+        </div>--%>
         <div class="container body-content">
-            
-      
-
-            <div  id="panel">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-<%--            <asp:ContentPlaceHolder runat="server" ID="placefooter"/>--%>
-
-            </div>
-
+            <hr />
             <footer>
-               <div id="footer">
-                   <ul id="listefooter">
-                       <li><a href="Default.aspx">Accueil</a></li>
-                       <li><a href="About.aspx">À propos</a></li>
-                       <li><a href="Contact.aspx">Pour nous joindre</a></li>
-                       <li><a href="http://localhost:1888/Account/Login">Ultranet</a></li>
-                                  <%--Changer ce lien ^ lors de la remise--%>
-                   </ul>
-           
-               </div>
+<%--                <p>&copy; <%: DateTime.Now.Year %> - Mon ASP.NET Application</p>--%>
             </footer>
-
         </div>
     </form>
 </body>

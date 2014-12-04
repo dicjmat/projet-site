@@ -41,6 +41,15 @@ Partial Public Class Chambre
     Protected WithEvents imgChambre As Global.System.Web.UI.WebControls.Image
 
     '''<summary>
+    '''Contrôle Label1.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Contrôle lblDescTypeSalle.
     '''</summary>
     '''<remarks>
@@ -48,4 +57,13 @@ Partial Public Class Chambre
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents lblDescTypeSalle As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Contrôle lstItem.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents lstItem As Global.System.Web.UI.WebControls.Repeater
 End Class
