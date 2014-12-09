@@ -48,7 +48,24 @@
 }
 
 .imagechambre{
-    width:10%;
-    height:10%;
+    width:15%;
+    height:15%;
     border-style:solid;
+}
+
+.btninfo{
+    margin-left:2%;
+
+}
+
+#divgrid{
+    border-style:dashed;
+    width:300px;
+    height:300px;
+}
+
+.datagrid{
+    border-style:dotted;
+    height:200px;
+    width:200px;
 }
