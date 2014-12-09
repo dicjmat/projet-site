@@ -8,7 +8,19 @@ body {
 {
     width: 25%;
     height: 25%;
+    min-height: 200px;
+    min-width:250px;
     position:relative;
+}
+
+.titre
+{
+   font-weight:bold;
+}
+
+.bouton
+{
+    float:right;
 }
 
 .typeChambre

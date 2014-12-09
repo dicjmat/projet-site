@@ -11,14 +11,14 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class listeSalle
+Partial Public Class salle
 
     '''<summary>
-    '''Contrôle listeSalleHotel.
+    '''Contrôle lblnomSalle.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents listeSalleHotel As Global.System.Web.UI.WebControls.Repeater
+    Protected WithEvents lblnomSalle As Global.System.Web.UI.WebControls.Label
 End Class
