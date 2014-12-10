@@ -15,31 +15,6 @@
         </ItemTemplate>
         </asp:Repeater>--%>
 
-<%--            <cc1:NumericUpDownExtender   
-            ID="NumericUpDownExtender1"  
-            runat="server"  
-            TargetControlID="TextBox1"  
-            Minimum="1"  
-            Maximum="25"  
-            Width="100"  
-            >  
-        </cc1:NumericUpDownExtender>  
-            <asp:TextBox   
-            ID="TextBox1"  
-            runat="server"  
-            Font-Bold="true"  
-            ForeColor="Crimson"  
-            BackColor="LightGoldenrodYellow"  
-            >  
-        </asp:TextBox>  
-    
-        <br /><br />                          
-        <asp:Image   
-            ID="Image1"  
-            runat="server"  
-            ImageUrl="~/Images/RedTree.jpg"  
-            Width="50"  
-            />  --%> 
 
             <p>Nombre de chambre: <asp:DropDownList id="nblist" runat="server" AutoPostBack="true" CausesValidation="false" OnSelectedIndexChanged="nblist_SelectedIndexChanged">
                   <asp:ListItem Text="1" Value="1"></asp:ListItem>
@@ -63,9 +38,9 @@
               <table style="width: 100%; border-width: 1px; border-color: #666; border-style: solid">
                 <tr>
                   <td>
-                    <h3>
-                      <span>View 1 </span>
-                    </h3>
+                      <asp:RadioButton runat="server" Text="Standard" GroupName="typechambre" />
+                      <asp:RadioButton runat="server" Text="Supérieur" GroupName="typechambre"/>
+                      <asp:RadioButton runat="server" Text="Suite" GroupName="typechambre"/>
                   </td>
                 </tr>
               </table>
@@ -74,9 +49,9 @@
               <table style="width: 100%; border-width: 1px; border-color: #666; border-style: solid">
                 <tr>
                   <td>
-                    <h3>
-                      View 2
-                    </h3>
+                      <asp:RadioButton runat="server" Text="Standard" GroupName="typechambre2" />
+                      <asp:RadioButton runat="server" Text="Supérieur" GroupName="typechambre2"/>
+                      <asp:RadioButton runat="server" Text="Suite" GroupName="typechambre2"/>
                   </td>
                 </tr>
               </table>
@@ -85,9 +60,9 @@
               <table style="width: 100%; border-width: 1px; border-color: #666; border-style: solid">
                 <tr>
                   <td>
-                    <h3>
-                      View 3
-                    </h3>
+                      <asp:RadioButton runat="server" Text="Standard" GroupName="typechambre3" />
+                      <asp:RadioButton runat="server" Text="Supérieur" GroupName="typechambre3"/>
+                      <asp:RadioButton runat="server" Text="Suite" GroupName="typechambre3"/>
                   </td>
                 </tr>
               </table>
@@ -96,9 +71,9 @@
               <table style="width: 100%; border-width: 1px; border-color: #666; border-style: solid">
                 <tr>
                   <td>
-                    <h4>
-                      View 4
-                    </h4>
+                      <asp:RadioButton runat="server" Text="Standard" GroupName="typechambre4" />
+                      <asp:RadioButton runat="server" Text="Supérieur" GroupName="typechambre4"/>
+                      <asp:RadioButton runat="server" Text="Suite" GroupName="typechambre4"/>
                   </td>
                 </tr>
               </table>
