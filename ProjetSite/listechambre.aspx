@@ -41,7 +41,7 @@
             Width="50"  
             />  --%> 
 
-            <p>Nombre de chambre: <asp:DropDownList id="nblist" runat="server">
+            <p>Nombre de chambre: <asp:DropDownList id="nblist" runat="server" AutoPostBack="true" CausesValidation="false" OnSelectedIndexChanged="nblist_SelectedIndexChanged">
                   <asp:ListItem Text="1" Value="1"></asp:ListItem>
                   <asp:ListItem Text="2" Value="2"></asp:ListItem>
                   <asp:ListItem Text="3" Value="3"></asp:ListItem>
@@ -50,12 +50,14 @@
             </p>
 
     
-          <asp:Button Text="Tab 1" BorderStyle="None" ID="Tab1" CssClass="Initial" runat="server"
+          <asp:Button Text="Chambre 1" BorderStyle="None" ID="Tab1" CssClass="Initial" runat="server"
               OnClick="Tab1_Click" />
-          <asp:Button Text="Tab 2" BorderStyle="None" ID="Tab2" CssClass="Initial" runat="server"
+          <asp:Button Text="Chambre 2" BorderStyle="None" ID="Tab2" CssClass="Initial" runat="server"
               OnClick="Tab2_Click" />
-          <asp:Button Text="Tab 3" BorderStyle="None" ID="Tab3" CssClass="Initial" runat="server"
+          <asp:Button Text="Chambre 3" BorderStyle="None" ID="Tab3" CssClass="Initial" runat="server"
               OnClick="Tab3_Click" />
+          <asp:Button Text="Chambre 4" BorderStyle="None" ID="Tab4" CssClass="Initial" runat="server"
+              OnClick="Tab4_Click" />
           <asp:MultiView ID="MainView" runat="server">
             <asp:View ID="View1" runat="server">
               <table style="width: 100%; border-width: 1px; border-color: #666; border-style: solid">
@@ -90,8 +92,17 @@
                 </tr>
               </table>
             </asp:View>
+            <asp:View ID="View4" runat="server">
+              <table style="width: 100%; border-width: 1px; border-color: #666; border-style: solid">
+                <tr>
+                  <td>
+                    <h4>
+                      View 4
+                    </h4>
+                  </td>
+                </tr>
+              </table>
+            </asp:View>
           </asp:MultiView>
-     
-
 
 </asp:Content>

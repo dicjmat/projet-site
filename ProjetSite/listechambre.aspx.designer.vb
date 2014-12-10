@@ -50,6 +50,15 @@ Partial Public Class listechambre
     Protected WithEvents Tab3 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''Contrôle Tab4.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents Tab4 As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''Contrôle MainView.
     '''</summary>
     '''<remarks>
@@ -84,4 +93,13 @@ Partial Public Class listechambre
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents View3 As Global.System.Web.UI.WebControls.View
+
+    '''<summary>
+    '''Contrôle View4.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents View4 As Global.System.Web.UI.WebControls.View
 End Class
