@@ -13,8 +13,20 @@ body {
     position:relative;
 }
 
+.img
+{
+    float:left;
+}
+
+.desc
+{
+   margin-top:5%;
+
+}
+
 .titre
 {
+   font-size:larger;
    font-weight:bold;
 }
 

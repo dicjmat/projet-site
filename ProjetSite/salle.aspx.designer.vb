@@ -21,4 +21,31 @@ Partial Public Class salle
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents lblnomSalle As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Contrôle imgSalle.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents imgSalle As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
+    '''Contrôle lblDescSalle.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents lblDescSalle As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Contrôle lblNombrePlace.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents lblNombrePlace As Global.System.Web.UI.WebControls.Label
 End Class
