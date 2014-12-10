@@ -20,11 +20,13 @@
         Dim datef As Date
         Dim dated As Date
         Dim noHotel As Integer
+        Dim nbChambre As Integer
 
         dated = textboxdebut.Text
         datef = textboxFin.Text
         noHotel = nomhotel.SelectedValue
-        Response.Redirect("listechambre.aspx?dated=" + dated + "&datef=" + datef + "&noHotel=" + noHotel.ToString)
+
+        Response.Redirect("listechambre.aspx?dated=" + dated + "&datef=" + datef + "&noHotel=" + noHotel.ToString + "&nbChambre=" + nbChambre.ToString)
     End Sub
 
 

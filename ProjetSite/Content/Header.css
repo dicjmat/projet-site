@@ -69,3 +69,32 @@
     height:200px;
     width:200px;
 }
+
+.p {
+    color:white;
+}
+
+  .Initial
+  {
+    display: block;
+    padding: 4px 18px 4px 18px;
+    float: left;
+    background: url("../Images/InitialImage.png") no-repeat right top;
+    color: Black;
+    font-weight: bold;
+  }
+  .Initial:hover
+  {
+    color: White;
+    background: url("../Images/SelectedButton.png") no-repeat right top;
+  }
+  .Clicked
+  {
+    float: left;
+    display: block;
+    background: url("../Images/SelectedButton.png") no-repeat right top;
+    padding: 4px 18px 4px 18px;
+    color: Black;
+    font-weight: bold;
+    color: White;
+  }
