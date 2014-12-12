@@ -20,6 +20,10 @@
             Tab1.CssClass = "Clicked"
             MainView.ActiveViewIndex = 0
         End If
+        rd11.Checked = True
+        rd21.Checked = True
+        rd31.Checked = True
+        rd41.Checked = True
     End Sub
 
     Protected Sub Tab1_Click(sender As Object, e As EventArgs)
@@ -53,7 +57,6 @@
         MainView.ActiveViewIndex = 3
     End Sub
 
-
     Protected Sub nblist_SelectedIndexChanged(sender As Object, e As EventArgs) Handles nblist.SelectedIndexChanged
         afficheronglet(nblist)
     End Sub
@@ -67,6 +70,100 @@
             mybutton.Visible = True
             i += 1
         End While
+    End Sub
+  
+    Protected Sub rd11_CheckedChanged(sender As Object, e As EventArgs) Handles rd11.CheckedChanged
+        Dim STA As String
+        affichercontenu(STA)
+    End Sub
+
+    Protected Sub rd12_CheckedChanged(sender As Object, e As EventArgs) Handles rd12.CheckedChanged
+        Dim SUP As String
+        affichercontenu(SUP)
+    End Sub
+
+    Protected Sub rd13_CheckedChanged(sender As Object, e As EventArgs) Handles rd13.CheckedChanged
+        Dim SUI As String
+        affichercontenu(SUI)
+    End Sub
+
+    Protected Sub rd21_CheckedChanged(sender As Object, e As EventArgs) Handles rd21.CheckedChanged
+        Dim STA As String
+        affichercontenu(STA)
+    End Sub
+
+    Protected Sub rd22_CheckedChanged(sender As Object, e As EventArgs) Handles rd22.CheckedChanged
+        Dim SUP As String
+        affichercontenu(SUP)
+    End Sub
+
+    Protected Sub rd23_CheckedChanged(sender As Object, e As EventArgs) Handles rd23.CheckedChanged
+        Dim SUI As String
+        affichercontenu(SUI)
+    End Sub
+
+    Protected Sub rd31_CheckedChanged(sender As Object, e As EventArgs) Handles rd31.CheckedChanged
+        Dim STA As String
+        affichercontenu(STA)
+    End Sub
+
+    Protected Sub rd32_CheckedChanged(sender As Object, e As EventArgs) Handles rd32.CheckedChanged
+        Dim SUP As String
+        affichercontenu(SUP)
+    End Sub
+
+    Protected Sub rd33_CheckedChanged(sender As Object, e As EventArgs) Handles rd33.CheckedChanged
+        Dim SUI As String
+        affichercontenu(SUI)
+    End Sub
+
+    Protected Sub rd41_CheckedChanged(sender As Object, e As EventArgs) Handles rd41.CheckedChanged
+        Dim STA As String
+        affichercontenu(STA)
+    End Sub
+
+    Protected Sub rd42_CheckedChanged(sender As Object, e As EventArgs) Handles rd42.CheckedChanged
+        Dim SUP As String
+        affichercontenu(SUP)
+    End Sub
+
+    Protected Sub rd43_CheckedChanged(sender As Object, e As EventArgs) Handles rd43.CheckedChanged
+        Dim SUI As String
+        affichercontenu(SUI)
+    End Sub
+
+    Protected Sub affichercontenu(type As String)
+        Dim chambre = From ch In bd.tblTypeSalle
+          Where ch.codeTypeSalle = type
+          Select ch
+
+        Dim lit = From ch In bd.tblSalle
+                  Where ch.codeTypeSalle = type
+                  Join li In bd.tblTypeLit
+                  On li.codeTypeLit Equals ch.codeTypeLit
+                  Select li.descTypeLit
+
+
+        imgChambre.ImageUrl = "~/Images/chambre" + type + ".jpg"
+        lblTypeChambre.Text = chambre.Single.nomTypeSalle
+        For Each li In lit.Distinct.ToList
+            If li = lit.Distinct.ToList.Last Then
+                lblTypeLit.Text += li.ToString
+            Else
+                lblTypeLit.Text += li.ToString + " - "
+            End If
+        Next
+        lblDescTypeSalle.Text = chambre.Single.descTypeSalle
+        If Not IsPostBack Then
+            Dim res = From it In bd.tblItem
+                      Join gab In bd.tblGabarit
+                      On gab.codeItem Equals it.codeItem
+                      Where gab.codeTypeSalle = type
+                      Select it
+
+            lstItem.DataSource = res.ToList
+            lstItem.DataBind()
+        End If
     End Sub
 End Class
 

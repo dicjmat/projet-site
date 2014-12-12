@@ -38,20 +38,38 @@
               <table style="width: 100%; border-width: 1px; border-color: #666; border-style: solid">
                 <tr>
                   <td>
-                      <asp:RadioButton runat="server" Text="Standard" GroupName="typechambre" />
-                      <asp:RadioButton runat="server" Text="Supérieur" GroupName="typechambre"/>
-                      <asp:RadioButton runat="server" Text="Suite" GroupName="typechambre"/>
+                      <asp:RadioButton runat="server" Text="Standard" GroupName="typechambre1" id="rd11" />
+                      <asp:RadioButton runat="server" Text="Supérieur" GroupName="typechambrerd1" id="rd12"/>
+                      <asp:RadioButton runat="server" Text="Suite" GroupName="typechambrerd1" id="rd13"/>  
+                                            
+           <div>
+           <asp:Label ID="lblTypeChambre" runat="server" CssClass="typeChambre"></asp:Label>
+           <br />
+           <asp:Label ID="lblTypeLit" runat="server"></asp:Label>
+              </div>
+              <asp:Image ID="imgChambre" runat="server" CssClass="imgChambre" />
+              <asp:Label ID="Label1" runat="server" CssClass="lbl"><b>Description</b></asp:Label>
+              <asp:Label ID="lblDescTypeSalle" runat="server" CssClass="lbl lbldesc"></asp:Label>
+           <br />
+          <asp:Repeater runat="server" ID="lstItem">
+            <ItemTemplate>
+            <asp:Label runat="server" Text ='<%#String.Format("- {0}", Eval("nomItem"))%>'></asp:Label>
+            <br />
+          </ItemTemplate>
+          </asp:Repeater>
                   </td>
                 </tr>
               </table>
+
             </asp:View>
             <asp:View ID="View2" runat="server">
               <table style="width: 100%; border-width: 1px; border-color: #666; border-style: solid">
                 <tr>
                   <td>
-                      <asp:RadioButton runat="server" Text="Standard" GroupName="typechambre2" />
-                      <asp:RadioButton runat="server" Text="Supérieur" GroupName="typechambre2"/>
-                      <asp:RadioButton runat="server" Text="Suite" GroupName="typechambre2"/>
+                      <asp:RadioButton runat="server" Text="Standard" GroupName="typechambre2" id="rd21"/>
+                      <asp:RadioButton runat="server" Text="Supérieur" GroupName="typechambre2" id="rd22"/>
+                      <asp:RadioButton runat="server" Text="Suite" GroupName="typechambre2" id="rd23"/>
+
                   </td>
                 </tr>
               </table>
@@ -60,20 +78,19 @@
               <table style="width: 100%; border-width: 1px; border-color: #666; border-style: solid">
                 <tr>
                   <td>
-                      <asp:RadioButton runat="server" Text="Standard" GroupName="typechambre3" />
-                      <asp:RadioButton runat="server" Text="Supérieur" GroupName="typechambre3"/>
-                      <asp:RadioButton runat="server" Text="Suite" GroupName="typechambre3"/>
+                      <asp:RadioButton runat="server" Text="Standard" GroupName="typechambre3" id="rd31"/>
+                      <asp:RadioButton runat="server" Text="Supérieur" GroupName="typechambre3" id="rd32"/>
+                      <asp:RadioButton runat="server" Text="Suite" GroupName="typechambre3" id="rd33"/>
                   </td>
-                </tr>
               </table>
             </asp:View>
             <asp:View ID="View4" runat="server">
               <table style="width: 100%; border-width: 1px; border-color: #666; border-style: solid">
                 <tr>
                   <td>
-                      <asp:RadioButton runat="server" Text="Standard" GroupName="typechambre4" />
-                      <asp:RadioButton runat="server" Text="Supérieur" GroupName="typechambre4"/>
-                      <asp:RadioButton runat="server" Text="Suite" GroupName="typechambre4"/>
+                      <asp:RadioButton runat="server" Text="Standard" GroupName="typechambre4" id="rd41"/>
+                      <asp:RadioButton runat="server" Text="Supérieur" GroupName="typechambre4" id="rd42"/>
+                      <asp:RadioButton runat="server" Text="Suite" GroupName="typechambre4" id="rd43"/>
                   </td>
                 </tr>
               </table>

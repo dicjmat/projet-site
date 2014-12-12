@@ -86,7 +86,7 @@
             <div  id="panel">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-<%--            <asp:ContentPlaceHolder runat="server" ID="placefooter"/>--%>
+
 
             </div>
 

@@ -15,8 +15,6 @@
                   Select li.descTypeLit
 
 
-
-
         imgChambre.ImageUrl = "~/Images/chambre" + chambre.Single.codeTypeSalle + ".jpg"
         lblTypeChambre.Text = chambre.Single.nomTypeSalle
         For Each li In lit.Distinct.ToList
