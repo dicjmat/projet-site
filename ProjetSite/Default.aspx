@@ -20,7 +20,7 @@
 
         <div id="verif">
         <p class="p">Date de début: <asp:textbox runat="server" cssclass="textboxdebut" id="textboxdebut"/></p>
-        <p class="p">Date de fin: <asp:textbox runat="server" cssclass="textboxFin" ID="textboxFin" /></p>
+        <p class="p">Date de fin: <asp:textbox runat="server" cssclass="textboxFin" ID="textboxFin"  /></p>
         <p class="p">Hotel: <asp:DropDownList id="nomhotel" runat="server"/></p>
 
 <%--        <p class="p">Nb de chambre: <asp:DropDownList runat="server" ID="ddlist">
@@ -31,6 +31,11 @@
         </asp:DropDownList></p>--%>
 
         <asp:Button id="btnValid" runat="server" Text="Vérification"/>
+        <div>
+            <asp:label id="erreur" CssClass="erreur" runat="server">La date de fin ne peut être avant la date de début.</asp:label>
+            <asp:label id="erreur2" CssClass="erreur" runat="server">La date choisie ne peut être avant aujourd'hui.</asp:label>
+            <asp:label id="erreur3" CssClass="erreur" runat="server">You're kidding me, right?.</asp:label>
+        </div>
     </div>
 
 <script type="text/javascript">

@@ -72,6 +72,7 @@
 
 .p {
     color:white;
+    margin-right:4%;
 }
 
   .Initial
@@ -97,4 +98,9 @@
     color: Black;
     font-weight: bold;
     color: White;
+  }
+
+  .erreur{
+      color:red;
+ 
   }
