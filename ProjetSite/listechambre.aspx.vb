@@ -187,7 +187,10 @@
     End Sub
 
     Protected Sub btnreserv_Click(sender As Object, e As EventArgs) Handles btnreserv.Click
-        Response.Redirect("Réservation.aspx")
+        Dim gotdated = Request.QueryString("dated")
+        Dim gotdatef = Request.QueryString("datef")
+        Dim gotnohotel = Request.QueryString("nohotel")
+        Response.Redirect("Réservation.aspx?gotdated=" + gotdated + "&gotdatef=" + gotdatef + "&gotnohotel=" + gotnohotel)
     End Sub
 End Class
 
