@@ -43,15 +43,15 @@
                       <asp:RadioButton runat="server" Text="Suite" GroupName="typechambrerd1" id="rd13" AutoPostBack=True/>  
                                             
            <div>
-           <asp:Label ID="lblTypeChambre" runat="server" CssClass="typeChambre"></asp:Label>
+           <asp:Label Class="lblTypeChambre" runat="server" CssClass="typeChambre"></asp:Label>
            <br />
-           <asp:Label ID="lblTypeLit" runat="server"></asp:Label>
+           <asp:Label Class="lblTypeLit" runat="server"></asp:Label>
               </div>
-              <asp:Image ID="imgChambre" runat="server" CssClass="imgChambre" />
-              <asp:Label ID="Label1" runat="server" CssClass="lbl"><b>Description</b></asp:Label>
-              <asp:Label ID="lblDescTypeSalle" runat="server" CssClass="lbl lbldesc"></asp:Label>
+              <asp:Image Class="imgChambre" runat="server" CssClass="imgChambre" />
+              <asp:Label Class="Label1" runat="server" CssClass="lbl"><b>Description</b></asp:Label>
+              <asp:Label Class="lblDescTypeSalle" runat="server" CssClass="lbl lbldesc"></asp:Label>
            <br />
-          <asp:Repeater runat="server" ID="lstItem">
+          <asp:Repeater runat="server" Class="lstItem">
             <ItemTemplate>
             <asp:Label runat="server" Text ='<%#String.Format("- {0}", Eval("nomItem"))%>'></asp:Label>
             <br />

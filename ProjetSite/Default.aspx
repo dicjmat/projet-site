@@ -34,7 +34,7 @@
         <div>
             <asp:label id="erreur" CssClass="erreur" runat="server">La date de fin ne peut être avant la date de début.</asp:label>
             <asp:label id="erreur2" CssClass="erreur" runat="server">La date choisie ne peut être avant aujourd'hui.</asp:label>
-            <asp:label id="erreur3" CssClass="erreur" runat="server">You're kidding me, right?.</asp:label>
+            <asp:label id="erreur3" CssClass="erreur" runat="server">La date de fin ne peut être avant la date de début et la date choisie ne peut être avant aujourd'hui.</asp:label>
         </div>
     </div>
 
