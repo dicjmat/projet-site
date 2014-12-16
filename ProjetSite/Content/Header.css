@@ -38,14 +38,17 @@
 
 #verif{
     background-color:black;
-    height:40%;
+    height:30%;
     width:35%;
     min-width:300px;
     padding-top:1%;
     padding-left:1%;
     padding-bottom:1%;
+    margin-left:55%;
     border-style:solid;
     float:right;
+    z-index:1;
+    position:absolute;
 }
 
 .imagechambre{
@@ -103,5 +106,42 @@
 
   .erreur{
       color:red;
- 
   }
+
+  .happy{
+      width:95%;
+      height:50%;
+      margin-top:3%;
+      margin-left:2%;
+      z-index:-1;
+  }
+  
+  .logo{
+      z-index:1;
+      position:absolute;
+  }
+
+  #bloc{
+      border-style:double;
+      margin-top:1%;
+  }
+
+  /*.imgspa{
+      width:15%;
+      height:15%;
+      margin-left:5%;
+      margin-top:2%;
+      margin-bottom:2%;
+      position:absolute;
+      
+  }
+
+  #blocspa{
+      border-style:groove;
+      margin-left:4%;
+      margin-bottom:1%;
+      margin-top:1%;
+      margin-right:80%;
+      width:16%;
+      height:16%;
+  }*/
