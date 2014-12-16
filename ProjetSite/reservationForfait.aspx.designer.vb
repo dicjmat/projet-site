@@ -95,6 +95,105 @@ Partial Public Class reservationForfait
     Protected WithEvents txtAdresse As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Contrôle txtTel.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents txtTel As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Contrôle txtCell.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents txtCell As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Contrôle txtCodePostal.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents txtCodePostal As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Contrôle listtype.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents listtype As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Contrôle txtNoCarteCredit.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents txtNoCarteCredit As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Contrôle txtEmail.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Contrôle txtDateExpiration.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents txtDateExpiration As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Contrôle lstPays.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents lstPays As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Contrôle lstProvince.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents lstProvince As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Contrôle lstVille.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents lstVille As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Contrôle txtCommentaire.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents txtCommentaire As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''Contrôle textboxdebut.
     '''</summary>
     '''<remarks>

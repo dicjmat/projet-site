@@ -12,6 +12,7 @@
         <div><p>Type de carte crédit:</p><asp:DropDownList id="listtype" runat="server" AutoPostBack="true" CausesValidation="false" >
                 <asp:ListItem Text="VISA" Value="1"></asp:ListItem>
                 <asp:ListItem Text="AMEX" Value="2"></asp:ListItem>
+                <asp:ListItem Text="MAST" Value="3"></asp:ListItem>
         </asp:DropDownList></div>
         <div><p>No carte de crédit:</p><asp:textbox runat="server" cssclass="txtprofil" id="txtnocarte"/></div>
         <div><p>Date d'expiration:</p><asp:textbox runat="server" cssclass="txtprofil" id="txtdateexp"/></div>

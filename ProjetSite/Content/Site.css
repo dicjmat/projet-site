@@ -229,3 +229,23 @@ input[type="email"] {
 {
     display:inline
 }
+
+.width
+{
+    max-width:100px;
+}
+
+.width2
+{
+    max-width:200px;
+}
+
+.height
+{
+    height:10%;
+}
+
+.width2
+{
+    min-width:200px;
+}
