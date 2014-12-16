@@ -45,7 +45,6 @@ Partial Public Class P2014_Equipe2_GestionHôtelièreEntities
     Public Overridable Property tblProfession() As DbSet(Of tblProfession)
     Public Overridable Property tblClient() As DbSet(Of tblClient)
     Public Overridable Property tblCompagnie() As DbSet(Of tblCompagnie)
-    Public Overridable Property tblCompte() As DbSet(Of tblCompte)
     Public Overridable Property tblDemandeur() As DbSet(Of tblDemandeur)
     Public Overridable Property tblElementNote() As DbSet(Of tblElementNote)
     Public Overridable Property tblFacture() As DbSet(Of tblFacture)

@@ -14,9 +14,10 @@ Partial Public Class tblNote
     Public Property noNote As Integer
     Public Property noReservation As Integer
     Public Property etatNote As String
+    Public Property noFacture As Nullable(Of Integer)
 
     Public Overridable Property tblElementNote As ICollection(Of tblElementNote) = New HashSet(Of tblElementNote)
+    Public Overridable Property tblFacture As tblFacture
     Public Overridable Property tblReservation As tblReservation
-    Public Overridable Property tblFacture As ICollection(Of tblFacture) = New HashSet(Of tblFacture)
 
 End Class

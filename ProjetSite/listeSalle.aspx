@@ -2,8 +2,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <asp:Repeater runat="server" ID="listeSalleHotel">
          <ItemTemplate>
-             <asp:Label runat="server" Text='<%#Eval("nomHotel") %>'  CssClass='<%#String.Format("{0} titre", Eval("noHotel"))%>'></asp:Label>
+             <div class='<%#String.Format("flip{0}", Eval("noHotel"))%>'>
+                <asp:Label runat="server" Text='<%#Eval("nomHotel") %>'  CssClass='<%#String.Format("{0} titre", Eval("noHotel"))%>'></asp:Label>
+             </div>
+             <script>
+                 $(document).ready(function () {
+                     $(".flip<%# Eval("noHotel")%>").click(function () {
+                         $(".panel<%# Eval("noHotel")%>").slideToggle("slow");
+                     });
+                 });
+            </script>
              <hr />
+             <div class='<%#String.Format("panel{0} ini", Eval("noHotel"))%>'>
              <asp:ListView runat="server">
                  <ItemTemplate>
                      <asp:Label runat="server" Text='<%#Eval("nomSalle")%>'></asp:Label>
@@ -20,7 +30,7 @@
                      <br />
                      <br />
                  </EmptyDataTemplate>
-             </asp:ListView>
+             </asp:ListView></div>
          </ItemTemplate>
      </asp:Repeater>
 </asp:Content>

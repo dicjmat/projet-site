@@ -18,6 +18,7 @@ Partial Public Class tblForfait
     Public Property prixForfait As Decimal
     Public Property noHotel As Byte
     Public Property codeTypeSalle As String
+    Public Property nbNuitForfait As Nullable(Of Byte)
 
     Public Overridable Property tblHotel As tblHotel
     Public Overridable Property tblTypeSalle As tblTypeSalle
