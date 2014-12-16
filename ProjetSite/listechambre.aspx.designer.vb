@@ -264,4 +264,13 @@ Partial Public Class listechambre
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents rd43 As Global.System.Web.UI.WebControls.RadioButton
+
+    '''<summary>
+    '''Contrôle btnreserv.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents btnreserv As Global.System.Web.UI.WebControls.Button
 End Class

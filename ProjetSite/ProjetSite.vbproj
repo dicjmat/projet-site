@@ -250,6 +250,7 @@
     <Content Include="Accueil.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Account\PageAccueil.aspx" />
+    <Content Include="Réservation.aspx" />
     <Content Include="salle.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -585,6 +586,13 @@
     </Compile>
     <Compile Include="Account\PageAccueil.aspx.vb">
       <DependentUpon>PageAccueil.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Réservation.aspx.designer.vb">
+      <DependentUpon>Réservation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Réservation.aspx.vb">
+      <DependentUpon>Réservation.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="salle.aspx.designer.vb">

@@ -38,9 +38,9 @@
               <table style="width: 100%; border-width: 1px; border-color: #666; border-style: solid">
                 <tr>
                   <td>
-                      <asp:RadioButton runat="server" Text="Standard" GroupName="typechambre1" id="rd11" />
-                      <asp:RadioButton runat="server" Text="Supérieur" GroupName="typechambrerd1" id="rd12"/>
-                      <asp:RadioButton runat="server" Text="Suite" GroupName="typechambrerd1" id="rd13"/>  
+                      <asp:RadioButton runat="server" Text="Standard" GroupName="typechambre1" id="rd11" AutoPostBack=True/>
+                      <asp:RadioButton runat="server" Text="Supérieur" GroupName="typechambrerd1" id="rd12" AutoPostBack=True/>
+                      <asp:RadioButton runat="server" Text="Suite" GroupName="typechambrerd1" id="rd13" AutoPostBack=True/>  
                                             
            <div>
            <asp:Label ID="lblTypeChambre" runat="server" CssClass="typeChambre"></asp:Label>
@@ -57,6 +57,7 @@
             <br />
           </ItemTemplate>
           </asp:Repeater>
+
                   </td>
                 </tr>
               </table>
@@ -96,5 +97,5 @@
               </table>
             </asp:View>
           </asp:MultiView>
-
+          <asp:Button runat="server" ID="btnreserv" Text="Réserver"/>
 </asp:Content>
