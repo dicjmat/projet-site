@@ -40,11 +40,12 @@
     background-color:black;
     height:40%;
     width:35%;
+    min-width:300px;
     padding-top:1%;
     padding-left:1%;
     padding-bottom:1%;
     border-style:solid;
-    margin-left:68%;
+    float:right;
 }
 
 .imagechambre{

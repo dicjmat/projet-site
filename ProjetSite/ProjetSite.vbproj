@@ -217,12 +217,15 @@
     <Content Include="Content\Site.css" />
     <Content Include="Content\Header.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="forfait.aspx" />
     <Content Include="Images\chambreSTA.jpg" />
     <Content Include="Images\chambreSUI.jpg" />
     <Content Include="Images\chambreSUP.jpg" />
     <Content Include="Images\logo-hotel.png" />
     <Content Include="Images\salle1-2.jpg" />
     <Content Include="Images\villa.jpg" />
+    <Content Include="reservationForfait.aspx" />
+    <Content Include="Scripts\unslider.js" />
     <Content Include="listechambre.aspx" />
     <Content Include="listeSalle.aspx" />
     <Content Include="packages.config" />
@@ -230,6 +233,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <Content Include="Accueil.Master" />
     <EntityDeploy Include="Models\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.vb</LastGenOutput>
@@ -247,7 +251,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.vb</LastGenOutput>
     </Content>
-    <Content Include="Accueil.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Account\PageAccueil.aspx" />
     <Content Include="Réservation.aspx" />
@@ -402,6 +405,13 @@
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="forfait.aspx.designer.vb">
+      <DependentUpon>forfait.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forfait.aspx.vb">
+      <DependentUpon>forfait.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -476,9 +486,6 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblCompagnie.vb">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\tblCompte.vb">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblDemandeur.vb">
@@ -595,6 +602,13 @@
       <DependentUpon>Réservation.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="reservationForfait.aspx.designer.vb">
+      <DependentUpon>reservationForfait.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reservationForfait.aspx.vb">
+      <DependentUpon>reservationForfait.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="salle.aspx.designer.vb">
       <DependentUpon>salle.aspx</DependentUpon>
     </Compile>
@@ -631,13 +645,6 @@
     <Compile Include="ViewSwitcher.ascx.designer.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Site.Mobile.Master.vb">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.designer.vb">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -658,7 +665,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <Content Include="Site.Master" />
-    <Content Include="Site.Mobile.Master" />
     <Content Include="ViewSwitcher.ascx" />
   </ItemGroup>
   <ItemGroup>

@@ -19,7 +19,7 @@ Partial Public Class tblReservation
     Public Property commentaire As String
     Public Property noSalle As Short
     Public Property noHotel As Byte
-    Public Property noClient As Integer
+    Public Property noClient As Nullable(Of Integer)
     Public Property noEmpl As Nullable(Of Short)
     Public Property noDemandeur As Nullable(Of Integer)
 
