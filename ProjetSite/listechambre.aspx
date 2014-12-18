@@ -71,6 +71,21 @@
                       <asp:RadioButton runat="server" Text="Supérieur" GroupName="typechambre2" id="rd22"/>
                       <asp:RadioButton runat="server" Text="Suite" GroupName="typechambre2" id="rd23"/>
 
+                                 <div>
+           <asp:Label Class="lblTypeChambre" runat="server" CssClass="typeChambre"></asp:Label>
+           <br />
+           <asp:Label Class="lblTypeLit" runat="server"></asp:Label>
+              </div>
+              <asp:Image Class="imgChambre" runat="server" CssClass="imgChambre" />
+              <asp:Label Class="Label1" runat="server" CssClass="lbl"><b>Description</b></asp:Label>
+              <asp:Label Class="lblDescTypeSalle" runat="server" CssClass="lbl lbldesc"></asp:Label>
+           <br />
+          <asp:Repeater runat="server" Class="lstItem">
+            <ItemTemplate>
+            <asp:Label runat="server" Text ='<%#String.Format("- {0}", Eval("nomItem"))%>'></asp:Label>
+            <br />
+          </ItemTemplate>
+          </asp:Repeater>
                   </td>
                 </tr>
               </table>
@@ -82,6 +97,21 @@
                       <asp:RadioButton runat="server" Text="Standard" GroupName="typechambre3" id="rd31"/>
                       <asp:RadioButton runat="server" Text="Supérieur" GroupName="typechambre3" id="rd32"/>
                       <asp:RadioButton runat="server" Text="Suite" GroupName="typechambre3" id="rd33"/>
+                                 <div>
+           <asp:Label Class="lblTypeChambre" runat="server" CssClass="typeChambre"></asp:Label>
+           <br />
+           <asp:Label Class="lblTypeLit" runat="server"></asp:Label>
+              </div>
+              <asp:Image Class="imgChambre" runat="server" CssClass="imgChambre" />
+              <asp:Label Class="Label1" runat="server" CssClass="lbl"><b>Description</b></asp:Label>
+              <asp:Label Class="lblDescTypeSalle" runat="server" CssClass="lbl lbldesc"></asp:Label>
+           <br />
+          <asp:Repeater runat="server" Class="lstItem">
+            <ItemTemplate>
+            <asp:Label runat="server" Text ='<%#String.Format("- {0}", Eval("nomItem"))%>'></asp:Label>
+            <br />
+          </ItemTemplate>
+          </asp:Repeater>
                   </td>
               </table>
             </asp:View>
@@ -92,6 +122,21 @@
                       <asp:RadioButton runat="server" Text="Standard" GroupName="typechambre4" id="rd41"/>
                       <asp:RadioButton runat="server" Text="Supérieur" GroupName="typechambre4" id="rd42"/>
                       <asp:RadioButton runat="server" Text="Suite" GroupName="typechambre4" id="rd43"/>
+                                 <div>
+           <asp:Label Class="lblTypeChambre" runat="server" CssClass="typeChambre"></asp:Label>
+           <br />
+           <asp:Label Class="lblTypeLit" runat="server"></asp:Label>
+              </div>
+              <asp:Image Class="imgChambre" runat="server" CssClass="imgChambre" />
+              <asp:Label Class="Label1" runat="server" CssClass="lbl"><b>Description</b></asp:Label>
+              <asp:Label Class="lblDescTypeSalle" runat="server" CssClass="lbl lbldesc"></asp:Label>
+           <br />
+          <asp:Repeater runat="server" Class="lstItem">
+            <ItemTemplate>
+            <asp:Label runat="server" Text ='<%#String.Format("- {0}", Eval("nomItem"))%>'></asp:Label>
+            <br />
+          </ItemTemplate>
+          </asp:Repeater>
                   </td>
                 </tr>
               </table>

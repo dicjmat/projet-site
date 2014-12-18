@@ -38,26 +38,35 @@
     End Sub
 
     Protected Sub Tab2_Click(sender As Object, e As EventArgs)
+        Dim STA As String
+        STA = "STA"
         Tab1.CssClass = "Initial"
         Tab2.CssClass = "Clicked"
         Tab3.CssClass = "Initial"
         Tab4.CssClass = "Initial"
         MainView.ActiveViewIndex = 1
+        affichercontenu(STA)
     End Sub
 
     Protected Sub Tab3_Click(sender As Object, e As EventArgs)
+        Dim STA As String
+        STA = "STA"
         Tab1.CssClass = "Initial"
         Tab2.CssClass = "Initial"
         Tab3.CssClass = "Clicked"
         Tab4.CssClass = "Initial"
         MainView.ActiveViewIndex = 2
+        affichercontenu(STA)
     End Sub
     Protected Sub Tab4_Click(sender As Object, e As EventArgs)
+        Dim STA As String
+        STA = "STA"
         Tab1.CssClass = "Initial"
         Tab2.CssClass = "Initial"
         Tab3.CssClass = "Initial"
         Tab4.CssClass = "Clicked"
         MainView.ActiveViewIndex = 3
+        affichercontenu(STA)
     End Sub
 
     Protected Sub nblist_SelectedIndexChanged(sender As Object, e As EventArgs) Handles nblist.SelectedIndexChanged
