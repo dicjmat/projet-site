@@ -144,7 +144,11 @@
 
         imgChambre3.ImageUrl = "~/Images/chambre" + type + ".jpg"
         lblTypeChambre3.Text = chambre.Single.nomTypeSalle
+        imgChambre.ImageUrl = "~/Images/chambre" + type + ".jpg"
+        lblTypeChambre.Text = chambre.Single.nomTypeSalle
+        lblTypeLit.Text = ""
         For Each li In lit.Distinct.ToList
+
             If li = lit.Distinct.ToList.Last Then
                 lblTypeLit3.Text += li.ToString
             Else

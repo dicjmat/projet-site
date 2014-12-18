@@ -15,7 +15,7 @@
         </ItemTemplate>
         </asp:Repeater>--%>
 
-    
+
           <asp:Button Text="Standard" BorderStyle="None" ID="Tab1" CssClass="Initial" runat="server"
               OnClick="Tab1_Click" />
           <asp:Button Text="Supérieur" BorderStyle="None" ID="Tab2" CssClass="Initial" runat="server"
@@ -26,7 +26,7 @@
             <asp:View ID="View1" runat="server">
               <table style="width: 100%; border-width: 1px; border-color: #666; border-style: solid">
                 <tr>
-                  <td>      
+                  <td>
            <div>
            <asp:Label id="lblTypeChambre" runat="server" CssClass="typeChambre"></asp:Label>
            <br />
@@ -115,5 +115,8 @@
               </table>
             </asp:View>
           </asp:MultiView>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+
           <asp:Button runat="server" ID="btnreserv" Text="Réserver"/>
 </asp:Content>
