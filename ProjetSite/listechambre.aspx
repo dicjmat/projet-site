@@ -33,6 +33,8 @@
               OnClick="Tab3_Click" />
           <asp:Button Text="Chambre 4" BorderStyle="None" ID="Tab4" CssClass="Initial" runat="server"
               OnClick="Tab4_Click" />
+    <asp:UpdatePanel runat="server">
+        <ContentTemplate>
           <asp:MultiView ID="MainView" runat="server">
             <asp:View ID="View1" runat="server">
               <table style="width: 100%; border-width: 1px; border-color: #666; border-style: solid">
@@ -98,5 +100,8 @@
               </table>
             </asp:View>
           </asp:MultiView>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+
           <asp:Button runat="server" ID="btnreserv" Text="Réserver"/>
 </asp:Content>
