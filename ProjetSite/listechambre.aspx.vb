@@ -13,62 +13,43 @@
         'repeatchambre.DataSource() = bd.determinertypechambrelibre(gotdated, gotdatef, gotnohotel).ToList
         'repeatchambre.DataBind()
 
-        Tab1.Visible = False
-        Tab2.Visible = False
-        Tab3.Visible = False
-        Tab4.Visible = False
         afficheronglet(nblist)
         If Not IsPostBack Then
             Tab1.CssClass = "Clicked"
             MainView.ActiveViewIndex = 0
         End If
-        rd11.Checked = True
-        rd21.Checked = True
-        rd31.Checked = True
-        rd41.Checked = True
         affichercontenu(STA)
     End Sub
 
     Protected Sub Tab1_Click(sender As Object, e As EventArgs)
+        Dim STA As String
+        STA = "STA"
         Tab1.CssClass = "Clicked"
         Tab2.CssClass = "Initial"
         Tab3.CssClass = "Initial"
-        Tab4.CssClass = "Initial"
         MainView.ActiveViewIndex = 0
+        affichercontenu(STA)
     End Sub
 
     Protected Sub Tab2_Click(sender As Object, e As EventArgs)
-        Dim STA As String
-        STA = "STA"
+        Dim SUP As String
+        SUP = "SUP"
         Tab1.CssClass = "Initial"
         Tab2.CssClass = "Clicked"
         Tab3.CssClass = "Initial"
-        Tab4.CssClass = "Initial"
         MainView.ActiveViewIndex = 1
-        affichercontenu(STA)
+        affichercontenu2(SUP)
     End Sub
 
     Protected Sub Tab3_Click(sender As Object, e As EventArgs)
-        Dim STA As String
-        STA = "STA"
+        Dim SUI As String
+        SUI = "SUI"
         Tab1.CssClass = "Initial"
         Tab2.CssClass = "Initial"
         Tab3.CssClass = "Clicked"
-        Tab4.CssClass = "Initial"
         MainView.ActiveViewIndex = 2
-        affichercontenu(STA)
+        affichercontenu3(SUI)
     End Sub
-    Protected Sub Tab4_Click(sender As Object, e As EventArgs)
-        Dim STA As String
-        STA = "STA"
-        Tab1.CssClass = "Initial"
-        Tab2.CssClass = "Initial"
-        Tab3.CssClass = "Initial"
-        Tab4.CssClass = "Clicked"
-        MainView.ActiveViewIndex = 3
-        affichercontenu(STA)
-    End Sub
-
     Protected Sub nblist_SelectedIndexChanged(sender As Object, e As EventArgs) Handles nblist.SelectedIndexChanged
         afficheronglet(nblist)
     End Sub
@@ -82,84 +63,6 @@
             mybutton.Visible = True
             i += 1
         End While
-    End Sub
-  
-    Protected Sub rd11_CheckedChanged(sender As Object, e As EventArgs) Handles rd11.CheckedChanged
-        Dim STA As String
-        STA = "STA"
-        affichercontenu(STA)
-        rd12.Checked = False
-        rd13.Checked = False
-    End Sub
-
-    Protected Sub rd12_CheckedChanged(sender As Object, e As EventArgs) Handles rd12.CheckedChanged
-        Dim SUP As String
-        SUP = "SUP"
-        affichercontenu(SUP)
-        rd11.Checked = False
-        rd13.Checked = False
-    End Sub
-
-    Protected Sub rd13_CheckedChanged(sender As Object, e As EventArgs) Handles rd13.CheckedChanged
-        Dim SUI As String
-        SUI = "SUI"
-        affichercontenu(SUI)
-        rd11.Checked = False
-        rd12.Checked = False
-    End Sub
-
-    Protected Sub rd21_CheckedChanged(sender As Object, e As EventArgs) Handles rd21.CheckedChanged
-        Dim STA As String
-        STA = "STA"
-        affichercontenu(STA)
-    End Sub
-
-    Protected Sub rd22_CheckedChanged(sender As Object, e As EventArgs) Handles rd22.CheckedChanged
-        Dim SUP As String
-        SUP = "SUP"
-        affichercontenu(SUP)
-    End Sub
-
-    Protected Sub rd23_CheckedChanged(sender As Object, e As EventArgs) Handles rd23.CheckedChanged
-        Dim SUI As String
-        SUI = "SUI"
-        affichercontenu(SUI)
-    End Sub
-
-    Protected Sub rd31_CheckedChanged(sender As Object, e As EventArgs) Handles rd31.CheckedChanged
-        Dim STA As String
-        STA = "STA"
-        affichercontenu(STA)
-    End Sub
-
-    Protected Sub rd32_CheckedChanged(sender As Object, e As EventArgs) Handles rd32.CheckedChanged
-        Dim SUP As String
-        SUP = "SUP"
-        affichercontenu(SUP)
-    End Sub
-
-    Protected Sub rd33_CheckedChanged(sender As Object, e As EventArgs) Handles rd33.CheckedChanged
-        Dim SUI As String
-        SUI = "SUI"
-        affichercontenu(SUI)
-    End Sub
-
-    Protected Sub rd41_CheckedChanged(sender As Object, e As EventArgs) Handles rd41.CheckedChanged
-        Dim STA As String
-        STA = "STA"
-        affichercontenu(STA)
-    End Sub
-
-    Protected Sub rd42_CheckedChanged(sender As Object, e As EventArgs) Handles rd42.CheckedChanged
-        Dim SUP As String
-        SUP = "SUP"
-        affichercontenu(SUP)
-    End Sub
-
-    Protected Sub rd43_CheckedChanged(sender As Object, e As EventArgs) Handles rd43.CheckedChanged
-        Dim SUI As String
-        SUI = "SUI"
-        affichercontenu(SUI)
     End Sub
 
     Protected Sub affichercontenu(type As String)
@@ -192,6 +95,72 @@
 
             lstItem.DataSource = res.ToList
             lstItem.DataBind()
+        End If
+    End Sub
+
+    Protected Sub affichercontenu2(type As String)
+        Dim chambre = From ch In bd.tblTypeSalle
+          Where ch.codeTypeSalle = type
+          Select ch
+
+        Dim lit = From ch In bd.tblSalle
+                  Where ch.codeTypeSalle = type
+                  Join li In bd.tblTypeLit
+                  On li.codeTypeLit Equals ch.codeTypeLit
+                  Select li.descTypeLit
+
+        imgChambre2.ImageUrl = "~/Images/chambre" + type + ".jpg"
+        lblTypeChambre2.Text = chambre.Single.nomTypeSalle
+        For Each li In lit.Distinct.ToList
+            If li = lit.Distinct.ToList.Last Then
+                lblTypeLit2.Text += li.ToString
+            Else
+                lblTypeLit2.Text += li.ToString + " - "
+            End If
+        Next
+        lblDescTypeSalle2.Text = chambre.Single.descTypeSalle
+        If Not IsPostBack Then
+            Dim res = From it In bd.tblItem
+                      Join gab In bd.tblGabarit
+                      On gab.codeItem Equals it.codeItem
+                      Where gab.codeTypeSalle = type
+                      Select it
+
+            lstItem2.DataSource = res.ToList
+            lstItem2.DataBind()
+        End If
+    End Sub
+
+    Protected Sub affichercontenu3(type As String)
+        Dim chambre = From ch In bd.tblTypeSalle
+          Where ch.codeTypeSalle = type
+          Select ch
+
+        Dim lit = From ch In bd.tblSalle
+                  Where ch.codeTypeSalle = type
+                  Join li In bd.tblTypeLit
+                  On li.codeTypeLit Equals ch.codeTypeLit
+                  Select li.descTypeLit
+
+        imgChambre3.ImageUrl = "~/Images/chambre" + type + ".jpg"
+        lblTypeChambre3.Text = chambre.Single.nomTypeSalle
+        For Each li In lit.Distinct.ToList
+            If li = lit.Distinct.ToList.Last Then
+                lblTypeLit3.Text += li.ToString
+            Else
+                lblTypeLit3.Text += li.ToString + " - "
+            End If
+        Next
+        lblDescTypeSalle3.Text = chambre.Single.descTypeSalle
+        If Not IsPostBack Then
+            Dim res = From it In bd.tblItem
+                      Join gab In bd.tblGabarit
+                      On gab.codeItem Equals it.codeItem
+                      Where gab.codeTypeSalle = type
+                      Select it
+
+            lstItem3.DataSource = res.ToList
+            lstItem3.DataBind()
         End If
     End Sub
 

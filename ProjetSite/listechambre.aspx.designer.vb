@@ -14,15 +14,6 @@ Option Explicit On
 Partial Public Class listechambre
 
     '''<summary>
-    '''Contrôle nblist.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents nblist As Global.System.Web.UI.WebControls.DropDownList
-
-    '''<summary>
     '''Contrôle Tab1.
     '''</summary>
     '''<remarks>
@@ -50,15 +41,6 @@ Partial Public Class listechambre
     Protected WithEvents Tab3 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Contrôle Tab4.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents Tab4 As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
     '''Contrôle MainView.
     '''</summary>
     '''<remarks>
@@ -75,33 +57,6 @@ Partial Public Class listechambre
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents View1 As Global.System.Web.UI.WebControls.View
-
-    '''<summary>
-    '''Contrôle rd11.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents rd11 As Global.System.Web.UI.WebControls.RadioButton
-
-    '''<summary>
-    '''Contrôle rd12.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents rd12 As Global.System.Web.UI.WebControls.RadioButton
-
-    '''<summary>
-    '''Contrôle rd13.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents rd13 As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
     '''Contrôle lblTypeChambre.
@@ -158,6 +113,15 @@ Partial Public Class listechambre
     Protected WithEvents lstItem As Global.System.Web.UI.WebControls.Repeater
 
     '''<summary>
+    '''Contrôle nblist.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents nblist As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
     '''Contrôle View2.
     '''</summary>
     '''<remarks>
@@ -167,31 +131,67 @@ Partial Public Class listechambre
     Protected WithEvents View2 As Global.System.Web.UI.WebControls.View
 
     '''<summary>
-    '''Contrôle rd21.
+    '''Contrôle lblTypeChambre2.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents rd21 As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents lblTypeChambre2 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Contrôle rd22.
+    '''Contrôle lblTypeLit2.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents rd22 As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents lblTypeLit2 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Contrôle rd23.
+    '''Contrôle imgChambre2.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents rd23 As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents imgChambre2 As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
+    '''Contrôle Label2.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Contrôle lblDescTypeSalle2.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents lblDescTypeSalle2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Contrôle lstItem2.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents lstItem2 As Global.System.Web.UI.WebControls.Repeater
+
+    '''<summary>
+    '''Contrôle nblist2.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents nblist2 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Contrôle View3.
@@ -203,67 +203,67 @@ Partial Public Class listechambre
     Protected WithEvents View3 As Global.System.Web.UI.WebControls.View
 
     '''<summary>
-    '''Contrôle rd31.
+    '''Contrôle lblTypeChambre3.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents rd31 As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents lblTypeChambre3 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Contrôle rd32.
+    '''Contrôle lblTypeLit3.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents rd32 As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents lblTypeLit3 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Contrôle rd33.
+    '''Contrôle imgChambre3.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents rd33 As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents imgChambre3 As Global.System.Web.UI.WebControls.Image
 
     '''<summary>
-    '''Contrôle View4.
+    '''Contrôle Label3.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents View4 As Global.System.Web.UI.WebControls.View
+    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Contrôle rd41.
+    '''Contrôle lblDescTypeSalle3.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents rd41 As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents lblDescTypeSalle3 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Contrôle rd42.
+    '''Contrôle lstItem3.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents rd42 As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents lstItem3 As Global.System.Web.UI.WebControls.Repeater
 
     '''<summary>
-    '''Contrôle rd43.
+    '''Contrôle nblist3.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents rd43 As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents nblist3 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Contrôle btnreserv.
