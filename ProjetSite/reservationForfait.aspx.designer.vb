@@ -140,15 +140,6 @@ Partial Public Class reservationForfait
     Protected WithEvents txtNoCarteCredit As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contrôle txtEmail.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''Contrôle txtDateExpiration.
     '''</summary>
     '''<remarks>
@@ -156,6 +147,15 @@ Partial Public Class reservationForfait
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents txtDateExpiration As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Contrôle txtEmail.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Contrôle lstPays.

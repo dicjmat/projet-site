@@ -21,7 +21,7 @@
             lbldescForfait.Text = res.Single.descForfait
             lblTarifForfait.Text = "Tarif : " + res.Single.prixForfait.ToString("#####.##") + " $"
             lblTypeChambreForfait.Text = "Une " + res.Single.tblTypeSalle.nomTypeSalle
-            lstPays.SelectedIndex = 0
+            lstPays.SelectedIndex = -1
         End If
     End Sub
 

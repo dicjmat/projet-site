@@ -145,7 +145,9 @@
         </div>
         <br />
         <br />
-        <div class="form-group">
+        <asp:UpdatePanel runat="server">
+        <ContentTemplate>
+<div class="form-group">
             <asp:Label runat="server" AssociatedControlID="lstPays" CssClass="col-md-2 control-label">Pays</asp:Label>
             <div class="col-md-10">
                 <asp:DropDownList CssClass="form-control width2" ID="lstPays" runat="server" AutoPostBack="true" CausesValidation="false">
@@ -198,27 +200,24 @@
                 Date de fin:
                 <asp:TextBox runat="server" CssClass="textboxfin textbox" ID="textboxFin" />
             </p>
-
-            <asp:Button ID="btnValid" runat="server" Text="Vérification" ValidationGroup="SetPassword" />
-
-        </div>
+                    </div>
         <script type="text/javascript">
-            $(document).ready(function () {
+            function pageLoad(sender, args) {
                 $(".textboxdebut").wijinputdate(
                     {
                         showTrigger: true,
-                        minDate: Date.now()
+                        minDate: Date.now(),
                     });
-            });
+                    $(".textboxfin").wijinputdate(
+                        {
+                            showTrigger: true,
+                            readonly: true,
+                        });
+            };
         </script>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $(".textboxfin").wijinputdate(
-                    {
-                        showTrigger: true,
-                        readonly: true,
-                    });
-            });
-        </script>
+        </ContentTemplate>
+        </asp:UpdatePanel>
+
+            <asp:Button ID="btnValid" runat="server" Text="Vérification" ValidationGroup="SetPassword" />
     </div>
 </asp:Content>
