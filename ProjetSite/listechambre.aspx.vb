@@ -78,7 +78,7 @@
 
         imgChambre.ImageUrl = "~/Images/chambre" + type + ".jpg"
         lblTypeChambre.Text = chambre.Single.nomTypeSalle
-        lblTypeChambre.Text = ""
+        lblTypeLit.Text = ""
 
         For Each li In lit.Distinct.ToList
             If li = lit.Distinct.ToList.Last Then
@@ -113,7 +113,7 @@
 
         imgChambre2.ImageUrl = "~/Images/chambre" + type + ".jpg"
         lblTypeChambre2.Text = chambre.Single.nomTypeSalle
-        lblTypeChambre2.Text = ""
+        lblTypeLit2.Text = ""
 
         For Each li In lit.Distinct.ToList
             If li = lit.Distinct.ToList.Last Then
@@ -148,7 +148,7 @@
 
         imgChambre3.ImageUrl = "~/Images/chambre" + type + ".jpg"
         lblTypeChambre3.Text = chambre.Single.nomTypeSalle
-        lblTypeChambre3.Text = ""
+        lblTypeLit3.Text = ""
 
         For Each li In lit.Distinct.ToList
 

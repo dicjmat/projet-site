@@ -15,7 +15,8 @@
         </ItemTemplate>
         </asp:Repeater>--%>
 
-
+    <asp:UpdatePanel runat="server">
+        <ContentTemplate>
           <asp:Button Text="Standard" BorderStyle="None" ID="Tab1" CssClass="Initial" runat="server"
               OnClick="Tab1_Click" />
           <asp:Button Text="Supérieur" BorderStyle="None" ID="Tab2" CssClass="Initial" runat="server"
