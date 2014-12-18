@@ -20,7 +20,7 @@
         <div><p>Code de la ville: </p><asp:DropDownList id="listville" runat="server" AutoPostBack="true" CausesValidation="false" /></div>
         <div><p>Code de la province:</p><asp:DropDownList id="listprov" runat="server" AutoPostBack="true" CausesValidation="false" /></div>
         <asp:Button runat="server" Text="Confirmer" OnClick="Unnamed1_Click" />
-        <asp:label runat="server" id="swag">Swag</asp:label>
-         <asp:label runat="server" id="swag2">lol</asp:label>
+        <asp:label runat="server" id="réussite">La réservation s'est effectué avec succès.</asp:label>
+         <asp:label runat="server" id="echec">Vous avez oublié de remplir un champ.</asp:label>
     </div>
 </asp:Content>

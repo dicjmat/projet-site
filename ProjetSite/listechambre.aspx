@@ -44,6 +44,7 @@
           </ItemTemplate>
           </asp:Repeater>
            <p>Nombre de chambre: <asp:DropDownList id="nblist" runat="server" AutoPostBack="true" CausesValidation="false" OnSelectedIndexChanged="nblist_SelectedIndexChanged">
+                  <asp:ListItem Text="0" Value="0"></asp:ListItem>
                   <asp:ListItem Text="1" Value="1"></asp:ListItem>
                   <asp:ListItem Text="2" Value="2"></asp:ListItem>
                   <asp:ListItem Text="3" Value="3"></asp:ListItem>
@@ -76,7 +77,8 @@
           </ItemTemplate>
           </asp:Repeater>
            <p>Nombre de chambre: <asp:DropDownList id="nblist2" runat="server" AutoPostBack="true" CausesValidation="false" OnSelectedIndexChanged="nblist_SelectedIndexChanged">
-                  <asp:ListItem Text="1" Value="1"></asp:ListItem>
+               <asp:ListItem Text="0" Value="0"></asp:ListItem>   
+               <asp:ListItem Text="1" Value="1"></asp:ListItem>
                   <asp:ListItem Text="2" Value="2"></asp:ListItem>
                   <asp:ListItem Text="3" Value="3"></asp:ListItem>
                   <asp:ListItem Text="4" Value="4"></asp:ListItem>
@@ -106,7 +108,8 @@
           </ItemTemplate>
           </asp:Repeater>
            <p>Nombre de chambre: <asp:DropDownList id="nblist3" runat="server" AutoPostBack="true" CausesValidation="false" OnSelectedIndexChanged="nblist_SelectedIndexChanged">
-                  <asp:ListItem Text="1" Value="1"></asp:ListItem>
+               <asp:ListItem Text="0" Value="0"></asp:ListItem>   
+               <asp:ListItem Text="1" Value="1"></asp:ListItem>
                   <asp:ListItem Text="2" Value="2"></asp:ListItem>
                   <asp:ListItem Text="3" Value="3"></asp:ListItem>
                   <asp:ListItem Text="4" Value="4"></asp:ListItem>

@@ -175,7 +175,10 @@
         Dim gotdated = Request.QueryString("dated")
         Dim gotdatef = Request.QueryString("datef")
         Dim gotnohotel = Request.QueryString("nohotel")
-        Response.Redirect("Réservation.aspx?gotdated=" + gotdated + "&gotdatef=" + gotdatef + "&gotnohotel=" + gotnohotel)
+        Dim nbSTA = nblist.SelectedValue
+        Dim nbSUP = nblist2.SelectedValue
+        Dim nbSUI = nblist3.SelectedValue
+        Response.Redirect("Réservation.aspx?gotdated=" + gotdated + "&gotdatef=" + gotdatef + "&gotnohotel=" + gotnohotel + "&nbSTA=" + nbSTA + "&nbSUP=" + nbSUP + "&nbSUI=" + nbSUI)
     End Sub
 End Class
 

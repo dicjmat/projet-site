@@ -131,20 +131,20 @@ Partial Public Class Réservation
     Protected WithEvents listprov As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Contrôle swag.
+    '''Contrôle réussite.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents swag As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents réussite As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Contrôle swag2.
+    '''Contrôle echec.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents swag2 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents echec As Global.System.Web.UI.WebControls.Label
 End Class
