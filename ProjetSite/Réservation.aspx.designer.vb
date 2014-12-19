@@ -113,22 +113,31 @@ Partial Public Class Réservation
     Protected WithEvents txtcomm As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contrôle listprov.
+    '''Contrôle lstPays.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents listprov As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents lstPays As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Contrôle listville.
+    '''Contrôle lstProvince.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents listville As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents lstProvince As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Contrôle lstVille.
+    '''</summary>
+    '''<remarks>
+    '''Champ généré automatiquement.
+    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+    '''</remarks>
+    Protected WithEvents lstVille As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Contrôle réussite.

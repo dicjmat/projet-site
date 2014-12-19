@@ -3,14 +3,16 @@
     Dim bd As P2014_Equipe2_GestionHôtelièreEntities
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         bd = New P2014_Equipe2_GestionHôtelièreEntities
-        Dim res2 = From el In bd.tblProvince Select el
-        listprov.DataSource = res2.ToList
-        listprov.DataTextField = "codeProv"
-        listprov.DataBind()
-        Dim res = From el In bd.tblVille Select el
-        listville.DataSource = res.ToList
-        listville.DataTextField = "codeVille"
-        listville.DataBind()
+        If Not IsPostBack Then
+            Dim pays = From pa In bd.tblPays
+                       Select pa
+
+            lstPays.DataValueField = "codePays"
+            lstPays.DataTextField = "nomPays"
+            lstPays.DataSource = pays.ToList
+            lstPays.DataBind()
+            lstPays.SelectedIndex = -1
+        End If
         réussite.Visible = False
         echec.Visible = False
     End Sub
@@ -43,8 +45,8 @@
             client.noCarteCredit = txtnocarte.Text.Trim
             client.typeCarteCredit = listtype.SelectedItem.ToString
         client.dateExpiration = txtdateexp.Text.Trim
-        client.codeProv = listprov.SelectedItem.ToString
-            client.codeVille = listville.SelectedItem.ToString
+        client.codeProv = lstProvince.SelectedItem.ToString
+        client.codeVille = lstVille.SelectedItem.ToString
             client.commentaire = txtcomm.Text.Trim
         bd.tblDemandeur.Add(client)
         Try
@@ -113,4 +115,31 @@
         réussite.Visible = True
     End Sub
 
+    Protected Sub lstProvince_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstProvince.SelectedIndexChanged
+        If lstProvince.SelectedIndex <> -1 Then
+            Dim province As String = lstProvince.SelectedValue
+            Dim ville = From vi In bd.tblVille
+                           Where vi.codeProv = province
+                           Select vi
+
+            lstVille.DataValueField = "codeVille"
+            lstVille.DataTextField = "nomVille"
+            lstVille.DataSource = ville.ToList
+            lstVille.DataBind()
+        End If
+    End Sub
+
+    Protected Sub lstPays_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstPays.SelectedIndexChanged
+        If lstPays.SelectedIndex <> -1 Then
+            Dim pays As String = lstPays.SelectedValue
+            Dim province = From pro In bd.tblProvince
+                           Where pro.codePays = pays
+                           Select pro
+
+            lstProvince.DataValueField = "codeProv"
+            lstProvince.DataTextField = "nomProv"
+            lstProvince.DataSource = province.ToList
+            lstProvince.DataBind()
+        End If
+    End Sub
 End Class

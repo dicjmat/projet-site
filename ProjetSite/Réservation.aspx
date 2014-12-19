@@ -17,10 +17,43 @@
         <div><p>No carte de crédit:</p><asp:textbox runat="server" cssclass="txtprofil" id="txtnocarte"/></div>
         <div><p>Date d'expiration:</p><asp:textbox runat="server" cssclass="txtprofil" id="txtdateexp"/></div>
         <div><p>Commentaires:</p><asp:textbox runat="server" cssclass="txtprofil" id="txtcomm"/></div>
-        <div><p>Code de la province:</p><asp:DropDownList id="listprov" runat="server" AutoPostBack="true" CausesValidation="false" /></div>
-        <div><p>Code de la ville: </p><asp:DropDownList id="listville" runat="server" AutoPostBack="true" CausesValidation="false" /></div>
+        <asp:Label runat="server" AssociatedControlID="lstPays" CssClass="col-md-2 control-label">Pays</asp:Label>
+            <div class="col-md-10">
+                <asp:DropDownList CssClass="form-control width2" ID="lstPays" runat="server" AutoPostBack="true" CausesValidation="false">
+                </asp:DropDownList>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="lstPays"
+                    CssClass="text-danger" ErrorMessage="Le champ pays est requis."
+                    Display="Dynamic" ValidationGroup="SetPassword" />
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="lstProvince" CssClass="col-md-2 control-label">Province</asp:Label>
+            <div class="col-md-10">
+                <asp:DropDownList CssClass="form-control width2" ID="lstProvince" runat="server" AutoPostBack="true" CausesValidation="false">
+                </asp:DropDownList>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="lstProvince"
+                    CssClass="text-danger" ErrorMessage="Le champ province est requis."
+                    Display="Dynamic" ValidationGroup="SetPassword" />
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="lstVille" CssClass="col-md-2 control-label">Ville</asp:Label>
+            <div class="col-md-10">
+                <asp:DropDownList CssClass="form-control width2" ID="lstVille" runat="server" AutoPostBack="true" CausesValidation="false">
+                </asp:DropDownList>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="lstVille"
+                    CssClass="text-danger" ErrorMessage="Le champ pays est requis."
+                    Display="Dynamic" ValidationGroup="SetPassword" />
+            </div>
+        </div>
+        <br />
+        <br />
         <asp:Button runat="server" Text="Confirmer" OnClick="Unnamed1_Click" />
         <asp:label runat="server" id="réussite">La réservation s'est effectué avec succès.</asp:label>
          <asp:label runat="server" id="echec">Vous avez oublié de remplir un champ.</asp:label>
-    </div>
+    
 </asp:Content>
