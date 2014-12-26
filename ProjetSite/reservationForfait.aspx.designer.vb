@@ -11,266 +11,212 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class listechambre
+Partial Public Class reservationForfait
 
     '''<summary>
-    '''Contrôle Tab1.
+    '''Contrôle lblnomForfait.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents Tab1 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents lblnomForfait As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Contrôle Tab2.
+    '''Contrôle lbldescForfait.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents Tab2 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents lbldescForfait As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Contrôle Tab3.
+    '''Contrôle lblTarifForfait.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents Tab3 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents lblTarifForfait As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Contrôle MainView.
+    '''Contrôle lblnbNuitForfait.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents MainView As Global.System.Web.UI.WebControls.MultiView
+    Protected WithEvents lblnbNuitForfait As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Contrôle View1.
+    '''Contrôle lblTypeChambreForfait.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents View1 As Global.System.Web.UI.WebControls.View
+    Protected WithEvents lblTypeChambreForfait As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Contrôle lblTypeChambre.
+    '''Contrôle SetPassword.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents lblTypeChambre As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents SetPassword As Global.System.Web.UI.WebControls.PlaceHolder
 
     '''<summary>
-    '''Contrôle lblTypeLit.
+    '''Contrôle txtPrenom.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents lblTypeLit As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents txtPrenom As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contrôle imgChambre.
+    '''Contrôle txtNom.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents imgChambre As Global.System.Web.UI.WebControls.Image
+    Protected WithEvents txtNom As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contrôle Label1.
+    '''Contrôle txtAdresse.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents txtAdresse As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contrôle lblDescTypeSalle.
+    '''Contrôle txtTel.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents lblDescTypeSalle As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents txtTel As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contrôle lstItem.
+    '''Contrôle txtCell.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents lstItem As Global.System.Web.UI.WebControls.Repeater
+    Protected WithEvents txtCell As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contrôle nblist.
+    '''Contrôle txtCodePostal.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents nblist As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents txtCodePostal As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contrôle View2.
+    '''Contrôle listtype.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents View2 As Global.System.Web.UI.WebControls.View
+    Protected WithEvents listtype As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Contrôle lblTypeChambre2.
+    '''Contrôle txtNoCarteCredit.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents lblTypeChambre2 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents txtNoCarteCredit As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contrôle lblTypeLit2.
+    '''Contrôle txtDateExpiration.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents lblTypeLit2 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents txtDateExpiration As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contrôle imgChambre2.
+    '''Contrôle txtEmail.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents imgChambre2 As Global.System.Web.UI.WebControls.Image
+    Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contrôle Label2.
+    '''Contrôle lstPays.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lstPays As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Contrôle lblDescTypeSalle2.
+    '''Contrôle lstProvince.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents lblDescTypeSalle2 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lstProvince As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Contrôle lstItem2.
+    '''Contrôle lstVille.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents lstItem2 As Global.System.Web.UI.WebControls.Repeater
+    Protected WithEvents lstVille As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Contrôle nblist2.
+    '''Contrôle txtCommentaire.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents nblist2 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents txtCommentaire As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contrôle View3.
+    '''Contrôle textboxdebut.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents View3 As Global.System.Web.UI.WebControls.View
+    Protected WithEvents textboxdebut As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contrôle lblTypeChambre3.
+    '''Contrôle textboxFin.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents lblTypeChambre3 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents textboxFin As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contrôle lblTypeLit3.
+    '''Contrôle btnValid.
     '''</summary>
     '''<remarks>
     '''Champ généré automatiquement.
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
-    Protected WithEvents lblTypeLit3 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Contrôle imgChambre3.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents imgChambre3 As Global.System.Web.UI.WebControls.Image
-
-    '''<summary>
-    '''Contrôle Label3.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Contrôle lblDescTypeSalle3.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents lblDescTypeSalle3 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Contrôle lstItem3.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents lstItem3 As Global.System.Web.UI.WebControls.Repeater
-
-    '''<summary>
-    '''Contrôle nblist3.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents nblist3 As Global.System.Web.UI.WebControls.DropDownList
-
-    '''<summary>
-    '''Contrôle btnreserv.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents btnreserv As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnValid As Global.System.Web.UI.WebControls.Button
 End Class

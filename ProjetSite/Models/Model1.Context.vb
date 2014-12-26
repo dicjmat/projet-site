@@ -44,7 +44,7 @@ Partial Public Class P2014_Equipe2_GestionHôtelièreEntities
     Public Overridable Property tblProfession() As DbSet(Of tblProfession)
     Public Overridable Property tblClient() As DbSet(Of tblClient)
     Public Overridable Property tblCompagnie() As DbSet(Of tblCompagnie)
-    Public Overridable Property tblCompte() As DbSet(Of tblCompte)
+    Public Overridable Property tblDemandeur() As DbSet(Of tblDemandeur)
     Public Overridable Property tblElementNote() As DbSet(Of tblElementNote)
     Public Overridable Property tblFacture() As DbSet(Of tblFacture)
     Public Overridable Property tblForfait() As DbSet(Of tblForfait)
@@ -81,6 +81,16 @@ Partial Public Class P2014_Equipe2_GestionHôtelièreEntities
         Dim noHotelParameter As ObjectParameter = If(noHotel.HasValue, New ObjectParameter("noHotel", noHotel), New ObjectParameter("noHotel", GetType(Byte)))
 
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of determinersallelibre_Result)("determinersallelibre", dateDebutParameter, datefinParameter, noHotelParameter)
+    End Function
+
+    Public Overridable Function determinertypechambrelibre(dateDebut As Nullable(Of Date), datefin As Nullable(Of Date), noHotel As Nullable(Of Byte)) As ObjectResult(Of determinertypechambrelibre_Result)
+        Dim dateDebutParameter As ObjectParameter = If(dateDebut.HasValue, New ObjectParameter("dateDebut", dateDebut), New ObjectParameter("dateDebut", GetType(Date)))
+
+        Dim datefinParameter As ObjectParameter = If(datefin.HasValue, New ObjectParameter("datefin", datefin), New ObjectParameter("datefin", GetType(Date)))
+
+        Dim noHotelParameter As ObjectParameter = If(noHotel.HasValue, New ObjectParameter("noHotel", noHotel), New ObjectParameter("noHotel", GetType(Byte)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of determinertypechambrelibre_Result)("determinertypechambrelibre", dateDebutParameter, datefinParameter, noHotelParameter)
     End Function
 
 End Class

@@ -10,12 +10,9 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class tblCompte
-    Public Property email As String
-    Public Property mdp As String
-    Public Property premiereConnexion As Boolean
-    Public Property noClient As Integer
-
-    Public Overridable Property tblClient As tblClient
+Partial Public Class determinertypechambrelibre_Result
+    Public Property nomTypeSalle As String
+    Public Property codeTypeSalle As String
+    Public Property nbChambre As Nullable(Of Integer)
 
 End Class

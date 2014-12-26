@@ -13,6 +13,7 @@ Imports System.Collections.Generic
 Partial Public Class tblTypeSalle
     Public Property codeTypeSalle As String
     Public Property nomTypeSalle As String
+    Public Property descTypeSalle As String
 
     Public Overridable Property tblGabarit As ICollection(Of tblGabarit) = New HashSet(Of tblGabarit)
     Public Overridable Property tblForfait As ICollection(Of tblForfait) = New HashSet(Of tblForfait)

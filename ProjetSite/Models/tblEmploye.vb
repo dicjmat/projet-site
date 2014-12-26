@@ -17,8 +17,10 @@ Partial Public Class tblEmploye
     Public Property noTelEmpl As String
     Public Property noCellEmpl As String
     Public Property adrEmpl As String
+    Public Property codePostalEmploye As String
     Public Property codeVille As String
     Public Property codeProv As String
+    Public Property emailEmploye As String
     Public Property NAS As String
     Public Property dateEmbauche As Date
     Public Property noHotel As Byte

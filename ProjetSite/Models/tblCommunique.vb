@@ -14,6 +14,7 @@ Partial Public Class tblCommunique
     Public Property noCommunique As Short
     Public Property titreCommunique As String
     Public Property contCommunique As String
+    Public Property etatCommunique As String
     Public Property noHotel As Byte
 
     Public Overridable Property tblHotel As tblHotel
